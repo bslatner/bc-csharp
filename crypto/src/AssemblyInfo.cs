@@ -65,7 +65,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyKeyName("")]
 
 [assembly: CLSCompliant(true)]
+
+#if !PORTABLE
 [assembly: ComVisible(false)]
+#endif
 
 // Start with no permissions
 //[assembly: PermissionSet(SecurityAction.RequestOptional, Unrestricted=false)]
