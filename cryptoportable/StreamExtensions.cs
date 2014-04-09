@@ -8,5 +8,10 @@ namespace Org.BouncyCastle
         {
             stream.Dispose();
         }
+
+        public static void Close(this TextWriter writer)
+        {
+            writer.Dispose();
+        }
     }
 }
