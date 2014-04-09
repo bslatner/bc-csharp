@@ -13,5 +13,10 @@ namespace Org.BouncyCastle
         {
             writer.Dispose();
         }
+
+        public static byte[] GetBuffer(this MemoryStream stream)
+        {
+            return stream.ToArray();
+        }
     }
 }
