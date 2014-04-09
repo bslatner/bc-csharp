@@ -34,12 +34,14 @@ namespace Org.BouncyCastle.Utilities
         {
 #if SILVERLIGHT
             return String.Compare(a, b, StringComparison.InvariantCultureIgnoreCase);
+#elif PORTABLE
+            return StringComparer.CurrentCultureIgnoreCase.Compare(a, b);
 #else
             return String.Compare(a, b, true);
 #endif
         }
 
-#if NETCF_1_0 || NETCF_2_0 || SILVERLIGHT
+#if NETCF_1_0 || NETCF_2_0 || SILVERLIGHT || PORTABLE
         internal static string GetEnvironmentVariable(
             string variable)
         {
