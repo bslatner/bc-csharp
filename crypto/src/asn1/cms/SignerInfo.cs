@@ -24,7 +24,9 @@ namespace Org.BouncyCastle.Asn1.Cms
                 return (SignerInfo) obj;
 
             if (obj is Asn1Sequence)
+#pragma warning disable 618
                 return new SignerInfo((Asn1Sequence) obj);
+#pragma warning restore 618
 
             throw new ArgumentException("Unknown object in factory: " + obj.GetType().FullName, "obj");
         }

@@ -19,7 +19,9 @@ namespace Org.BouncyCastle.Asn1.Cms
             IssuerAndSerialNumber existing = obj as IssuerAndSerialNumber;
             if (existing != null)
                 return existing;
+#pragma warning disable 618
             return new IssuerAndSerialNumber(Asn1Sequence.GetInstance(obj));
+#pragma warning restore 618
         }
 
         [Obsolete("Use GetInstance() instead")]

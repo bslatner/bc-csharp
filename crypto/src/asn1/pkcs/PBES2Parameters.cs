@@ -15,7 +15,9 @@ namespace Org.BouncyCastle.Asn1.Pkcs
             PbeS2Parameters existing = obj as PbeS2Parameters;
             if (existing != null)
                 return existing;
+#pragma warning disable 618
             return new PbeS2Parameters(Asn1Sequence.GetInstance(obj));
+#pragma warning restore 618
         }
 
         public PbeS2Parameters(KeyDerivationFunc keyDevFunc, EncryptionScheme encScheme)

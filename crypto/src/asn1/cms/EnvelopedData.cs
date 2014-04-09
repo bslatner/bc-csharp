@@ -94,7 +94,9 @@ namespace Org.BouncyCastle.Asn1.Cms
                 return (EnvelopedData)obj;
             if (obj == null)
                 return null;
+#pragma warning disable 618
             return new EnvelopedData(Asn1Sequence.GetInstance(obj));
+#pragma warning restore 618
         }
 
         public DerInteger Version
