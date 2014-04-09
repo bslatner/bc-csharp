@@ -124,17 +124,39 @@ namespace Org.BouncyCastle.Cms
 				_out.Write(bytes, off, len);
 			}
 
+#if PORTABLE
+
+		    private bool isDisposed;
+            protected override void Dispose(bool disposing)
+            {
+                if (disposing && !isDisposed)
+                {
+                    _out.Dispose();
+                    CleanUp();
+                    isDisposed = true;
+                }
+                base.Dispose(disposing);
+            }
+
+#else
+
 			public override void Close()
 			{
-				_out.Close();
-
-				// TODO Parent context(s) should really be be closed explicitly
-
-				_eiGen.Close();
-				_cGen.Close();
-				_sGen.Close();
-				base.Close();
+                _out.Close();
+			    CleanUp();
+			    base.Close();
 			}
+
+#endif
+
+		    private void CleanUp()
+		    {
+		        // TODO Parent context(s) should really be be closed explicitly
+
+		        _eiGen.Close();
+		        _cGen.Close();
+		        _sGen.Close();
+		    }
 		}
 	}
 }

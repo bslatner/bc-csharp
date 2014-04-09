@@ -250,11 +250,28 @@ namespace Org.BouncyCastle.Bcpg
             }
         }
 
-		public override void Close()
+#if PORTABLE
+
+	    private bool isDisposed;
+	    protected override void Dispose(bool disposing)
+	    {
+            if (disposing && !isDisposed)
+	        {
+	            m_in.Dispose();
+	            isDisposed = true;
+	        }
+            base.Dispose(disposing);
+        }
+
+#else
+
+	    public override void Close()
 		{
 			m_in.Close();
 			base.Close();
 		}
+
+#endif
 
 		/// <summary>
 		/// A stream that overlays our input stream, allowing the user to only read a segment of it.

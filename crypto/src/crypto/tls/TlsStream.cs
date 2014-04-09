@@ -29,12 +29,29 @@ namespace Org.BouncyCastle.Crypto.Tls
 			get { return !handler.IsClosed; }
 		}
 
+#if PORTABLE
+
+	    private bool isDisposed;
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && !isDisposed)
+            {
+                handler.Close();
+                isDisposed = true;
+            }
+            base.Dispose(disposing);
+        }
+
+#else
+
 		public override void Close()
 		{
 			handler.Close();
 		}
 
-		public override void Flush()
+#endif
+
+        public override void Flush()
 		{
 			handler.Flush();
 		}

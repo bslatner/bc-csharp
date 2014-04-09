@@ -386,7 +386,29 @@ namespace Org.BouncyCastle.Apache.Bzip2
 
 #if PORTABLE
 
+        private bool isDisposed;
         protected override void Dispose(bool disposing)
+        {
+            CleanUp();
+            base.Dispose(disposing);
+            if (disposing && !isDisposed)
+            {
+                bsStream.Dispose();
+                isDisposed = true;
+            }
+        }
+
+#else
+
+        public override void Close() {
+            CleanUp();
+            base.Close();
+            bsStream.Close();
+        }
+
+#endif
+
+        private void CleanUp()
         {
             if (closed)
             {
@@ -396,28 +418,7 @@ namespace Org.BouncyCastle.Apache.Bzip2
             Finish();
 
             closed = true;
-            base.Dispose(disposing);
-            if (disposing)
-            {
-                bsStream.Dispose();
-            }
         }
-
-#else
-
-        public override void Close() {
-            if (closed) {
-                return;
-            }
-
-            Finish();
-
-            closed = true;
-            base.Close();
-            bsStream.Close();
-        }
-
-#endif
 
         public void Finish() {
             if (finished) {

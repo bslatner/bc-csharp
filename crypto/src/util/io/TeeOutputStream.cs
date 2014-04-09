@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using Org.BouncyCastle.Utilities.Zlib;
 
 namespace Org.BouncyCastle.Utilities.IO
 {
@@ -18,11 +19,29 @@ namespace Org.BouncyCastle.Utilities.IO
 			this.tee = tee;
 		}
 
-		public override void Close()
+#if PORTABLE
+
+        private bool isDisposed;
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && !isDisposed)
+            {
+                output.Dispose();
+                tee.Dispose();
+                isDisposed = true;
+            }
+            base.Dispose(disposing);
+        }
+
+#else
+
+        public override void Close()
 		{
 			output.Close();
 			tee.Close();
 		}
+
+#endif
 
 		public override void Write(byte[] buffer, int offset, int count)
 		{

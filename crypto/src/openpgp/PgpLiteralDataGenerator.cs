@@ -4,6 +4,7 @@ using System.Text;
 
 using Org.BouncyCastle.Utilities;
 using Org.BouncyCastle.Utilities.Date;
+using Org.BouncyCastle.Utilities.IO;
 
 namespace Org.BouncyCastle.Bcpg.OpenPgp
 {

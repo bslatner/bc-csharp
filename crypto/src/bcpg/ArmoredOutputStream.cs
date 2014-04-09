@@ -277,23 +277,41 @@ namespace Org.BouncyCastle.Bcpg
         }
 
         /**
-         * <b>Note</b>: close does nor close the underlying stream. So it is possible to write
+         * <b>Note</b>: Close/Dispose does not close the underlying stream. So it is possible to write
          * multiple objects using armoring to a single stream.
          */
+
+#if PORTABLE
+
+        protected override void Dispose(bool disposing)
+        {
+            CleanUp();
+            base.Dispose(disposing);
+        }
+
+#else
+
         public override void Close()
+        {
+            CleanUp();
+        }
+
+#endif
+
+        private void CleanUp()
         {
             if (type != null)
             {
-				if (bufPtr > 0)
-				{
-					Encode(outStream, buf, bufPtr);
-				}
+                if (bufPtr > 0)
+                {
+                    Encode(outStream, buf, bufPtr);
+                }
 
                 DoWrite(nl + '=');
 
                 int crcV = crc.Value;
 
-				buf[0] = ((crcV >> 16) & 0xff);
+                buf[0] = ((crcV >> 16) & 0xff);
                 buf[1] = ((crcV >> 8) & 0xff);
                 buf[2] = (crcV & 0xff);
 
@@ -309,11 +327,13 @@ namespace Org.BouncyCastle.Bcpg
 
                 type = null;
                 start = true;
-				base.Close();
-			}
+                #if !PORTABLE
+                base.Close();
+                #endif
+            }
         }
 
-		private void WriteHeaderEntry(
+        private void WriteHeaderEntry(
 			string	name,
 			string	v)
         {

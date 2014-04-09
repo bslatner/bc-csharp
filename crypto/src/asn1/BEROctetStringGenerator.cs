@@ -102,16 +102,39 @@ namespace Org.BouncyCastle.Asn1
 				}
 			}
 
+#if PORTABLE
+
+		    private bool isDisposed;
+            protected override void Dispose(bool disposing)
+            {
+                if (!isDisposed)
+                {
+                    CleanUp();
+                    isDisposed = true;
+                }
+                base.Dispose(disposing);
+            }
+
+#else
+
 			public override void Close()
 			{
-				if (_off != 0)
-				{
-					DerOctetString.Encode(_derOut, _buf, 0, _off);
-				}
-
-				_gen.WriteBerEnd();
+                CleanUp();
 				base.Close();
 			}
+
+#endif
+
+		    private void CleanUp()
+		    {
+                if (_off != 0)
+                {
+                    DerOctetString.Encode(_derOut, _buf, 0, _off);
+                }
+
+                _gen.WriteBerEnd();
+            }
+
 		}
 	}
 }
