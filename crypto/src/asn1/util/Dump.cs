@@ -1,4 +1,5 @@
 using Org.BouncyCastle.Asn1;
+using Org.BouncyCastle.Utilities.IO;
 
 using System;
 using System.IO;

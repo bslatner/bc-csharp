@@ -32,8 +32,12 @@ namespace Org.BouncyCastle.Cms
 
 		public virtual Stream GetInputStream()
 		{
+#if PORTABLE
+		    return _file.OpenRead();
+#else
 			return new FileStream(
 				_file.FullName, FileMode.Open, FileAccess.Read, FileShare.Read, _bufSize);
+#endif
 		}
 
 		public virtual void Write(
