@@ -267,7 +267,7 @@ namespace Org.BouncyCastle.Asn1
             {
                 try
                 {
-                    style = (DateTimeStyles)Enum.Parse(typeof(DateTimeStyles), "AssumeUniversal");
+                    style = GetAssumeUniversalDateTimeStyles();
                 }
                 catch (Exception)
                 {
@@ -279,6 +279,15 @@ namespace Org.BouncyCastle.Asn1
             DateTime dt = DateTime.ParseExact(s, format, DateTimeFormatInfo.InvariantInfo, style);
 
             return makeUniversal ? dt.ToUniversalTime() : dt;
+        }
+
+        private static DateTimeStyles GetAssumeUniversalDateTimeStyles()
+        {
+            return (DateTimeStyles)Enum.Parse(typeof(DateTimeStyles), "AssumeUniversal"
+#if PORTABLE
+                ,false
+#endif
+                );
         }
 
         private bool HasFractionalSeconds
