@@ -34,6 +34,20 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="src\asn1\" />
+    <Folder Include="src\bcpg\" />
+    <Folder Include="src\cms\" />
+    <Folder Include="src\crypto\" />
+    <Folder Include="src\math\" />
+    <Folder Include="src\ocsp\" />
+    <Folder Include="src\openpgp\" />
+    <Folder Include="src\openssl\" />
+    <Folder Include="src\pkcs\" />
+    <Folder Include="src\pkix\" />
+    <Folder Include="src\security\" />
+    <Folder Include="src\tsp\" />
+    <Folder Include="src\util\" />
+    <Folder Include="src\x509\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\crypto\bzip2\src\BZip2Constants.cs">
