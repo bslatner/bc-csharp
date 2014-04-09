@@ -3,7 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-#if SILVERLIGHT
+#if SILVERLIGHT || PORTABLE
 using System.Collections.Generic;
 #else
 using System.Collections;
@@ -83,7 +83,7 @@ namespace Org.BouncyCastle.Utilities
         }
 #endif
 
-#if SILVERLIGHT
+#if SILVERLIGHT || PORTABLE
         internal static System.Collections.IList CreateArrayList()
         {
             return new List<object>();
