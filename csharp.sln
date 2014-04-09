@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crypto", "crypto\crypto.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crypto-test", "crypto-test\crypto-test.csproj", "{C857AD68-8F1B-4C7A-A76B-3DC03CBE4FB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cryptoportable", "cryptoportable\cryptoportable.csproj", "{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{C857AD68-8F1B-4C7A-A76B-3DC03CBE4FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C857AD68-8F1B-4C7A-A76B-3DC03CBE4FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C857AD68-8F1B-4C7A-A76B-3DC03CBE4FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
