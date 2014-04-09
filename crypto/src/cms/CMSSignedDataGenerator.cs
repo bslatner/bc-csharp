@@ -108,7 +108,7 @@ namespace Org.BouncyCastle.Cms
 				outer._digests.Add(digestOID, hash.Clone());
 
 				sig.Init(true, new ParametersWithRandom(key, random));
-#if NETCF_1_0 || NETCF_2_0 || SILVERLIGHT
+#if NETCF_1_0 || NETCF_2_0 || SILVERLIGHT || PORTABLE
 				Stream sigStr = new SigOutputStream(sig);
 #else
 				Stream sigStr = new BufferedStream(new SigOutputStream(sig));
