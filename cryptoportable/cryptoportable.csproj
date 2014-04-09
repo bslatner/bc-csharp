@@ -3736,6 +3736,11 @@
     <Compile Include="..\crypto\src\x509\X509V3CertificateGenerator.cs">
       <Link>src\x509\X509V3CertificateGenerator.cs</Link>
     </Compile>
+    <Compile Include="debug\Console.cs" />
+    <Compile Include="debug\DebugOutputConsole.cs" />
+    <Compile Include="debug\DebugOutputConsoleFactory.cs" />
+    <Compile Include="debug\IConsole.cs" />
+    <Compile Include="debug\IConsoleFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\util\io\FileInfo.cs" />
     <Compile Include="StreamExtensions.cs" />
