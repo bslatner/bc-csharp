@@ -1,6 +1,10 @@
 using System;
 using System.Threading;
 
+#if PORTABLE
+using System.Threading.Tasks;
+#endif
+
 namespace Org.BouncyCastle.Crypto.Prng
 {
 	/**
@@ -34,7 +38,7 @@ namespace Org.BouncyCastle.Crypto.Prng
 				int		numBytes,
 				bool	fast)
 			{
-#if SILVERLIGHT
+#if SILVERLIGHT || PORTABLE
                 return DoGenerateSeed(numBytes, fast);
 #else
                 ThreadPriority originalPriority = Thread.CurrentThread.Priority;
@@ -69,7 +73,12 @@ namespace Org.BouncyCastle.Crypto.Prng
 					{
 						try
 						{
+#if PORTABLE
+						    var waiter = new Task(DoNothing);
+						    waiter.Wait(1);
+#else
 							Thread.Sleep(1);
+#endif
 						}
 						catch (Exception)
 						{
@@ -94,6 +103,15 @@ namespace Org.BouncyCastle.Crypto.Prng
 
 				return result;
 			}
+
+#if PORTABLE
+
+		    private void DoNothing()
+		    {
+		        throw new NotImplementedException();
+		    }
+
+#endif
 		}
 
 		/**
