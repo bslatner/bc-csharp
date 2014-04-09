@@ -122,7 +122,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
             FileInfo					file = new FileInfo(fileName);
             PgpLiteralDataGenerator     lGen = new PgpLiteralDataGenerator();
             Stream						lOut = lGen.Open(bOut, PgpLiteralData.Binary, file);
-            FileStream					fIn = file.OpenRead();
+            Stream						fIn = file.OpenRead();
             int                         ch = 0;
 
 			while ((ch = fIn.ReadByte()) >= 0)

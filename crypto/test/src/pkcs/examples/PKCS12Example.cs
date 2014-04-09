@@ -378,7 +378,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 //			FileOutputStream fOut = new FileOutputStream("id.p12");
 //
 //			store.store(fOut, passwd);
-			FileStream fOut = File.Create("id.p12");
+			Stream fOut = File.Create("id.p12");
 			store.Save(fOut, passwd, new SecureRandom());
 			fOut.Close();
 		}

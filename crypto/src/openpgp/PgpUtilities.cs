@@ -332,7 +332,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 
 		private static void PipeFileContents(FileInfo file, Stream pOut, int bufSize)
 		{
-			FileStream inputStream = file.OpenRead();
+			Stream inputStream = file.OpenRead();
 			byte[] buf = new byte[bufSize];
 
 			int len;

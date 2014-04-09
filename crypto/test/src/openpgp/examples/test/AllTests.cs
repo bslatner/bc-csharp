@@ -368,7 +368,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples.Tests
 			byte[]	keyData,
 			string	name)
 		{
-			FileStream fOut = File.Create(name);
+			Stream fOut = File.Create(name);
 			fOut.Write(keyData, 0, keyData.Length);
 			fOut.Close();
 		}
