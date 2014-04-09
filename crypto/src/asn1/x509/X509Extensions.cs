@@ -278,8 +278,8 @@ namespace Org.BouncyCastle.Asn1.X509
             }
         }
 
-#if !SILVERLIGHT
-		/**
+#if !(SILVERLIGHT || PORTABLE)
+        /**
          * constructor from a table of extensions.
          * <p>
          * it's is assumed the table contains Oid/string pairs.</p>
