@@ -22,9 +22,19 @@
             get { return _Output ?? (_Output = ConsoleFactory.CreateInstance()); }
         }
 
+        public static void WriteLine()
+        {
+            Output.WriteLine();
+        }
+
+        public static void WriteLine(object value)
+        {
+            Output.WriteLine(value);
+        }
+
         public static void WriteLine(string value)
         {
-            throw new System.NotImplementedException();
+            Output.WriteLine(value);
         }
     }
 }
