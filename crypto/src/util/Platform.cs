@@ -165,12 +165,20 @@ namespace Org.BouncyCastle.Utilities
 
         internal static string ToLowerInvariant(string s)
         {
+#if PORTABLE
+            return s.ToLowerInvariant();
+#else
             return s.ToLower(CultureInfo.InvariantCulture);
+#endif
         }
 
         internal static string ToUpperInvariant(string s)
         {
+#if PORTABLE
+            return s.ToUpperInvariant();
+#else
             return s.ToUpper(CultureInfo.InvariantCulture);
+#endif
         }
 
         internal static readonly string NewLine = GetNewLine();
