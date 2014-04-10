@@ -1,3 +1,4 @@
+#if !__MOBILE__
 using System;
 
 using NUnit.Core;
@@ -30,3 +31,4 @@ namespace Org.BouncyCastle.Tsp.Tests
         }
     }
 }
+#endif

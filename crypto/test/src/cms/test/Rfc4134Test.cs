@@ -160,8 +160,13 @@ namespace Org.BouncyCastle.Cms.Tests
 			Assert.AreEqual(envelopedData.EncryptionAlgOid, symAlgorithmOID);
 
 			ArrayList c = new ArrayList(recipients.GetRecipients());
+#if !__MOBILE__
 			Assert.LessOrEqual(1, c.Count);
 			Assert.GreaterOrEqual(2, c.Count);
+#else
+		    Assert.That(1 <= c.Count);
+		    Assert.That(2 >= c.Count);
+#endif
 
 			VerifyRecipient((RecipientInformation)c[0], privKey);
 
@@ -185,8 +190,13 @@ namespace Org.BouncyCastle.Cms.Tests
 			Assert.AreEqual(envelopedParser.EncryptionAlgOid, symAlgorithmOID);
 
 			ArrayList c = new ArrayList(recipients.GetRecipients());
+#if !__MOBILE__
 			Assert.LessOrEqual(1, c.Count);
 			Assert.GreaterOrEqual(2, c.Count);
+#else
+		    Assert.That(1 <= c.Count);
+		    Assert.That(2 >= c.Count);
+#endif
 
 			VerifyRecipient((RecipientInformation)c[0], privKey);
 

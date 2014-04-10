@@ -2,7 +2,9 @@ using System;
 using System.IO;
 using System.Text;
 
+#if !__MOBILE__
 using NUnit.Core;
+#endif
 using NUnit.Framework;
 
 using Org.BouncyCastle.Crypto;
@@ -33,6 +35,7 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 			}
 		}
 		
+#if !__MOBILE__
 		[Suite]
 		public static TestSuite Suite
 		{
@@ -43,6 +46,7 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 				return suite;
 			}
 		}
+#endif
 
 		[Test]
 		public void TestOpenSsl()
@@ -122,6 +126,7 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 			Assert.AreEqual(privKey, rdKey);
 		}
 
+#if !__MOBILE__
         public static void Main(
 			string[] args)
         {
@@ -129,5 +134,6 @@ namespace Org.BouncyCastle.OpenSsl.Tests
             EventListener el = new NullListener();
             Suite.Run(el);
         }
+#endif
 	}
 }

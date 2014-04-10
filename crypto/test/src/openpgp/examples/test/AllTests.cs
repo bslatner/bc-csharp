@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 
+#if !__MOBILE__
 using NUnit.Core;
+#endif
 using NUnit.Framework;
 
 using Org.BouncyCastle.Utilities.Encoders;
@@ -382,6 +384,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples.Tests
 			return bRd.ReadLine();
 		}
 
+#if !__MOBILE__
 		public static void Main(
 			string[] args)
 		{
@@ -398,6 +401,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples.Tests
 
 			return suite;
 		}
+#endif
 
 	}
 }
