@@ -1,0 +1,3211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E39FE59-814A-434E-A26C-1C93E49C8A5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cryptoportable_test45</RootNamespace>
+    <AssemblyName>cryptoportable-test45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.core, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\crypto\test\src\asn1\test\AdditionalInformationSyntaxUnitTest.cs">
+      <Link>src\asn1\test\AdditionalInformationSyntaxUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\AdmissionsUnitTest.cs">
+      <Link>src\asn1\test\AdmissionsUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\AdmissionSyntaxUnitTest.cs">
+      <Link>src\asn1\test\AdmissionSyntaxUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\AllTests.cs">
+      <Link>src\asn1\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ASN1SequenceParserTest.cs">
+      <Link>src\asn1\test\ASN1SequenceParserTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ASN1UnitTest.cs">
+      <Link>src\asn1\test\ASN1UnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\AttributeTableUnitTest.cs">
+      <Link>src\asn1\test\AttributeTableUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\BiometricDataUnitTest.cs">
+      <Link>src\asn1\test\BiometricDataUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\BitStringConstantTester.cs">
+      <Link>src\asn1\test\BitStringConstantTester.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\BitStringTest.cs">
+      <Link>src\asn1\test\BitStringTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CertHashUnitTest.cs">
+      <Link>src\asn1\test\CertHashUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CertificateTest.cs">
+      <Link>src\asn1\test\CertificateTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CMSTest.cs">
+      <Link>src\asn1\test\CMSTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CommitmentTypeIndicationUnitTest.cs">
+      <Link>src\asn1\test\CommitmentTypeIndicationUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CommitmentTypeQualifierUnitTest.cs">
+      <Link>src\asn1\test\CommitmentTypeQualifierUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ContentHintsUnitTest.cs">
+      <Link>src\asn1\test\ContentHintsUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\CscaMasterListTest.cs">
+      <Link>src\asn1\test\CscaMasterListTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\DataGroupHashUnitTest.cs">
+      <Link>src\asn1\test\DataGroupHashUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\DeclarationOfMajorityUnitTest.cs">
+      <Link>src\asn1\test\DeclarationOfMajorityUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\DERApplicationSpecificTest.cs">
+      <Link>src\asn1\test\DERApplicationSpecificTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\DERUTF8StringTest.cs">
+      <Link>src\asn1\test\DERUTF8StringTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\EncryptedPrivateKeyInfoTest.cs">
+      <Link>src\asn1\test\EncryptedPrivateKeyInfoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\EnumeratedTest.cs">
+      <Link>src\asn1\test\EnumeratedTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\EqualsAndHashCodeTest.cs">
+      <Link>src\asn1\test\EqualsAndHashCodeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\EssCertIDv2UnitTest.cs">
+      <Link>src\asn1\test\EssCertIDv2UnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\GeneralizedTimeTest.cs">
+      <Link>src\asn1\test\GeneralizedTimeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\GeneralNameTest.cs">
+      <Link>src\asn1\test\GeneralNameTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\GenerationTest.cs">
+      <Link>src\asn1\test\GenerationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\InputStreamTest.cs">
+      <Link>src\asn1\test\InputStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\Iso4217CurrencyCodeUnitTest.cs">
+      <Link>src\asn1\test\Iso4217CurrencyCodeUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\IssuingDistributionPointTest.cs">
+      <Link>src\asn1\test\IssuingDistributionPointTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\KeyUsageTest.cs">
+      <Link>src\asn1\test\KeyUsageTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\LDSSecurityObjectUnitTest.cs">
+      <Link>src\asn1\test\LDSSecurityObjectUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\MiscTest.cs">
+      <Link>src\asn1\test\MiscTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\MonetaryLimitUnitTest.cs">
+      <Link>src\asn1\test\MonetaryLimitUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\MonetaryValueUnitTest.cs">
+      <Link>src\asn1\test\MonetaryValueUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\NameOrPseudonymUnitTest.cs">
+      <Link>src\asn1\test\NameOrPseudonymUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\NamingAuthorityUnitTest.cs">
+      <Link>src\asn1\test\NamingAuthorityUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\NetscapeCertTypeTest.cs">
+      <Link>src\asn1\test\NetscapeCertTypeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\OCSPTest.cs">
+      <Link>src\asn1\test\OCSPTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\OctetStringTest.cs">
+      <Link>src\asn1\test\OctetStringTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\OIDTest.cs">
+      <Link>src\asn1\test\OIDTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\OtherCertIDUnitTest.cs">
+      <Link>src\asn1\test\OtherCertIDUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\OtherSigningCertificateUnitTest.cs">
+      <Link>src\asn1\test\OtherSigningCertificateUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ParseTest.cs">
+      <Link>src\asn1\test\ParseTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ParsingTest.cs">
+      <Link>src\asn1\test\ParsingTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\PersonalDataUnitTest.cs">
+      <Link>src\asn1\test\PersonalDataUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\PKCS10Test.cs">
+      <Link>src\asn1\test\PKCS10Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\PKCS12Test.cs">
+      <Link>src\asn1\test\PKCS12Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\PKIFailureInfoTest.cs">
+      <Link>src\asn1\test\PKIFailureInfoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ProcurationSyntaxUnitTest.cs">
+      <Link>src\asn1\test\ProcurationSyntaxUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ProfessionInfoUnitTest.cs">
+      <Link>src\asn1\test\ProfessionInfoUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\QCStatementUnitTest.cs">
+      <Link>src\asn1\test\QCStatementUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\ReasonFlagsTest.cs">
+      <Link>src\asn1\test\ReasonFlagsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\RegressionTest.cs">
+      <Link>src\asn1\test\RegressionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\RequestedCertificateUnitTest.cs">
+      <Link>src\asn1\test\RequestedCertificateUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\RestrictionUnitTest.cs">
+      <Link>src\asn1\test\RestrictionUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\SemanticsInformationUnitTest.cs">
+      <Link>src\asn1\test\SemanticsInformationUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\SetTest.cs">
+      <Link>src\asn1\test\SetTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\SignerLocationUnitTest.cs">
+      <Link>src\asn1\test\SignerLocationUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\SMIMETest.cs">
+      <Link>src\asn1\test\SMIMETest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\StringTest.cs">
+      <Link>src\asn1\test\StringTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\SubjectKeyIdentifierTest.cs">
+      <Link>src\asn1\test\SubjectKeyIdentifierTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\TagTest.cs">
+      <Link>src\asn1\test\TagTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\TargetInformationTest.cs">
+      <Link>src\asn1\test\TargetInformationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\TimeTest.cs">
+      <Link>src\asn1\test\TimeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\TypeOfBiometricDataUnitTest.cs">
+      <Link>src\asn1\test\TypeOfBiometricDataUnitTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\UTCTimeTest.cs">
+      <Link>src\asn1\test\UTCTimeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\X509ExtensionsTest.cs">
+      <Link>src\asn1\test\X509ExtensionsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\X509NameTest.cs">
+      <Link>src\asn1\test\X509NameTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\asn1\test\X9Test.cs">
+      <Link>src\asn1\test\X9Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\AllTests.cs">
+      <Link>src\cms\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\AuthenticatedDataStreamTest.cs">
+      <Link>src\cms\test\AuthenticatedDataStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\AuthenticatedDataTest.cs">
+      <Link>src\cms\test\AuthenticatedDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\CMSSampleMessages.cs">
+      <Link>src\cms\test\CMSSampleMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\CMSTestUtil.cs">
+      <Link>src\cms\test\CMSTestUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\CompressedDataStreamTest.cs">
+      <Link>src\cms\test\CompressedDataStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\CompressedDataTest.cs">
+      <Link>src\cms\test\CompressedDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\EnvelopedDataStreamTest.cs">
+      <Link>src\cms\test\EnvelopedDataStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\EnvelopedDataTest.cs">
+      <Link>src\cms\test\EnvelopedDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\MiscDataStreamTest.cs">
+      <Link>src\cms\test\MiscDataStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\Rfc4134Test.cs">
+      <Link>src\cms\test\Rfc4134Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\SignedDataStreamTest.cs">
+      <Link>src\cms\test\SignedDataStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\cms\test\SignedDataTest.cs">
+      <Link>src\cms\test\SignedDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\examples\DESExample.cs">
+      <Link>src\crypto\examples\DESExample.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\io\test\AllTests.cs">
+      <Link>src\crypto\io\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\io\test\CipherStreamTest.cs">
+      <Link>src\crypto\io\test\CipherStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AESFastTest.cs">
+      <Link>src\crypto\test\AESFastTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AESLightTest.cs">
+      <Link>src\crypto\test\AESLightTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AESTest.cs">
+      <Link>src\crypto\test\AESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AESWrapTest.cs">
+      <Link>src\crypto\test\AESWrapTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AllTests.cs">
+      <Link>src\crypto\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\BlockCipherMonteCarloTest.cs">
+      <Link>src\crypto\test\BlockCipherMonteCarloTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\BlockCipherVectorTest.cs">
+      <Link>src\crypto\test\BlockCipherVectorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\BlowfishTest.cs">
+      <Link>src\crypto\test\BlowfishTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CamelliaLightTest.cs">
+      <Link>src\crypto\test\CamelliaLightTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CamelliaTest.cs">
+      <Link>src\crypto\test\CamelliaTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Cast5Test.cs">
+      <Link>src\crypto\test\Cast5Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CAST6Test.cs">
+      <Link>src\crypto\test\CAST6Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CCMTest.cs">
+      <Link>src\crypto\test\CCMTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ChaChaTest.cs">
+      <Link>src\crypto\test\ChaChaTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CipherTest.cs">
+      <Link>src\crypto\test\CipherTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CMacTest.cs">
+      <Link>src\crypto\test\CMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\CTSTest.cs">
+      <Link>src\crypto\test\CTSTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DESedeTest.cs">
+      <Link>src\crypto\test\DESedeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DESTest.cs">
+      <Link>src\crypto\test\DESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DHKEKGeneratorTest.cs">
+      <Link>src\crypto\test\DHKEKGeneratorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DHTest.cs">
+      <Link>src\crypto\test\DHTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DigestRandomNumberTest.cs">
+      <Link>src\crypto\test\DigestRandomNumberTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DigestTest.cs">
+      <Link>src\crypto\test\DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DSATest.cs">
+      <Link>src\crypto\test\DSATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\EAXTest.cs">
+      <Link>src\crypto\test\EAXTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ECDHKEKGeneratorTest.cs">
+      <Link>src\crypto\test\ECDHKEKGeneratorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ECGOST3410Test.cs">
+      <Link>src\crypto\test\ECGOST3410Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ECIESTest.cs">
+      <Link>src\crypto\test\ECIESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ECNRTest.cs">
+      <Link>src\crypto\test\ECNRTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ECTest.cs">
+      <Link>src\crypto\test\ECTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ElGamalTest.cs">
+      <Link>src\crypto\test\ElGamalTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\EqualsHashCodeTest.cs">
+      <Link>src\crypto\test\EqualsHashCodeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GcmReorderTest.cs">
+      <Link>src\crypto\test\GcmReorderTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GCMTest.cs">
+      <Link>src\crypto\test\GCMTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GMacTest.cs">
+      <Link>src\crypto\test\GMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GOST28147MacTest.cs">
+      <Link>src\crypto\test\GOST28147MacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GOST28147Test.cs">
+      <Link>src\crypto\test\GOST28147Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GOST3410Test.cs">
+      <Link>src\crypto\test\GOST3410Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\GOST3411DigestTest.cs">
+      <Link>src\crypto\test\GOST3411DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\HCFamilyTest.cs">
+      <Link>src\crypto\test\HCFamilyTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\HCFamilyVecTest.cs">
+      <Link>src\crypto\test\HCFamilyVecTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\IDEATest.cs">
+      <Link>src\crypto\test\IDEATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ISAACTest.cs">
+      <Link>src\crypto\test\ISAACTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ISO9796Test.cs">
+      <Link>src\crypto\test\ISO9796Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ISO9797Alg3MacTest.cs">
+      <Link>src\crypto\test\ISO9797Alg3MacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\KDF1GeneratorTest.cs">
+      <Link>src\crypto\test\KDF1GeneratorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\KDF2GeneratorTest.cs">
+      <Link>src\crypto\test\KDF2GeneratorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MacTest.cs">
+      <Link>src\crypto\test\MacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MD2DigestTest.cs">
+      <Link>src\crypto\test\MD2DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MD4DigestTest.cs">
+      <Link>src\crypto\test\MD4DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MD5DigestTest.cs">
+      <Link>src\crypto\test\MD5DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MD5HMacTest.cs">
+      <Link>src\crypto\test\MD5HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\MGF1GeneratorTest.cs">
+      <Link>src\crypto\test\MGF1GeneratorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ModeTest.cs">
+      <Link>src\crypto\test\ModeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\NaccacheSternTest.cs">
+      <Link>src\crypto\test\NaccacheSternTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\NoekeonTest.cs">
+      <Link>src\crypto\test\NoekeonTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\NullTest.cs">
+      <Link>src\crypto\test\NullTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\OAEPTest.cs">
+      <Link>src\crypto\test\OAEPTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\OCBTest.cs">
+      <Link>src\crypto\test\OCBTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\PaddingTest.cs">
+      <Link>src\crypto\test\PaddingTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Pkcs12Test.cs">
+      <Link>src\crypto\test\Pkcs12Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Pkcs5Test.cs">
+      <Link>src\crypto\test\Pkcs5Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Poly1305Test.cs">
+      <Link>src\crypto\test\Poly1305Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\PSSBlindTest.cs">
+      <Link>src\crypto\test\PSSBlindTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\PSSTest.cs">
+      <Link>src\crypto\test\PSSTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RC2Test.cs">
+      <Link>src\crypto\test\RC2Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RC2WrapTest.cs">
+      <Link>src\crypto\test\RC2WrapTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RC4Test.cs">
+      <Link>src\crypto\test\RC4Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RC5Test.cs">
+      <Link>src\crypto\test\RC5Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RC6Test.cs">
+      <Link>src\crypto\test\RC6Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RegressionTest.cs">
+      <Link>src\crypto\test\RegressionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RFC3211WrapTest.cs">
+      <Link>src\crypto\test\RFC3211WrapTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RijndaelTest.cs">
+      <Link>src\crypto\test\RijndaelTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD128DigestTest.cs">
+      <Link>src\crypto\test\RipeMD128DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD128HMacTest.cs">
+      <Link>src\crypto\test\RipeMD128HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD160DigestTest.cs">
+      <Link>src\crypto\test\RipeMD160DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD160HMacTest.cs">
+      <Link>src\crypto\test\RipeMD160HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD256DigestTest.cs">
+      <Link>src\crypto\test\RipeMD256DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RipeMD320DigestTest.cs">
+      <Link>src\crypto\test\RipeMD320DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RSABlindedTest.cs">
+      <Link>src\crypto\test\RSABlindedTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\RsaTest.cs">
+      <Link>src\crypto\test\RsaTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Salsa20Test.cs">
+      <Link>src\crypto\test\Salsa20Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SCryptTest.cs">
+      <Link>src\crypto\test\SCryptTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SEEDTest.cs">
+      <Link>src\crypto\test\SEEDTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SerpentTest.cs">
+      <Link>src\crypto\test\SerpentTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA1DigestTest.cs">
+      <Link>src\crypto\test\SHA1DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA1HMacTest.cs">
+      <Link>src\crypto\test\SHA1HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA224DigestTest.cs">
+      <Link>src\crypto\test\SHA224DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA224HMacTest.cs">
+      <Link>src\crypto\test\SHA224HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA256DigestTest.cs">
+      <Link>src\crypto\test\SHA256DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA256HMacTest.cs">
+      <Link>src\crypto\test\SHA256HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA384DigestTest.cs">
+      <Link>src\crypto\test\SHA384DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA384HMacTest.cs">
+      <Link>src\crypto\test\SHA384HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA3DigestTest.cs">
+      <Link>src\crypto\test\SHA3DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA512DigestTest.cs">
+      <Link>src\crypto\test\SHA512DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA512HMacTest.cs">
+      <Link>src\crypto\test\SHA512HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA512t224DigestTest.cs">
+      <Link>src\crypto\test\SHA512t224DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SHA512t256DigestTest.cs">
+      <Link>src\crypto\test\SHA512t256DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\ShortenedDigestTest.cs">
+      <Link>src\crypto\test\ShortenedDigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SipHashTest.cs">
+      <Link>src\crypto\test\SipHashTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SkeinDigestTest.cs">
+      <Link>src\crypto\test\SkeinDigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SkeinMacTest.cs">
+      <Link>src\crypto\test\SkeinMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SkipjackTest.cs">
+      <Link>src\crypto\test\SkipjackTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SM3DigestTest.cs">
+      <Link>src\crypto\test\SM3DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\SRP6Test.cs">
+      <Link>src\crypto\test\SRP6Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\StreamCipherVectorTest.cs">
+      <Link>src\crypto\test\StreamCipherVectorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\TEATest.cs">
+      <Link>src\crypto\test\TEATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Threefish1024Test.cs">
+      <Link>src\crypto\test\Threefish1024Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Threefish256Test.cs">
+      <Link>src\crypto\test\Threefish256Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\Threefish512Test.cs">
+      <Link>src\crypto\test\Threefish512Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\TigerDigestTest.cs">
+      <Link>src\crypto\test\TigerDigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\TwofishTest.cs">
+      <Link>src\crypto\test\TwofishTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\VMPCKSA3Test.cs">
+      <Link>src\crypto\test\VMPCKSA3Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\VMPCMacTest.cs">
+      <Link>src\crypto\test\VMPCMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\VMPCTest.cs">
+      <Link>src\crypto\test\VMPCTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\WhirlpoolDigestTest.cs">
+      <Link>src\crypto\test\WhirlpoolDigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\XSalsa20Test.cs">
+      <Link>src\crypto\test\XSalsa20Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\XTEATest.cs">
+      <Link>src\crypto\test\XTEATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\io\pem\test\AllTests.cs">
+      <Link>src\util\io\pem\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\net\test\IPAddressTest.cs">
+      <Link>src\util\net\test\IPAddressTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\FixedSecureRandom.cs">
+      <Link>src\util\test\FixedSecureRandom.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\ITest.cs">
+      <Link>src\util\test\ITest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\ITestResult.cs">
+      <Link>src\util\test\ITestResult.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\NumberParsing.cs">
+      <Link>src\util\test\NumberParsing.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\SimpleTest.cs">
+      <Link>src\util\test\SimpleTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\SimpleTestResult.cs">
+      <Link>src\util\test\SimpleTestResult.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\TestFailedException.cs">
+      <Link>src\util\test\TestFailedException.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\util\test\UncloseableStream.cs">
+      <Link>src\util\test\UncloseableStream.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\util\AllFixtureSetup.cs" />
+    <Compile Include="src\util\SystemConsole.cs" />
+    <Compile Include="src\util\SystemConsoleFactory.cs" />
+    <Compile Include="src\util\TestSuiteExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\counterSig.p7m">
+      <Link>data\cms\sigs\counterSig.p7m</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA1.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA1.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA1Enc.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA1Enc.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA256.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA256.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA256Enc.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA256Enc.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA512.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA512.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignDataSHA512Enc.sig">
+      <Link>data\cms\sigs\PSSSignDataSHA512Enc.sig</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And128BitRC2_CBC.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And128BitRC2_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And128BitRC4.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And128BitRC4.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And2_Key_TripleDES_CBC.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And2_Key_TripleDES_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And3_Key_TripleDES_CBC.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And3_Key_TripleDES_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And40BitRC2_CBC.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And40BitRC2_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbe_WithSHA1And40BitRC4.key">
+      <Link>data\keys\pbes1\pbe_WithSHA1And40BitRC4.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithMD2AndDES_CBC.key">
+      <Link>data\keys\pbes1\pbeWithMD2AndDES_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithMD2AndRC2_CBC.key">
+      <Link>data\keys\pbes1\pbeWithMD2AndRC2_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithMD5AndDES_CBC.key">
+      <Link>data\keys\pbes1\pbeWithMD5AndDES_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithMD5AndRC2_CBC.key">
+      <Link>data\keys\pbes1\pbeWithMD5AndRC2_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithSHA1AndDES_CBC.key">
+      <Link>data\keys\pbes1\pbeWithSHA1AndDES_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes1\pbeWithSHA1AndRC2_CBC.key">
+      <Link>data\keys\pbes1\pbeWithSHA1AndRC2_CBC.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-cbc.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-cfb.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-cfb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-cfb1.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-cfb1.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-cfb8.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-cfb8.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-ecb.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-ecb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-128-ofb.key">
+      <Link>data\keys\pbes2\pbes2.aes-128-ofb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-cbc.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-cfb.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-cfb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-cfb1.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-cfb1.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-cfb8.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-cfb8.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-ecb.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-ecb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-192-ofb.key">
+      <Link>data\keys\pbes2\pbes2.aes-192-ofb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-cbc.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-cfb.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-cfb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-cfb1.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-cfb1.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-cfb8.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-cfb8.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-ecb.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-ecb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes-256-ofb.key">
+      <Link>data\keys\pbes2\pbes2.aes-256-ofb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes128.key">
+      <Link>data\keys\pbes2\pbes2.aes128.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes192.key">
+      <Link>data\keys\pbes2\pbes2.aes192.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.aes256.key">
+      <Link>data\keys\pbes2\pbes2.aes256.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.bf-cbc.key">
+      <Link>data\keys\pbes2\pbes2.bf-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.bf.key">
+      <Link>data\keys\pbes2\pbes2.bf.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.blowfish.key">
+      <Link>data\keys\pbes2\pbes2.blowfish.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.cast-cbc.key">
+      <Link>data\keys\pbes2\pbes2.cast-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.cast.key">
+      <Link>data\keys\pbes2\pbes2.cast.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.cast5-cbc.key">
+      <Link>data\keys\pbes2\pbes2.cast5-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-cbc.key">
+      <Link>data\keys\pbes2\pbes2.des-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-cfb.key">
+      <Link>data\keys\pbes2\pbes2.des-cfb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-cfb1.key">
+      <Link>data\keys\pbes2\pbes2.des-cfb1.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-cfb8.key">
+      <Link>data\keys\pbes2\pbes2.des-cfb8.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-ecb.key">
+      <Link>data\keys\pbes2\pbes2.des-ecb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-ede.key">
+      <Link>data\keys\pbes2\pbes2.des-ede.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-ede3-cbc.key">
+      <Link>data\keys\pbes2\pbes2.des-ede3-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des-ofb.key">
+      <Link>data\keys\pbes2\pbes2.des-ofb.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des.key">
+      <Link>data\keys\pbes2\pbes2.des.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.des3.key">
+      <Link>data\keys\pbes2\pbes2.des3.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.rc2-40-cbc.key">
+      <Link>data\keys\pbes2\pbes2.rc2-40-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.rc2-64-cbc.key">
+      <Link>data\keys\pbes2\pbes2.rc2-64-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.rc2-cbc.key">
+      <Link>data\keys\pbes2\pbes2.rc2-cbc.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\keys\pbes2\pbes2.rc2.key">
+      <Link>data\keys\pbes2\pbes2.rc2.key</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-1024-160.pub">
+      <Link>data\openpgp\dsa\keys\DSA-1024-160.pub</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-1024-160.sec">
+      <Link>data\openpgp\dsa\keys\DSA-1024-160.sec</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-15360-512.pub">
+      <Link>data\openpgp\dsa\keys\DSA-15360-512.pub</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-15360-512.sec">
+      <Link>data\openpgp\dsa\keys\DSA-15360-512.sec</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-2048-224.pub">
+      <Link>data\openpgp\dsa\keys\DSA-2048-224.pub</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-2048-224.sec">
+      <Link>data\openpgp\dsa\keys\DSA-2048-224.sec</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-3072-256.pub">
+      <Link>data\openpgp\dsa\keys\DSA-3072-256.pub</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-3072-256.sec">
+      <Link>data\openpgp\dsa\keys\DSA-3072-256.sec</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-7680-384.pub">
+      <Link>data\openpgp\dsa\keys\DSA-7680-384.pub</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\keys\DSA-7680-384.sec">
+      <Link>data\openpgp\dsa\keys\DSA-7680-384.sec</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-1024-160-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-1024-160-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-1024-224-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-1024-224-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-1024-256-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-1024-256-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-1024-384-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-1024-384-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-1024-512-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-1024-512-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-15360-512-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-15360-512-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-2048-224-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-2048-224-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-3072-256-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-3072-256-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openpgp\dsa\sigs\dsa-7680-384-sign.gpg">
+      <Link>data\openpgp\dsa\sigs\dsa-7680-384-sign.gpg</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes128_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes128_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes128_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes128_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes128_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes128_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes128_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes128_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes192_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes192_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes192_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes192_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes192_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes192_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes192_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes192_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes256_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes256_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes256_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes256_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes256_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes256_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_aes256_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_aes256_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_blowfish_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_blowfish_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_blowfish_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_blowfish_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_blowfish_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_blowfish_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_blowfish_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_blowfish_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des1_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des1_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des1_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des1_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des1_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des1_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des1_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des1_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des2_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des2_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des2_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des2_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des2_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des2_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des2_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des2_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des3_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des3_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des3_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des3_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des3_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des3_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_des3_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_des3_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_128_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_128_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_128_cfb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_128_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_128_ecb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_128_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_128_ofb.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_128_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_40_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_40_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_rc2_64_cbc.pem">
+      <Link>data\openssl\dsa\openssl_dsa_rc2_64_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\dsa\openssl_dsa_unencrypted.pem">
+      <Link>data\openssl\dsa\openssl_dsa_unencrypted.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\eckey.pem">
+      <Link>data\openssl\eckey.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\enckey.pem">
+      <Link>data\openssl\enckey.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\pkcs7.pem">
+      <Link>data\openssl\pkcs7.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\pkcs8\openssl_pkcs8_rsa.pem">
+      <Link>data\openssl\pkcs8\openssl_pkcs8_rsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\pkcs8\openssl_pkcs8_rsa_enc.pem">
+      <Link>data\openssl\pkcs8\openssl_pkcs8_rsa_enc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\pkcs8test.pem">
+      <Link>data\openssl\pkcs8test.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes128_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes128_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes128_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes128_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes128_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes128_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes128_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes128_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes192_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes192_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes192_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes192_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes192_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes192_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes192_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes192_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes256_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes256_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes256_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes256_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes256_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes256_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_aes256_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_aes256_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_blowfish_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_blowfish_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_blowfish_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_blowfish_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_blowfish_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_blowfish_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_blowfish_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_blowfish_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des1_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des1_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des1_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des1_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des1_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des1_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des1_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des1_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des2_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des2_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des2_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des2_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des2_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des2_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des2_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des2_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des3_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des3_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des3_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des3_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des3_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des3_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_des3_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_des3_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_128_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_128_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_128_cfb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_128_cfb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_128_ecb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_128_ecb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_128_ofb.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_128_ofb.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_40_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_40_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_rc2_64_cbc.pem">
+      <Link>data\openssl\rsa\openssl_rsa_rc2_64_cbc.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\rsa\openssl_rsa_unencrypted.pem">
+      <Link>data\openssl\rsa\openssl_rsa_unencrypted.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\openssl\test.pem">
+      <Link>data\openssl\test.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\AllCertificatesanyPolicyTest11EE.crt">
+      <Link>data\PKITS\certs\AllCertificatesanyPolicyTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\AllCertificatesNoPoliciesTest2EE.crt">
+      <Link>data\PKITS\certs\AllCertificatesNoPoliciesTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\AllCertificatesSamePoliciesTest10EE.crt">
+      <Link>data\PKITS\certs\AllCertificatesSamePoliciesTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\AllCertificatesSamePoliciesTest13EE.crt">
+      <Link>data\PKITS\certs\AllCertificatesSamePoliciesTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\anyPolicyCACert.crt">
+      <Link>data\PKITS\certs\anyPolicyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\AnyPolicyTest14EE.crt">
+      <Link>data\PKITS\certs\AnyPolicyTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BadCRLIssuerNameCACert.crt">
+      <Link>data\PKITS\certs\BadCRLIssuerNameCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BadCRLSignatureCACert.crt">
+      <Link>data\PKITS\certs\BadCRLSignatureCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BadnotAfterDateCACert.crt">
+      <Link>data\PKITS\certs\BadnotAfterDateCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BadnotBeforeDateCACert.crt">
+      <Link>data\PKITS\certs\BadnotBeforeDateCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BadSignedCACert.crt">
+      <Link>data\PKITS\certs\BadSignedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\basicConstraintsCriticalcAFalseCACert.crt">
+      <Link>data\PKITS\certs\basicConstraintsCriticalcAFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\basicConstraintsNotCriticalCACert.crt">
+      <Link>data\PKITS\certs\basicConstraintsNotCriticalCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\basicConstraintsNotCriticalcAFalseCACert.crt">
+      <Link>data\PKITS\certs\basicConstraintsNotCriticalcAFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedCRLSigningKeyCACert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedCRLSigningKeyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedCRLSigningKeyCRLCert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedCRLSigningKeyCRLCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedNewKeyCACert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedNewKeyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedNewKeyOldWithNewCACert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedNewKeyOldWithNewCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedOldKeyCACert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedOldKeyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\BasicSelfIssuedOldKeyNewWithOldCACert.crt">
+      <Link>data\PKITS\certs\BasicSelfIssuedOldKeyNewWithOldCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\CPSPointerQualifierTest20EE.crt">
+      <Link>data\PKITS\certs\CPSPointerQualifierTest20EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\deltaCRLCA1Cert.crt">
+      <Link>data\PKITS\certs\deltaCRLCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\deltaCRLCA2Cert.crt">
+      <Link>data\PKITS\certs\deltaCRLCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\deltaCRLCA3Cert.crt">
+      <Link>data\PKITS\certs\deltaCRLCA3Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\deltaCRLIndicatorNoBaseCACert.crt">
+      <Link>data\PKITS\certs\deltaCRLIndicatorNoBaseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest12EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest3EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest4EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest5EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest7EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest8EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DifferentPoliciesTest9EE.crt">
+      <Link>data\PKITS\certs\DifferentPoliciesTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\distributionPoint1CACert.crt">
+      <Link>data\PKITS\certs\distributionPoint1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\distributionPoint2CACert.crt">
+      <Link>data\PKITS\certs\distributionPoint2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DSACACert.crt">
+      <Link>data\PKITS\certs\DSACACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\DSAParametersInheritedCACert.crt">
+      <Link>data\PKITS\certs\DSAParametersInheritedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\GeneralizedTimeCRLnextUpdateCACert.crt">
+      <Link>data\PKITS\certs\GeneralizedTimeCRLnextUpdateCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\GoodCACert.crt">
+      <Link>data\PKITS\certs\GoodCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\GoodsubCACert.crt">
+      <Link>data\PKITS\certs\GoodsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\GoodsubCAPanyPolicyMapping1to2CACert.crt">
+      <Link>data\PKITS\certs\GoodsubCAPanyPolicyMapping1to2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA1Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA2Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA3Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA3Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA3cRLIssuerCert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA3cRLIssuerCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA4Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA4Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA4cRLIssuerCert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA4cRLIssuerCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA5Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA5Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\indirectCRLCA6Cert.crt">
+      <Link>data\PKITS\certs\indirectCRLCA6Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy0CACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy0CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1CACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1SelfIssuedsubCA2Cert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1SelfIssuedsubCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1subCA1Cert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1subCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1subCA2Cert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1subCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1subCAIAP5Cert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1subCAIAP5Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy1subsubCA2Cert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy1subsubCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy5CACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy5CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy5subCACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy5subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicy5subsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicy5subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitAnyPolicyTest3EE.crt">
+      <Link>data\PKITS\certs\inhibitAnyPolicyTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping0CACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping0CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping0subCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping0subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P12CACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P12CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P12subCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P12subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P12subCAIPM5Cert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P12subCAIPM5Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P12subsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P12subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P12subsubCAIPM5Cert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P12subsubCAIPM5Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P1CACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P1SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P1SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P1SelfIssuedsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P1SelfIssuedsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P1subCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P1subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping1P1subsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping1P1subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping5CACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping5CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping5subCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping5subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping5subsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping5subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\inhibitPolicyMapping5subsubsubCACert.crt">
+      <Link>data\PKITS\certs\inhibitPolicyMapping5subsubsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBadCRLIssuerNameTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidBadCRLIssuerNameTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBadCRLSignatureTest4EE.crt">
+      <Link>data\PKITS\certs\InvalidBadCRLSignatureTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBasicSelfIssuedCRLSigningKeyTest7EE.crt">
+      <Link>data\PKITS\certs\InvalidBasicSelfIssuedCRLSigningKeyTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBasicSelfIssuedCRLSigningKeyTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidBasicSelfIssuedCRLSigningKeyTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBasicSelfIssuedNewWithOldTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidBasicSelfIssuedNewWithOldTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidBasicSelfIssuedOldWithNewTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidBasicSelfIssuedOldWithNewTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcAFalseTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidcAFalseTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcAFalseTest3EE.crt">
+      <Link>data\PKITS\certs\InvalidcAFalseTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidCAnotAfterDateTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidCAnotAfterDateTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidCAnotBeforeDateTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidCAnotBeforeDateTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidCASignatureTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidCASignatureTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcRLIssuerTest27EE.crt">
+      <Link>data\PKITS\certs\InvalidcRLIssuerTest27EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcRLIssuerTest31EE.crt">
+      <Link>data\PKITS\certs\InvalidcRLIssuerTest31EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcRLIssuerTest32EE.crt">
+      <Link>data\PKITS\certs\InvalidcRLIssuerTest32EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcRLIssuerTest34EE.crt">
+      <Link>data\PKITS\certs\InvalidcRLIssuerTest34EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidcRLIssuerTest35EE.crt">
+      <Link>data\PKITS\certs\InvalidcRLIssuerTest35EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLIndicatorNoBaseTest1EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLIndicatorNoBaseTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLTest10EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLTest3EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLTest4EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLTest6EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddeltaCRLTest9EE.crt">
+      <Link>data\PKITS\certs\InvaliddeltaCRLTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddistributionPointTest2EE.crt">
+      <Link>data\PKITS\certs\InvaliddistributionPointTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddistributionPointTest3EE.crt">
+      <Link>data\PKITS\certs\InvaliddistributionPointTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddistributionPointTest6EE.crt">
+      <Link>data\PKITS\certs\InvaliddistributionPointTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddistributionPointTest8EE.crt">
+      <Link>data\PKITS\certs\InvaliddistributionPointTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvaliddistributionPointTest9EE.crt">
+      <Link>data\PKITS\certs\InvaliddistributionPointTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNandRFC822nameConstraintsTest28EE.crt">
+      <Link>data\PKITS\certs\InvalidDNandRFC822nameConstraintsTest28EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNandRFC822nameConstraintsTest29EE.crt">
+      <Link>data\PKITS\certs\InvalidDNandRFC822nameConstraintsTest29EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest12EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest13EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest15EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest15EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest16EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest16EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest17EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest17EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest20EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest20EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest3EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest7EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNnameConstraintsTest9EE.crt">
+      <Link>data\PKITS\certs\InvalidDNnameConstraintsTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNSnameConstraintsTest31EE.crt">
+      <Link>data\PKITS\certs\InvalidDNSnameConstraintsTest31EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNSnameConstraintsTest33EE.crt">
+      <Link>data\PKITS\certs\InvalidDNSnameConstraintsTest33EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDNSnameConstraintsTest38EE.crt">
+      <Link>data\PKITS\certs\InvalidDNSnameConstraintsTest38EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidDSASignatureTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidDSASignatureTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidEEnotAfterDateTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidEEnotAfterDateTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidEEnotBeforeDateTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidEEnotBeforeDateTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidEESignatureTest3EE.crt">
+      <Link>data\PKITS\certs\InvalidEESignatureTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidIDPwithindirectCRLTest23EE.crt">
+      <Link>data\PKITS\certs\InvalidIDPwithindirectCRLTest23EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidIDPwithindirectCRLTest26EE.crt">
+      <Link>data\PKITS\certs\InvalidIDPwithindirectCRLTest26EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitAnyPolicyTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitAnyPolicyTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitAnyPolicyTest4EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitAnyPolicyTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitAnyPolicyTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitAnyPolicyTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitAnyPolicyTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitAnyPolicyTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitPolicyMappingTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitPolicyMappingTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitPolicyMappingTest3EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitPolicyMappingTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitPolicyMappingTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitPolicyMappingTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidinhibitPolicyMappingTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidinhibitPolicyMappingTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidkeyUsageCriticalcRLSignFalseTest4EE.crt">
+      <Link>data\PKITS\certs\InvalidkeyUsageCriticalcRLSignFalseTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidkeyUsageCriticalkeyCertSignFalseTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidkeyUsageCriticalkeyCertSignFalseTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidkeyUsageNotCriticalcRLSignFalseTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidkeyUsageNotCriticalcRLSignFalseTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidkeyUsageNotCriticalkeyCertSignFalseTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidkeyUsageNotCriticalkeyCertSignFalseTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidLongSerialNumberTest18EE.crt">
+      <Link>data\PKITS\certs\InvalidLongSerialNumberTest18EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidMappingFromanyPolicyTest7EE.crt">
+      <Link>data\PKITS\certs\InvalidMappingFromanyPolicyTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidMappingToanyPolicyTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidMappingToanyPolicyTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidMissingbasicConstraintsTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidMissingbasicConstraintsTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidMissingCRLTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidMissingCRLTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidNameChainingOrderTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidNameChainingOrderTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidNameChainingTest1EE.crt">
+      <Link>data\PKITS\certs\InvalidNameChainingTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidNegativeSerialNumberTest15EE.crt">
+      <Link>data\PKITS\certs\InvalidNegativeSerialNumberTest15EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidOldCRLnextUpdateTest11EE.crt">
+      <Link>data\PKITS\certs\InvalidOldCRLnextUpdateTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlyContainsAttributeCertsTest14EE.crt">
+      <Link>data\PKITS\certs\InvalidonlyContainsAttributeCertsTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlyContainsCACertsTest12EE.crt">
+      <Link>data\PKITS\certs\InvalidonlyContainsCACertsTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlyContainsUserCertsTest11EE.crt">
+      <Link>data\PKITS\certs\InvalidonlyContainsUserCertsTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlySomeReasonsTest15EE.crt">
+      <Link>data\PKITS\certs\InvalidonlySomeReasonsTest15EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlySomeReasonsTest16EE.crt">
+      <Link>data\PKITS\certs\InvalidonlySomeReasonsTest16EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlySomeReasonsTest17EE.crt">
+      <Link>data\PKITS\certs\InvalidonlySomeReasonsTest17EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlySomeReasonsTest20EE.crt">
+      <Link>data\PKITS\certs\InvalidonlySomeReasonsTest20EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidonlySomeReasonsTest21EE.crt">
+      <Link>data\PKITS\certs\InvalidonlySomeReasonsTest21EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest11EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest12EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidpathLenConstraintTest9EE.crt">
+      <Link>data\PKITS\certs\InvalidpathLenConstraintTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidPolicyMappingTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidPolicyMappingTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidPolicyMappingTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidPolicyMappingTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidPolicyMappingTest4EE.crt">
+      <Link>data\PKITS\certs\InvalidPolicyMappingTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\Invalidpre2000CRLnextUpdateTest12EE.crt">
+      <Link>data\PKITS\certs\Invalidpre2000CRLnextUpdateTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\Invalidpre2000UTCEEnotAfterDateTest7EE.crt">
+      <Link>data\PKITS\certs\Invalidpre2000UTCEEnotAfterDateTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidrequireExplicitPolicyTest3EE.crt">
+      <Link>data\PKITS\certs\InvalidrequireExplicitPolicyTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidrequireExplicitPolicyTest5EE.crt">
+      <Link>data\PKITS\certs\InvalidrequireExplicitPolicyTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidRevokedCATest2EE.crt">
+      <Link>data\PKITS\certs\InvalidRevokedCATest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidRevokedEETest3EE.crt">
+      <Link>data\PKITS\certs\InvalidRevokedEETest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidRFC822nameConstraintsTest22EE.crt">
+      <Link>data\PKITS\certs\InvalidRFC822nameConstraintsTest22EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidRFC822nameConstraintsTest24EE.crt">
+      <Link>data\PKITS\certs\InvalidRFC822nameConstraintsTest24EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidRFC822nameConstraintsTest26EE.crt">
+      <Link>data\PKITS\certs\InvalidRFC822nameConstraintsTest26EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitAnyPolicyTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitAnyPolicyTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitAnyPolicyTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitAnyPolicyTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitPolicyMappingTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitPolicyMappingTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitPolicyMappingTest11EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitPolicyMappingTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitPolicyMappingTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitPolicyMappingTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedinhibitPolicyMappingTest9EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedinhibitPolicyMappingTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedpathLenConstraintTest16EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedpathLenConstraintTest16EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedrequireExplicitPolicyTest7EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedrequireExplicitPolicyTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSelfIssuedrequireExplicitPolicyTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidSelfIssuedrequireExplicitPolicyTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSeparateCertificateandCRLKeysTest20EE.crt">
+      <Link>data\PKITS\certs\InvalidSeparateCertificateandCRLKeysTest20EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidSeparateCertificateandCRLKeysTest21EE.crt">
+      <Link>data\PKITS\certs\InvalidSeparateCertificateandCRLKeysTest21EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidUnknownCriticalCertificateExtensionTest2EE.crt">
+      <Link>data\PKITS\certs\InvalidUnknownCriticalCertificateExtensionTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidUnknownCRLEntryExtensionTest8EE.crt">
+      <Link>data\PKITS\certs\InvalidUnknownCRLEntryExtensionTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidUnknownCRLExtensionTest10EE.crt">
+      <Link>data\PKITS\certs\InvalidUnknownCRLExtensionTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidUnknownCRLExtensionTest9EE.crt">
+      <Link>data\PKITS\certs\InvalidUnknownCRLExtensionTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidURInameConstraintsTest35EE.crt">
+      <Link>data\PKITS\certs\InvalidURInameConstraintsTest35EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidURInameConstraintsTest37EE.crt">
+      <Link>data\PKITS\certs\InvalidURInameConstraintsTest37EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\InvalidWrongCRLTest6EE.crt">
+      <Link>data\PKITS\certs\InvalidWrongCRLTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\keyUsageCriticalcRLSignFalseCACert.crt">
+      <Link>data\PKITS\certs\keyUsageCriticalcRLSignFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\keyUsageCriticalkeyCertSignFalseCACert.crt">
+      <Link>data\PKITS\certs\keyUsageCriticalkeyCertSignFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\keyUsageNotCriticalCACert.crt">
+      <Link>data\PKITS\certs\keyUsageNotCriticalCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\keyUsageNotCriticalcRLSignFalseCACert.crt">
+      <Link>data\PKITS\certs\keyUsageNotCriticalcRLSignFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\keyUsageNotCriticalkeyCertSignFalseCACert.crt">
+      <Link>data\PKITS\certs\keyUsageNotCriticalkeyCertSignFalseCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\LongSerialNumberCACert.crt">
+      <Link>data\PKITS\certs\LongSerialNumberCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\Mapping1to2CACert.crt">
+      <Link>data\PKITS\certs\Mapping1to2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\MappingFromanyPolicyCACert.crt">
+      <Link>data\PKITS\certs\MappingFromanyPolicyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\MappingToanyPolicyCACert.crt">
+      <Link>data\PKITS\certs\MappingToanyPolicyCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\MissingbasicConstraintsCACert.crt">
+      <Link>data\PKITS\certs\MissingbasicConstraintsCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN1CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN1SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN1SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN1subCA1Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN1subCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN1subCA2Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN1subCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN1subCA3Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN1subCA3Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN2CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN3CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN3CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN3subCA1Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN3subCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN3subCA2Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN3subCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN4CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN4CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDN5CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDN5CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDNS1CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDNS1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsDNS2CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsDNS2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsRFC822CA1Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsRFC822CA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsRFC822CA2Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsRFC822CA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsRFC822CA3Cert.crt">
+      <Link>data\PKITS\certs\nameConstraintsRFC822CA3Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsURI1CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsURI1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\nameConstraintsURI2CACert.crt">
+      <Link>data\PKITS\certs\nameConstraintsURI2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\NameOrderingCACert.crt">
+      <Link>data\PKITS\certs\NameOrderingCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\NegativeSerialNumberCACert.crt">
+      <Link>data\PKITS\certs\NegativeSerialNumberCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\NoCRLCACert.crt">
+      <Link>data\PKITS\certs\NoCRLCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\NoissuingDistributionPointCACert.crt">
+      <Link>data\PKITS\certs\NoissuingDistributionPointCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\NoPoliciesCACert.crt">
+      <Link>data\PKITS\certs\NoPoliciesCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\OldCRLnextUpdateCACert.crt">
+      <Link>data\PKITS\certs\OldCRLnextUpdateCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlyContainsAttributeCertsCACert.crt">
+      <Link>data\PKITS\certs\onlyContainsAttributeCertsCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlyContainsCACertsCACert.crt">
+      <Link>data\PKITS\certs\onlyContainsCACertsCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlyContainsUserCertsCACert.crt">
+      <Link>data\PKITS\certs\onlyContainsUserCertsCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlySomeReasonsCA1Cert.crt">
+      <Link>data\PKITS\certs\onlySomeReasonsCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlySomeReasonsCA2Cert.crt">
+      <Link>data\PKITS\certs\onlySomeReasonsCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlySomeReasonsCA3Cert.crt">
+      <Link>data\PKITS\certs\onlySomeReasonsCA3Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\onlySomeReasonsCA4Cert.crt">
+      <Link>data\PKITS\certs\onlySomeReasonsCA4Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\OverlappingPoliciesTest6EE.crt">
+      <Link>data\PKITS\certs\OverlappingPoliciesTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P12Mapping1to3CACert.crt">
+      <Link>data\PKITS\certs\P12Mapping1to3CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P12Mapping1to3subCACert.crt">
+      <Link>data\PKITS\certs\P12Mapping1to3subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P12Mapping1to3subsubCACert.crt">
+      <Link>data\PKITS\certs\P12Mapping1to3subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P1anyPolicyMapping1to2CACert.crt">
+      <Link>data\PKITS\certs\P1anyPolicyMapping1to2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P1Mapping1to234CACert.crt">
+      <Link>data\PKITS\certs\P1Mapping1to234CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\P1Mapping1to234subCACert.crt">
+      <Link>data\PKITS\certs\P1Mapping1to234subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PanyPolicyMapping1to2CACert.crt">
+      <Link>data\PKITS\certs\PanyPolicyMapping1to2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint0CACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint0CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint0SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint0SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint0subCA2Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint0subCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint0subCACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint0subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint1CACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint1CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint1SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint1SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint1SelfIssuedsubCACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint1SelfIssuedsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint1subCACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint1subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6CACert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subCA0Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subCA0Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subCA1Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subCA1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subCA4Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subCA4Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subsubCA00Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subsubCA00Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subsubCA11Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subsubCA11Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subsubCA41Cert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subsubCA41Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subsubsubCA11XCert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subsubsubCA11XCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pathLenConstraint6subsubsubCA41XCert.crt">
+      <Link>data\PKITS\certs\pathLenConstraint6subsubsubCA41XCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP1234CACert.crt">
+      <Link>data\PKITS\certs\PoliciesP1234CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP1234subCAP123Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP1234subCAP123Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP1234subsubCAP123P12Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP1234subsubCAP123P12Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP123CACert.crt">
+      <Link>data\PKITS\certs\PoliciesP123CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP123subCAP12Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP123subCAP12Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP123subsubCAP12P1Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP123subsubCAP12P1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP123subsubCAP12P2Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP123subsubCAP12P2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP123subsubsubCAP12P2P1Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP123subsubsubCAP12P2P1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP12CACert.crt">
+      <Link>data\PKITS\certs\PoliciesP12CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP12subCAP1Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP12subCAP1Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP12subsubCAP1P2Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP12subsubCAP1P2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP2subCA2Cert.crt">
+      <Link>data\PKITS\certs\PoliciesP2subCA2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP2subCACert.crt">
+      <Link>data\PKITS\certs\PoliciesP2subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\PoliciesP3CACert.crt">
+      <Link>data\PKITS\certs\PoliciesP3CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\pre2000CRLnextUpdateCACert.crt">
+      <Link>data\PKITS\certs\pre2000CRLnextUpdateCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy0CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy0CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy0subCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy0subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy0subsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy0subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy0subsubsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy0subsubsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy10CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy10CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy10subCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy10subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy10subsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy10subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy10subsubsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy10subsubsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy2CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy2CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy2SelfIssuedCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy2SelfIssuedCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy2SelfIssuedsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy2SelfIssuedsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy2subCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy2subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy4CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy4CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy4subCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy4subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy4subsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy4subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy4subsubsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy4subsubsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy5CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy5CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy5subCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy5subCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy5subsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy5subsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy5subsubsubCACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy5subsubsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy7CACert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy7CACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy7subCARE2Cert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy7subCARE2Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy7subsubCARE2RE4Cert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy7subsubCARE2RE4Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\requireExplicitPolicy7subsubsubCARE2RE4Cert.crt">
+      <Link>data\PKITS\certs\requireExplicitPolicy7subsubsubCARE2RE4Cert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\RevokedsubCACert.crt">
+      <Link>data\PKITS\certs\RevokedsubCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\RFC3280MandatoryAttributeTypesCACert.crt">
+      <Link>data\PKITS\certs\RFC3280MandatoryAttributeTypesCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\RFC3280OptionalAttributeTypesCACert.crt">
+      <Link>data\PKITS\certs\RFC3280OptionalAttributeTypesCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\RolloverfromPrintableStringtoUTF8StringCACert.crt">
+      <Link>data\PKITS\certs\RolloverfromPrintableStringtoUTF8StringCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\SeparateCertificateandCRLKeysCA2CertificateSigningCACert.crt">
+      <Link>data\PKITS\certs\SeparateCertificateandCRLKeysCA2CertificateSigningCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\SeparateCertificateandCRLKeysCA2CRLSigningCert.crt">
+      <Link>data\PKITS\certs\SeparateCertificateandCRLKeysCA2CRLSigningCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\SeparateCertificateandCRLKeysCertificateSigningCACert.crt">
+      <Link>data\PKITS\certs\SeparateCertificateandCRLKeysCertificateSigningCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\SeparateCertificateandCRLKeysCRLSigningCert.crt">
+      <Link>data\PKITS\certs\SeparateCertificateandCRLKeysCRLSigningCert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\TrustAnchorRootCertificate.crt">
+      <Link>data\PKITS\certs\TrustAnchorRootCertificate.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\TwoCRLsCACert.crt">
+      <Link>data\PKITS\certs\TwoCRLsCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UIDCACert.crt">
+      <Link>data\PKITS\certs\UIDCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UnknownCRLEntryExtensionCACert.crt">
+      <Link>data\PKITS\certs\UnknownCRLEntryExtensionCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UnknownCRLExtensionCACert.crt">
+      <Link>data\PKITS\certs\UnknownCRLExtensionCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UserNoticeQualifierTest15EE.crt">
+      <Link>data\PKITS\certs\UserNoticeQualifierTest15EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UserNoticeQualifierTest16EE.crt">
+      <Link>data\PKITS\certs\UserNoticeQualifierTest16EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UserNoticeQualifierTest17EE.crt">
+      <Link>data\PKITS\certs\UserNoticeQualifierTest17EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UserNoticeQualifierTest18EE.crt">
+      <Link>data\PKITS\certs\UserNoticeQualifierTest18EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UserNoticeQualifierTest19EE.crt">
+      <Link>data\PKITS\certs\UserNoticeQualifierTest19EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UTF8StringCaseInsensitiveMatchCACert.crt">
+      <Link>data\PKITS\certs\UTF8StringCaseInsensitiveMatchCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\UTF8StringEncodedNamesCACert.crt">
+      <Link>data\PKITS\certs\UTF8StringEncodedNamesCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidbasicConstraintsNotCriticalTest4EE.crt">
+      <Link>data\PKITS\certs\ValidbasicConstraintsNotCriticalTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidBasicSelfIssuedCRLSigningKeyTest6EE.crt">
+      <Link>data\PKITS\certs\ValidBasicSelfIssuedCRLSigningKeyTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidBasicSelfIssuedNewWithOldTest3EE.crt">
+      <Link>data\PKITS\certs\ValidBasicSelfIssuedNewWithOldTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidBasicSelfIssuedNewWithOldTest4EE.crt">
+      <Link>data\PKITS\certs\ValidBasicSelfIssuedNewWithOldTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidBasicSelfIssuedOldWithNewTest1EE.crt">
+      <Link>data\PKITS\certs\ValidBasicSelfIssuedOldWithNewTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidCertificatePathTest1EE.crt">
+      <Link>data\PKITS\certs\ValidCertificatePathTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidcRLIssuerTest28EE.crt">
+      <Link>data\PKITS\certs\ValidcRLIssuerTest28EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidcRLIssuerTest29EE.crt">
+      <Link>data\PKITS\certs\ValidcRLIssuerTest29EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidcRLIssuerTest30EE.crt">
+      <Link>data\PKITS\certs\ValidcRLIssuerTest30EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidcRLIssuerTest33EE.crt">
+      <Link>data\PKITS\certs\ValidcRLIssuerTest33EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddeltaCRLTest2EE.crt">
+      <Link>data\PKITS\certs\ValiddeltaCRLTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddeltaCRLTest5EE.crt">
+      <Link>data\PKITS\certs\ValiddeltaCRLTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddeltaCRLTest7EE.crt">
+      <Link>data\PKITS\certs\ValiddeltaCRLTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddeltaCRLTest8EE.crt">
+      <Link>data\PKITS\certs\ValiddeltaCRLTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddistributionPointTest1EE.crt">
+      <Link>data\PKITS\certs\ValiddistributionPointTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddistributionPointTest4EE.crt">
+      <Link>data\PKITS\certs\ValiddistributionPointTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddistributionPointTest5EE.crt">
+      <Link>data\PKITS\certs\ValiddistributionPointTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValiddistributionPointTest7EE.crt">
+      <Link>data\PKITS\certs\ValiddistributionPointTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNandRFC822nameConstraintsTest27EE.crt">
+      <Link>data\PKITS\certs\ValidDNandRFC822nameConstraintsTest27EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest11EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest14EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest18EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest18EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest19EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest19EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest1EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest4EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest5EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNnameConstraintsTest6EE.crt">
+      <Link>data\PKITS\certs\ValidDNnameConstraintsTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNSnameConstraintsTest30EE.crt">
+      <Link>data\PKITS\certs\ValidDNSnameConstraintsTest30EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDNSnameConstraintsTest32EE.crt">
+      <Link>data\PKITS\certs\ValidDNSnameConstraintsTest32EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDSAParameterInheritanceTest5EE.crt">
+      <Link>data\PKITS\certs\ValidDSAParameterInheritanceTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidDSASignaturesTest4EE.crt">
+      <Link>data\PKITS\certs\ValidDSASignaturesTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidGeneralizedTimeCRLnextUpdateTest13EE.crt">
+      <Link>data\PKITS\certs\ValidGeneralizedTimeCRLnextUpdateTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidGeneralizedTimenotAfterDateTest8EE.crt">
+      <Link>data\PKITS\certs\ValidGeneralizedTimenotAfterDateTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidGeneralizedTimenotBeforeDateTest4EE.crt">
+      <Link>data\PKITS\certs\ValidGeneralizedTimenotBeforeDateTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidIDPwithindirectCRLTest22EE.crt">
+      <Link>data\PKITS\certs\ValidIDPwithindirectCRLTest22EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidIDPwithindirectCRLTest24EE.crt">
+      <Link>data\PKITS\certs\ValidIDPwithindirectCRLTest24EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidIDPwithindirectCRLTest25EE.crt">
+      <Link>data\PKITS\certs\ValidIDPwithindirectCRLTest25EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidinhibitAnyPolicyTest2EE.crt">
+      <Link>data\PKITS\certs\ValidinhibitAnyPolicyTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidinhibitPolicyMappingTest2EE.crt">
+      <Link>data\PKITS\certs\ValidinhibitPolicyMappingTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidinhibitPolicyMappingTest4EE.crt">
+      <Link>data\PKITS\certs\ValidinhibitPolicyMappingTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidkeyUsageNotCriticalTest3EE.crt">
+      <Link>data\PKITS\certs\ValidkeyUsageNotCriticalTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidLongSerialNumberTest16EE.crt">
+      <Link>data\PKITS\certs\ValidLongSerialNumberTest16EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidLongSerialNumberTest17EE.crt">
+      <Link>data\PKITS\certs\ValidLongSerialNumberTest17EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNameChainingCapitalizationTest5EE.crt">
+      <Link>data\PKITS\certs\ValidNameChainingCapitalizationTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNameChainingWhitespaceTest3EE.crt">
+      <Link>data\PKITS\certs\ValidNameChainingWhitespaceTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNameChainingWhitespaceTest4EE.crt">
+      <Link>data\PKITS\certs\ValidNameChainingWhitespaceTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNameUIDsTest6EE.crt">
+      <Link>data\PKITS\certs\ValidNameUIDsTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNegativeSerialNumberTest14EE.crt">
+      <Link>data\PKITS\certs\ValidNegativeSerialNumberTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidNoissuingDistributionPointTest10EE.crt">
+      <Link>data\PKITS\certs\ValidNoissuingDistributionPointTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidonlyContainsCACertsTest13EE.crt">
+      <Link>data\PKITS\certs\ValidonlyContainsCACertsTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidonlySomeReasonsTest18EE.crt">
+      <Link>data\PKITS\certs\ValidonlySomeReasonsTest18EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidonlySomeReasonsTest19EE.crt">
+      <Link>data\PKITS\certs\ValidonlySomeReasonsTest19EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidpathLenConstraintTest13EE.crt">
+      <Link>data\PKITS\certs\ValidpathLenConstraintTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidpathLenConstraintTest14EE.crt">
+      <Link>data\PKITS\certs\ValidpathLenConstraintTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidpathLenConstraintTest7EE.crt">
+      <Link>data\PKITS\certs\ValidpathLenConstraintTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidpathLenConstraintTest8EE.crt">
+      <Link>data\PKITS\certs\ValidpathLenConstraintTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest11EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest12EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest12EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest13EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest13EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest14EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest14EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest1EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest3EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest5EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest5EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest6EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidPolicyMappingTest9EE.crt">
+      <Link>data\PKITS\certs\ValidPolicyMappingTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\Validpre2000UTCnotBeforeDateTest3EE.crt">
+      <Link>data\PKITS\certs\Validpre2000UTCnotBeforeDateTest3EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidrequireExplicitPolicyTest1EE.crt">
+      <Link>data\PKITS\certs\ValidrequireExplicitPolicyTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidrequireExplicitPolicyTest2EE.crt">
+      <Link>data\PKITS\certs\ValidrequireExplicitPolicyTest2EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidrequireExplicitPolicyTest4EE.crt">
+      <Link>data\PKITS\certs\ValidrequireExplicitPolicyTest4EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRFC3280MandatoryAttributeTypesTest7EE.crt">
+      <Link>data\PKITS\certs\ValidRFC3280MandatoryAttributeTypesTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRFC3280OptionalAttributeTypesTest8EE.crt">
+      <Link>data\PKITS\certs\ValidRFC3280OptionalAttributeTypesTest8EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRFC822nameConstraintsTest21EE.crt">
+      <Link>data\PKITS\certs\ValidRFC822nameConstraintsTest21EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRFC822nameConstraintsTest23EE.crt">
+      <Link>data\PKITS\certs\ValidRFC822nameConstraintsTest23EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRFC822nameConstraintsTest25EE.crt">
+      <Link>data\PKITS\certs\ValidRFC822nameConstraintsTest25EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidRolloverfromPrintableStringtoUTF8StringTest10EE.crt">
+      <Link>data\PKITS\certs\ValidRolloverfromPrintableStringtoUTF8StringTest10EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedinhibitAnyPolicyTest7EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedinhibitAnyPolicyTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedinhibitAnyPolicyTest9EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedinhibitAnyPolicyTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedinhibitPolicyMappingTest7EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedinhibitPolicyMappingTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedpathLenConstraintTest15EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedpathLenConstraintTest15EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedpathLenConstraintTest17EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedpathLenConstraintTest17EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSelfIssuedrequireExplicitPolicyTest6EE.crt">
+      <Link>data\PKITS\certs\ValidSelfIssuedrequireExplicitPolicyTest6EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidSeparateCertificateandCRLKeysTest19EE.crt">
+      <Link>data\PKITS\certs\ValidSeparateCertificateandCRLKeysTest19EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidTwoCRLsTest7EE.crt">
+      <Link>data\PKITS\certs\ValidTwoCRLsTest7EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidUnknownNotCriticalCertificateExtensionTest1EE.crt">
+      <Link>data\PKITS\certs\ValidUnknownNotCriticalCertificateExtensionTest1EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidURInameConstraintsTest34EE.crt">
+      <Link>data\PKITS\certs\ValidURInameConstraintsTest34EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidURInameConstraintsTest36EE.crt">
+      <Link>data\PKITS\certs\ValidURInameConstraintsTest36EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidUTF8StringCaseInsensitiveMatchTest11EE.crt">
+      <Link>data\PKITS\certs\ValidUTF8StringCaseInsensitiveMatchTest11EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\ValidUTF8StringEncodedNamesTest9EE.crt">
+      <Link>data\PKITS\certs\ValidUTF8StringEncodedNamesTest9EE.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\certs\WrongCRLCACert.crt">
+      <Link>data\PKITS\certs\WrongCRLCACert.crt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\anyPolicyCACRL.crl">
+      <Link>data\PKITS\crls\anyPolicyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BadCRLIssuerNameCACRL.crl">
+      <Link>data\PKITS\crls\BadCRLIssuerNameCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BadCRLSignatureCACRL.crl">
+      <Link>data\PKITS\crls\BadCRLSignatureCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BadnotAfterDateCACRL.crl">
+      <Link>data\PKITS\crls\BadnotAfterDateCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BadnotBeforeDateCACRL.crl">
+      <Link>data\PKITS\crls\BadnotBeforeDateCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BadSignedCACRL.crl">
+      <Link>data\PKITS\crls\BadSignedCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\basicConstraintsCriticalcAFalseCACRL.crl">
+      <Link>data\PKITS\crls\basicConstraintsCriticalcAFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\basicConstraintsNotCriticalCACRL.crl">
+      <Link>data\PKITS\crls\basicConstraintsNotCriticalCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\basicConstraintsNotCriticalcAFalseCACRL.crl">
+      <Link>data\PKITS\crls\basicConstraintsNotCriticalcAFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BasicSelfIssuedCRLSigningKeyCACRL.crl">
+      <Link>data\PKITS\crls\BasicSelfIssuedCRLSigningKeyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BasicSelfIssuedCRLSigningKeyCRLCertCRL.crl">
+      <Link>data\PKITS\crls\BasicSelfIssuedCRLSigningKeyCRLCertCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BasicSelfIssuedNewKeyCACRL.crl">
+      <Link>data\PKITS\crls\BasicSelfIssuedNewKeyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BasicSelfIssuedOldKeyCACRL.crl">
+      <Link>data\PKITS\crls\BasicSelfIssuedOldKeyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\BasicSelfIssuedOldKeySelfIssuedCertCRL.crl">
+      <Link>data\PKITS\crls\BasicSelfIssuedOldKeySelfIssuedCertCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA1CRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA1deltaCRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA1deltaCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA2CRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA2deltaCRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA2deltaCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA3CRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA3CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLCA3deltaCRL.crl">
+      <Link>data\PKITS\crls\deltaCRLCA3deltaCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\deltaCRLIndicatorNoBaseCACRL.crl">
+      <Link>data\PKITS\crls\deltaCRLIndicatorNoBaseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\distributionPoint1CACRL.crl">
+      <Link>data\PKITS\crls\distributionPoint1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\distributionPoint2CACRL.crl">
+      <Link>data\PKITS\crls\distributionPoint2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\DSACACRL.crl">
+      <Link>data\PKITS\crls\DSACACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\DSAParametersInheritedCACRL.crl">
+      <Link>data\PKITS\crls\DSAParametersInheritedCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\GeneralizedTimeCRLnextUpdateCACRL.crl">
+      <Link>data\PKITS\crls\GeneralizedTimeCRLnextUpdateCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\GoodCACRL.crl">
+      <Link>data\PKITS\crls\GoodCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\GoodsubCACRL.crl">
+      <Link>data\PKITS\crls\GoodsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\GoodsubCAPanyPolicyMapping1to2CACRL.crl">
+      <Link>data\PKITS\crls\GoodsubCAPanyPolicyMapping1to2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\indirectCRLCA1CRL.crl">
+      <Link>data\PKITS\crls\indirectCRLCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\indirectCRLCA3CRL.crl">
+      <Link>data\PKITS\crls\indirectCRLCA3CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\indirectCRLCA3cRLIssuerCRL.crl">
+      <Link>data\PKITS\crls\indirectCRLCA3cRLIssuerCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\indirectCRLCA4cRLIssuerCRL.crl">
+      <Link>data\PKITS\crls\indirectCRLCA4cRLIssuerCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\indirectCRLCA5CRL.crl">
+      <Link>data\PKITS\crls\indirectCRLCA5CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy0CACRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy0CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy1CACRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy1subCA1CRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy1subCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy1subCA2CRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy1subCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy1subCAIAP5CRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy1subCAIAP5CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy1subsubCA2CRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy1subsubCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy5CACRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy5CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy5subCACRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy5subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitAnyPolicy5subsubCACRL.crl">
+      <Link>data\PKITS\crls\inhibitAnyPolicy5subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping0CACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping0CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping0subCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping0subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P12CACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P12CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P12subCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P12subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P12subCAIPM5CRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P12subCAIPM5CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P12subsubCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P12subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P12subsubCAIPM5CRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P12subsubCAIPM5CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P1CACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P1subCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P1subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping1P1subsubCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping1P1subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping5CACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping5CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping5subCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping5subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping5subsubCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping5subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\inhibitPolicyMapping5subsubsubCACRL.crl">
+      <Link>data\PKITS\crls\inhibitPolicyMapping5subsubsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\keyUsageCriticalcRLSignFalseCACRL.crl">
+      <Link>data\PKITS\crls\keyUsageCriticalcRLSignFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\keyUsageCriticalkeyCertSignFalseCACRL.crl">
+      <Link>data\PKITS\crls\keyUsageCriticalkeyCertSignFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\keyUsageNotCriticalCACRL.crl">
+      <Link>data\PKITS\crls\keyUsageNotCriticalCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\keyUsageNotCriticalcRLSignFalseCACRL.crl">
+      <Link>data\PKITS\crls\keyUsageNotCriticalcRLSignFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\keyUsageNotCriticalkeyCertSignFalseCACRL.crl">
+      <Link>data\PKITS\crls\keyUsageNotCriticalkeyCertSignFalseCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\LongSerialNumberCACRL.crl">
+      <Link>data\PKITS\crls\LongSerialNumberCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\Mapping1to2CACRL.crl">
+      <Link>data\PKITS\crls\Mapping1to2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\MappingFromanyPolicyCACRL.crl">
+      <Link>data\PKITS\crls\MappingFromanyPolicyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\MappingToanyPolicyCACRL.crl">
+      <Link>data\PKITS\crls\MappingToanyPolicyCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\MissingbasicConstraintsCACRL.crl">
+      <Link>data\PKITS\crls\MissingbasicConstraintsCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN1CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN1subCA1CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN1subCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN1subCA2CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN1subCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN1subCA3CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN1subCA3CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN2CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN3CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN3CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN3subCA1CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN3subCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN3subCA2CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN3subCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN4CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN4CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDN5CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDN5CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDNS1CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDNS1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsDNS2CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsDNS2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsRFC822CA1CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsRFC822CA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsRFC822CA2CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsRFC822CA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsRFC822CA3CRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsRFC822CA3CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsURI1CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsURI1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\nameConstraintsURI2CACRL.crl">
+      <Link>data\PKITS\crls\nameConstraintsURI2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\NameOrderCACRL.crl">
+      <Link>data\PKITS\crls\NameOrderCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\NegativeSerialNumberCACRL.crl">
+      <Link>data\PKITS\crls\NegativeSerialNumberCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\NoissuingDistributionPointCACRL.crl">
+      <Link>data\PKITS\crls\NoissuingDistributionPointCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\NoPoliciesCACRL.crl">
+      <Link>data\PKITS\crls\NoPoliciesCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\OldCRLnextUpdateCACRL.crl">
+      <Link>data\PKITS\crls\OldCRLnextUpdateCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlyContainsAttributeCertsCACRL.crl">
+      <Link>data\PKITS\crls\onlyContainsAttributeCertsCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlyContainsCACertsCACRL.crl">
+      <Link>data\PKITS\crls\onlyContainsCACertsCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlyContainsUserCertsCACRL.crl">
+      <Link>data\PKITS\crls\onlyContainsUserCertsCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA1compromiseCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA1compromiseCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA1otherreasonsCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA1otherreasonsCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA2CRL1.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA2CRL1.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA2CRL2.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA2CRL2.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA3compromiseCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA3compromiseCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA3otherreasonsCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA3otherreasonsCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA4compromiseCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA4compromiseCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\onlySomeReasonsCA4otherreasonsCRL.crl">
+      <Link>data\PKITS\crls\onlySomeReasonsCA4otherreasonsCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P12Mapping1to3CACRL.crl">
+      <Link>data\PKITS\crls\P12Mapping1to3CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P12Mapping1to3subCACRL.crl">
+      <Link>data\PKITS\crls\P12Mapping1to3subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P12Mapping1to3subsubCACRL.crl">
+      <Link>data\PKITS\crls\P12Mapping1to3subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P1anyPolicyMapping1to2CACRL.crl">
+      <Link>data\PKITS\crls\P1anyPolicyMapping1to2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P1Mapping1to234CACRL.crl">
+      <Link>data\PKITS\crls\P1Mapping1to234CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\P1Mapping1to234subCACRL.crl">
+      <Link>data\PKITS\crls\P1Mapping1to234subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PanyPolicyMapping1to2CACRL.crl">
+      <Link>data\PKITS\crls\PanyPolicyMapping1to2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint0CACRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint0CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint0subCA2CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint0subCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint0subCACRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint0subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint1CACRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint1CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint1subCACRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint1subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6CACRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subCA0CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subCA0CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subCA1CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subCA1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subCA4CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subCA4CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subsubCA00CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subsubCA00CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subsubCA11CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subsubCA11CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subsubCA41CRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subsubCA41CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subsubsubCA11XCRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subsubsubCA11XCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pathLenConstraint6subsubsubCA41XCRL.crl">
+      <Link>data\PKITS\crls\pathLenConstraint6subsubsubCA41XCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP1234CACRL.crl">
+      <Link>data\PKITS\crls\PoliciesP1234CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP1234subCAP123CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP1234subCAP123CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP1234subsubCAP123P12CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP1234subsubCAP123P12CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP123CACRL.crl">
+      <Link>data\PKITS\crls\PoliciesP123CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP123subCAP12CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP123subCAP12CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP123subsubCAP12P1CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP123subsubCAP12P1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP123subsubCAP2P2CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP123subsubCAP2P2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP123subsubsubCAP12P2P1CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP123subsubsubCAP12P2P1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP12CACRL.crl">
+      <Link>data\PKITS\crls\PoliciesP12CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP12subCAP1CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP12subCAP1CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP12subsubCAP1P2CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP12subsubCAP1P2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP2subCA2CRL.crl">
+      <Link>data\PKITS\crls\PoliciesP2subCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP2subCACRL.crl">
+      <Link>data\PKITS\crls\PoliciesP2subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\PoliciesP3CACRL.crl">
+      <Link>data\PKITS\crls\PoliciesP3CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\pre2000CRLnextUpdateCACRL.crl">
+      <Link>data\PKITS\crls\pre2000CRLnextUpdateCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy0CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy0CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy0subCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy0subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy0subsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy0subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy0subsubsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy0subsubsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy10CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy10CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy10subCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy10subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy10subsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy10subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy10subsubsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy10subsubsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy2CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy2CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy2subCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy2subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy4CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy4CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy4subCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy4subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy4subsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy4subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy4subsubsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy4subsubsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy5CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy5CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy5subCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy5subCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy5subsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy5subsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy5subsubsubCACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy5subsubsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy7CACRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy7CACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy7subCARE2CRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy7subCARE2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy7subsubCARE2RE4CRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy7subsubCARE2RE4CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\requireExplicitPolicy7subsubsubCARE2RE4CRL.crl">
+      <Link>data\PKITS\crls\requireExplicitPolicy7subsubsubCARE2RE4CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\RevokedsubCACRL.crl">
+      <Link>data\PKITS\crls\RevokedsubCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\RFC3280MandatoryAttributeTypesCACRL.crl">
+      <Link>data\PKITS\crls\RFC3280MandatoryAttributeTypesCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\RFC3280OptionalAttributeTypesCACRL.crl">
+      <Link>data\PKITS\crls\RFC3280OptionalAttributeTypesCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\RolloverfromPrintableStringtoUTF8StringCACRL.crl">
+      <Link>data\PKITS\crls\RolloverfromPrintableStringtoUTF8StringCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\SeparateCertificateandCRLKeysCA2CRL.crl">
+      <Link>data\PKITS\crls\SeparateCertificateandCRLKeysCA2CRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\SeparateCertificateandCRLKeysCRL.crl">
+      <Link>data\PKITS\crls\SeparateCertificateandCRLKeysCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\TrustAnchorRootCRL.crl">
+      <Link>data\PKITS\crls\TrustAnchorRootCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\TwoCRLsCABadCRL.crl">
+      <Link>data\PKITS\crls\TwoCRLsCABadCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\TwoCRLsCAGoodCRL.crl">
+      <Link>data\PKITS\crls\TwoCRLsCAGoodCRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\UIDCACRL.crl">
+      <Link>data\PKITS\crls\UIDCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\UnknownCRLEntryExtensionCACRL.crl">
+      <Link>data\PKITS\crls\UnknownCRLEntryExtensionCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\UnknownCRLExtensionCACRL.crl">
+      <Link>data\PKITS\crls\UnknownCRLExtensionCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\UTF8StringCaseInsensitiveMatchCACRL.crl">
+      <Link>data\PKITS\crls\UTF8StringCaseInsensitiveMatchCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\UTF8StringEncodedNamesCACRL.crl">
+      <Link>data\PKITS\crls\UTF8StringEncodedNamesCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\pkits\crls\WrongCRLCACRL.crl">
+      <Link>data\PKITS\crls\WrongCRLCACRL.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\3.1.bin">
+      <Link>data\rfc4134\3.1.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\3.2.bin">
+      <Link>data\rfc4134\3.2.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.1.bin">
+      <Link>data\rfc4134\4.1.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.10.bin">
+      <Link>data\rfc4134\4.10.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.11.bin">
+      <Link>data\rfc4134\4.11.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.2.bin">
+      <Link>data\rfc4134\4.2.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.3.bin">
+      <Link>data\rfc4134\4.3.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.4.bin">
+      <Link>data\rfc4134\4.4.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.5.bin">
+      <Link>data\rfc4134\4.5.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.6.bin">
+      <Link>data\rfc4134\4.6.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.7.bin">
+      <Link>data\rfc4134\4.7.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.8.eml">
+      <Link>data\rfc4134\4.8.eml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\4.9.eml">
+      <Link>data\rfc4134\4.9.eml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\5.1.bin">
+      <Link>data\rfc4134\5.1.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\5.2.bin">
+      <Link>data\rfc4134\5.2.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\5.3.eml">
+      <Link>data\rfc4134\5.3.eml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\6.0.bin">
+      <Link>data\rfc4134\6.0.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\7.1.bin">
+      <Link>data\rfc4134\7.1.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\7.2.bin">
+      <Link>data\rfc4134\7.2.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\AliceDSSSignByCarlNoInherit.cer">
+      <Link>data\rfc4134\AliceDSSSignByCarlNoInherit.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\AlicePrivDSSSign.pri">
+      <Link>data\rfc4134\AlicePrivDSSSign.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\AlicePrivRSASign.pri">
+      <Link>data\rfc4134\AlicePrivRSASign.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\AliceRSASignByCarl.cer">
+      <Link>data\rfc4134\AliceRSASignByCarl.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\BobPrivRSAEncrypt.pri">
+      <Link>data\rfc4134\BobPrivRSAEncrypt.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\BobRSASignByCarl.cer">
+      <Link>data\rfc4134\BobRSASignByCarl.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlDSSCRLEmpty.crl">
+      <Link>data\rfc4134\CarlDSSCRLEmpty.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlDSSCRLForAll.crl">
+      <Link>data\rfc4134\CarlDSSCRLForAll.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlDSSCRLForCarl.crl">
+      <Link>data\rfc4134\CarlDSSCRLForCarl.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlDSSSelf.cer">
+      <Link>data\rfc4134\CarlDSSSelf.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlPrivDSSSign.pri">
+      <Link>data\rfc4134\CarlPrivDSSSign.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlPrivRSASign.pri">
+      <Link>data\rfc4134\CarlPrivRSASign.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlRSACRLEmpty.crl">
+      <Link>data\rfc4134\CarlRSACRLEmpty.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlRSACRLForAll.crl">
+      <Link>data\rfc4134\CarlRSACRLForAll.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlRSACRLForCarl.crl">
+      <Link>data\rfc4134\CarlRSACRLForCarl.crl</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\CarlRSASelf.cer">
+      <Link>data\rfc4134\CarlRSASelf.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\DianeDSSSignByCarlInherit.cer">
+      <Link>data\rfc4134\DianeDSSSignByCarlInherit.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\DianePrivDSSSign.pri">
+      <Link>data\rfc4134\DianePrivDSSSign.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\DianePrivRSASignEncrypt.pri">
+      <Link>data\rfc4134\DianePrivRSASignEncrypt.pri</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\DianeRSASignByCarl.cer">
+      <Link>data\rfc4134\DianeRSASignByCarl.cer</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\ExContent.bin">
+      <Link>data\rfc4134\ExContent.bin</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-A.p12">
+      <Link>data\rsa3\self-testcase-A.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-A.pem">
+      <Link>data\rsa3\self-testcase-A.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-B.p12">
+      <Link>data\rsa3\self-testcase-B.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-B.pem">
+      <Link>data\rsa3\self-testcase-B.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-C.p12">
+      <Link>data\rsa3\self-testcase-C.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-C.pem">
+      <Link>data\rsa3\self-testcase-C.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-D.p12">
+      <Link>data\rsa3\self-testcase-D.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-D.pem">
+      <Link>data\rsa3\self-testcase-D.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-E.p12">
+      <Link>data\rsa3\self-testcase-E.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-E.pem">
+      <Link>data\rsa3\self-testcase-E.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-F.p12">
+      <Link>data\rsa3\self-testcase-F.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-F.pem">
+      <Link>data\rsa3\self-testcase-F.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-G.p12">
+      <Link>data\rsa3\self-testcase-G.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-G.pem">
+      <Link>data\rsa3\self-testcase-G.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-H.p12">
+      <Link>data\rsa3\self-testcase-H.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-H.pem">
+      <Link>data\rsa3\self-testcase-H.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-I.p12">
+      <Link>data\rsa3\self-testcase-I.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-I.pem">
+      <Link>data\rsa3\self-testcase-I.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-J.p12">
+      <Link>data\rsa3\self-testcase-J.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-J.pem">
+      <Link>data\rsa3\self-testcase-J.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-L.p12">
+      <Link>data\rsa3\self-testcase-L.p12</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\rsa3\self-testcase-L.pem">
+      <Link>data\rsa3\self-testcase-L.pem</Link>
+    </EmbeddedResource>
+    <None Include="..\crypto\test\data\rsa3\testcases.README">
+      <Link>data\rsa3\testcases.README</Link>
+    </None>
+    <EmbeddedResource Include="..\crypto\test\data\tls\keystores\client_store.dsa">
+      <Link>data\tls\keystores\client_store.dsa</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\keystores\client_store.rsa">
+      <Link>data\tls\keystores\client_store.rsa</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\keystores\server_store.dsa">
+      <Link>data\tls\keystores\server_store.dsa</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\keystores\server_store.rsa">
+      <Link>data\tls\keystores\server_store.rsa</Link>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\asn1\masterlist-content.data">
+      <Link>data\asn1\masterlist-content.data</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignData.data">
+      <Link>data\cms\sigs\PSSSignData.data</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc128\ecrypt_HC-128.txt">
+      <Link>data\hc256\hc128\ecrypt_HC-128.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\crypto\test\data\keys\README.txt">
+      <Link>data\keys\README.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\crypto\test\data\openpgp\dsa\README.txt">
+      <Link>data\openpgp\dsa\README.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\crypto\test\data\openssl\README.txt">
+      <Link>data\openssl\README.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\crypto\test\data\pkits\README.txt">
+      <Link>data\PKITS\README.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\rfc4134.txt">
+      <Link>data\rfc4134\rfc4134.txt</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\crypto\test\data\scrypt\TestVectors.txt">
+      <Link>data\scrypt\TestVectors.txt</Link>
+    </Content>
+    <Content Include="lib\nunit.core.dll" />
+    <Content Include="lib\nunit.core.interfaces.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\math\ec\test\" />
+    <Folder Include="src\math\test\" />
+    <Folder Include="src\ocsp\test\" />
+    <Folder Include="src\openpgp\examples\test\" />
+    <Folder Include="src\openpgp\test\" />
+    <Folder Include="src\openssl\test\" />
+    <Folder Include="src\pkcs\examples\" />
+    <Folder Include="src\pkcs\test\" />
+    <Folder Include="src\security\test\" />
+    <Folder Include="src\test\nist\" />
+    <Folder Include="src\test\rsa3\" />
+    <Folder Include="src\tsp\test\" />
+    <Folder Include="src\x509\test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cryptoportable\cryptoportable.csproj">
+      <Project>{d69a4f7e-d0c2-45bf-9e89-490467f8a6b3}</Project>
+      <Name>cryptoportable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

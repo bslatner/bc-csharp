@@ -1,4 +1,6 @@
-﻿namespace Org.BouncyCastle
+﻿using System.IO;
+
+namespace Org.BouncyCastle
 {
     public static class Console
     {
@@ -22,6 +24,16 @@
             get { return _Output ?? (_Output = ConsoleFactory.CreateInstance()); }
         }
 
+        public static TextWriter Out
+        {
+            get { return Output.Out; }
+        }
+
+        public static TextWriter Error
+        {
+            get { return Output.Error; }
+        }
+
         public static void WriteLine()
         {
             Output.WriteLine();
@@ -35,6 +47,11 @@
         public static void WriteLine(string value)
         {
             Output.WriteLine(value);
+        }
+
+        public static void WriteLine(string format, params object[] args)
+        {
+            Output.WriteLine(format, args);
         }
     }
 }
