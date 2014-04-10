@@ -108,7 +108,6 @@ namespace Org.BouncyCastle.Crypto.Prng
 
 		    private void DoNothing()
 		    {
-		        throw new NotImplementedException();
 		    }
 
 #endif
