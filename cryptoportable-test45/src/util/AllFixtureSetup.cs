@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Org.BouncyCastle.Utilities.IO;
 
 namespace Org.BouncyCastle
 {
@@ -9,6 +10,7 @@ namespace Org.BouncyCastle
         public void SetUp()
         {
             Console.ConsoleFactory = new SystemConsoleFactory();
+            FileSystemHelper.FileSystem = new PortableFileSystem();
         }
     }
 }

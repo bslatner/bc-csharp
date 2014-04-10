@@ -5,6 +5,7 @@ using MonoTouch.Foundation;
 using MonoTouch.NUnit.UI;
 using MonoTouch.UIKit;
 using Org.BouncyCastle;
+using Org.BouncyCastle.Utilities.IO;
 
 namespace cryptoportable_testios
 {
@@ -34,8 +35,9 @@ namespace cryptoportable_testios
             // register every tests included in the main application/assembly
             runner.Add(System.Reflection.Assembly.GetExecutingAssembly());
 
-            // register console
+            // register console and file system
             Console.ConsoleFactory = new SystemConsoleFactory();
+            FileSystemHelper.FileSystem = new PortableFileSystem();
 
             window.RootViewController = new UINavigationController(runner.GetViewController());
 

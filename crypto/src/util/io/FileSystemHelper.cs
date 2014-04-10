@@ -13,18 +13,15 @@ namespace Org.BouncyCastle.Utilities.IO
 
         public static IFileSystem FileSystem { get; set; }
 
-        static FileSystemHelper()
-        {
-            FileSystem = new PortableFileSystem();
-        }
-
         public static FileInfo GetFileInfo(string fileName)
         {
+            EnsureFileSystem();
             return FileSystem.GetFileInfo(fileName);
         }
 
         public static long GetFileLength(FileInfo fileInfo)
         {
+            EnsureFileSystem();
             return FileSystem.GetFileLength(fileInfo);
         }
 

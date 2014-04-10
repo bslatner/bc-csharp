@@ -1066,6 +1066,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\util\AllFixtureSetup.cs" />
+    <Compile Include="src\util\PortableFileSystem.cs" />
     <Compile Include="src\util\SystemConsole.cs" />
     <Compile Include="src\util\SystemConsoleFactory.cs" />
     <Compile Include="src\util\TestSuiteExtensions.cs" />

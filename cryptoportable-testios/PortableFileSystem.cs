@@ -1,7 +1,9 @@
 ﻿using System.IO;
-using PCLStorage;
+using FileAccess = PCLStorage.FileAccess;
+using FileInfo = Org.BouncyCastle.Utilities.IO.FileInfo;
+using IFileSystem = Org.BouncyCastle.Utilities.IO.IFileSystem;
 
-namespace Org.BouncyCastle.Utilities.IO
+namespace cryptoportable_testios
 {
     public class PortableFileSystem : IFileSystem
     {

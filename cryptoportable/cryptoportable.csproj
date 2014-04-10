@@ -3728,7 +3728,6 @@
     <Compile Include="src\util\io\File.cs" />
     <Compile Include="src\util\io\FileInfo.cs" />
     <Compile Include="src\util\io\IFileSystem.cs" />
-    <Compile Include="src\util\io\PortableFileSystem.cs" />
     <Compile Include="StreamExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -3741,9 +3740,6 @@
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.166\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="PCLStorage">
-      <HintPath>..\packages\PCLStorage.0.9.4\lib\portable-net45+sl5+wp8+win8+monoandroid+monotouch\PCLStorage.dll</HintPath>
     </Reference>
     <Reference Include="PCLStorage.Abstractions">
       <HintPath>..\packages\PCLStorage.0.9.4\lib\portable-net45+sl5+wp8+win8+monoandroid+monotouch\PCLStorage.Abstractions.dll</HintPath>
