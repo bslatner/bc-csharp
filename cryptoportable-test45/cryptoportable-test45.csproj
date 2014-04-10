@@ -50,6 +50,14 @@
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="PCLStorage, Version=0.9.4.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PCLStorage.0.9.4\lib\net45\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=0.9.4.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PCLStorage.0.9.4\lib\net45\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -695,6 +703,126 @@
     </Compile>
     <Compile Include="..\crypto\test\src\math\test\BigIntegerTest.cs">
       <Link>src\math\test\BigIntegerTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\ocsp\test\AllTests.cs">
+      <Link>src\ocsp\test\AllTests.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\ocsp\test\OCSPTest.cs">
+      <Link>src\ocsp\test\OCSPTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\ocsp\test\OCSPTestUtil.cs">
+      <Link>src\ocsp\test\OCSPTestUtil.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\ByteArrayHandler.cs">
+      <Link>src\openpgp\examples\ByteArrayHandler.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\ClearSignedFileProcessor.cs">
+      <Link>src\openpgp\examples\ClearSignedFileProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\DetachedSignatureProcessor.cs">
+      <Link>src\openpgp\examples\DetachedSignatureProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\DirectKeySignature.cs">
+      <Link>src\openpgp\examples\DirectKeySignature.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\DsaElGamalKeyRingGenerator.cs">
+      <Link>src\openpgp\examples\DsaElGamalKeyRingGenerator.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\KeyBasedFileProcessor.cs">
+      <Link>src\openpgp\examples\KeyBasedFileProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\KeyBasedLargeFileProcessor.cs">
+      <Link>src\openpgp\examples\KeyBasedLargeFileProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\PbeFileProcessor.cs">
+      <Link>src\openpgp\examples\PbeFileProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\PgpExampleUtilities.cs">
+      <Link>src\openpgp\examples\PgpExampleUtilities.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\PublicKeyRingDump.cs">
+      <Link>src\openpgp\examples\PublicKeyRingDump.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\RsaKeyRingGenerator.cs">
+      <Link>src\openpgp\examples\RsaKeyRingGenerator.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\SignedFileProcessor.cs">
+      <Link>src\openpgp\examples\SignedFileProcessor.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\examples\test\AllTests.cs">
+      <Link>src\openpgp\examples\test\AllTests.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\DSA2Test.cs">
+      <Link>src\openpgp\test\DSA2Test.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPArmoredTest.cs">
+      <Link>src\openpgp\test\PGPArmoredTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPClearSignedSignatureTest.cs">
+      <Link>src\openpgp\test\PGPClearSignedSignatureTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPCompressionTest.cs">
+      <Link>src\openpgp\test\PGPCompressionTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPDSAElGamalTest.cs">
+      <Link>src\openpgp\test\PGPDSAElGamalTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPDSATest.cs">
+      <Link>src\openpgp\test\PGPDSATest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PgpKeyRingTest.cs">
+      <Link>src\openpgp\test\PgpKeyRingTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PgpMarkerTest.cs">
+      <Link>src\openpgp\test\PgpMarkerTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPNoPrivateKeyTest.cs">
+      <Link>src\openpgp\test\PGPNoPrivateKeyTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPPacketTest.cs">
+      <Link>src\openpgp\test\PGPPacketTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPPBETest.cs">
+      <Link>src\openpgp\test\PGPPBETest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPRSATest.cs">
+      <Link>src\openpgp\test\PGPRSATest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\PGPSignatureTest.cs">
+      <Link>src\openpgp\test\PGPSignatureTest.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openpgp\test\RegressionTest.cs">
+      <Link>src\openpgp\test\RegressionTest.cs</Link>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="..\crypto\test\src\openssl\test\AllTests.cs">
       <Link>src\openssl\test\AllTests.cs</Link>
