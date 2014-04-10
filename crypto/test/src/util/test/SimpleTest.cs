@@ -91,7 +91,12 @@ namespace Org.BouncyCastle.Utilities.Test
 		{
 			string fullName = GetFullName(name);
 
-			return Assembly.GetExecutingAssembly().GetManifestResourceStream(fullName);
+			Stream result = Assembly.GetExecutingAssembly().GetManifestResourceStream(fullName);
+		    if (result == null)
+		    {
+		        throw new InvalidOperationException(string.Format("Unable to locate resource '{0}' (full name '{1}')", name, fullName));
+		    }
+		    return result;
 		}
 
 		internal static string[] GetTestDataEntries(
