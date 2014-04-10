@@ -5,14 +5,20 @@ namespace Org.BouncyCastle.Utilities.IO
 {
     public class FileInfo
     {
+        public static IFileSystem FileSystem { get; set; }
+
         public string FullName { get; private set; }
         public string Name { get; private set; }
-        public long Length { get; private set; }
-        public DateTime LastWriteTime { get; set; }
+
+        public FileInfo(string fullName, string name)
+        {
+            FullName = fullName;
+            Name = name;
+        }
 
         public Stream OpenRead()
         {
-            throw new NotImplementedException();
+            return FileSystemHelper.FileSystem.OpenRead(FullName);
         }
     }
 }

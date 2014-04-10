@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 
+using Org.BouncyCastle.Utilities.IO;
+
 namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 {
 	internal class PgpExampleUtilities
@@ -10,7 +12,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 			MemoryStream bOut = new MemoryStream();
 			PgpCompressedDataGenerator comData = new PgpCompressedDataGenerator(algorithm);
 			PgpUtilities.WriteFileToLiteralData(comData.Open(bOut), PgpLiteralData.Binary,
-				new FileInfo(fileName));
+				FileSystemHelper.GetFileInfo(fileName));
 			comData.Close();
 			return bOut.ToArray();
 		}

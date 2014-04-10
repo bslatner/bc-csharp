@@ -3507,6 +3507,9 @@
     <Compile Include="..\crypto\src\util\io\BaseOutputStream.cs">
       <Link>src\util\io\BaseOutputStream.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\util\io\FileSystemHelper.cs">
+      <Link>src\util\io\FileSystemHelper.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\util\io\pem\PemGenerationException.cs">
       <Link>src\util\io\pem\PemGenerationException.cs</Link>
     </Compile>
@@ -3724,6 +3727,8 @@
     <Compile Include="debug\IConsoleFactory.cs" />
     <Compile Include="src\util\io\File.cs" />
     <Compile Include="src\util\io\FileInfo.cs" />
+    <Compile Include="src\util\io\IFileSystem.cs" />
+    <Compile Include="src\util\io\PortableFileSystem.cs" />
     <Compile Include="StreamExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

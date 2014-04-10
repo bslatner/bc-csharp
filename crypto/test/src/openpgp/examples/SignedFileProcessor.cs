@@ -4,6 +4,11 @@ using System.IO;
 
 
 using Org.BouncyCastle.Bcpg.OpenPgp;
+using Org.BouncyCastle.Utilities.IO;
+
+#if PORTABLE
+using FileInfo = Org.BouncyCastle.Utilities.IO.FileInfo;
+#endif
 
 namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 {
@@ -119,7 +124,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 
             sGen.GenerateOnePassVersion(false).Encode(bOut);
 
-            FileInfo					file = new FileInfo(fileName);
+            FileInfo					file = FileSystemHelper.GetFileInfo(fileName);
             PgpLiteralDataGenerator     lGen = new PgpLiteralDataGenerator();
             Stream						lOut = lGen.Open(bOut, PgpLiteralData.Binary, file);
             Stream						fIn = file.OpenRead();

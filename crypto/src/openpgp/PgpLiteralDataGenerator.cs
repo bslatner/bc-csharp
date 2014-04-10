@@ -161,7 +161,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
             char		format,
             FileInfo	file)
         {
-			return Open(outStr, format, file.Name, file.Length, file.LastWriteTime);
+			return Open(outStr, format, file.Name, FileSystemHelper.GetFileLength(file), FileSystemHelper.GetFileLastWriteTime(file));
         }
 
 		/// <summary>

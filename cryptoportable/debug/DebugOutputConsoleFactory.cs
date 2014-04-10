@@ -4,7 +4,7 @@
     {
         public IConsole CreateInstance()
         {
-            throw new System.NotImplementedException();
+            return new DebugOutputConsole();
         }
     }
 }

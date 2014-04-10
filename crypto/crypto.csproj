@@ -3561,6 +3561,7 @@
     <Compile Include="src\util\io\BaseOutputStream.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\util\io\FileSystemHelper.cs" />
     <Compile Include="src\util\io\pem\PemGenerationException.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -248,7 +248,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
             }
             else if (args[0].Equals("-d"))
             {
-				DecryptFile(args[1], args[2], args[3].ToCharArray(), new FileInfo(args[1]).Name + ".out");
+				DecryptFile(args[1], args[2], args[3].ToCharArray(), FileSystemHelper.GetFileInfo(args[1]).Name + ".out");
             }
             else
             {
