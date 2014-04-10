@@ -15,6 +15,16 @@ namespace Org.BouncyCastle
             get { throw new NotImplementedException(); }
         }
 
+        public void SetOut(TextWriter writer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetError(TextWriter writer)
+        {
+            throw new NotImplementedException();
+        }
+
         public void WriteLine()
         {
             System.Diagnostics.Debug.WriteLine("");

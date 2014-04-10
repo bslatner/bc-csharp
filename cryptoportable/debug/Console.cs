@@ -34,6 +34,16 @@ namespace Org.BouncyCastle
             get { return Output.Error; }
         }
 
+        public static void SetOut(TextWriter writer)
+        {
+            Output.SetOut(writer);
+        }
+
+        public static void SetError(TextWriter writer)
+        {
+            Output.SetError(writer);
+        }
+
         public static void WriteLine()
         {
             Output.WriteLine();

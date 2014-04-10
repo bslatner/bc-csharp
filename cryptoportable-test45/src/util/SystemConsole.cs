@@ -7,6 +7,16 @@ namespace Org.BouncyCastle
         public TextWriter Out { get { return System.Console.Out; } }
         public TextWriter Error { get { return System.Console.Error; }}
 
+        public void SetOut(TextWriter writer)
+        {
+            System.Console.SetOut(writer);
+        }
+
+        public void SetError(TextWriter writer)
+        {
+            System.Console.SetError(writer);
+        }
+
         public void WriteLine()
         {
             System.Console.WriteLine();
