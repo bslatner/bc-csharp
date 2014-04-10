@@ -179,7 +179,8 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
             protected override void Dispose(bool disposing)
             {
                 Finish();
-                base.Dispose(disposing);
+                //original code does not call base class
+                //base.Dispose(disposing);
             }
 
 #else
@@ -201,16 +202,22 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 
 #if PORTABLE
 
+            private bool isDisposed;
             protected override void Dispose(bool disposing)
             {
-                Finish();
-                End();
-                base.Dispose(disposing);
+                if (!isDisposed)
+                {
+                    Finish();
+                    End();
+                    isDisposed = true;
+                }
+                //original code does not call base class
+                //base.Dispose(disposing);
             }
 
 #else
 
-			public override void Close()
+            public override void Close()
 			{
 				Finish();
                 End();

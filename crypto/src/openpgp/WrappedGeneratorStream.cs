@@ -27,7 +27,8 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 	            gen.Close();
 	            isDisposed = true;
 	        }
-            base.Dispose(disposing);
+            //original code deliberately does not call base method
+            //base.Dispose(disposing);
         }
 #else
 

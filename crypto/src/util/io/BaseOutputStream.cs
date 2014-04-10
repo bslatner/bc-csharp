@@ -17,7 +17,8 @@ namespace Org.BouncyCastle.Utilities.IO
         protected override void Dispose(bool disposing)
         {
             closed = true;
-            base.Dispose(disposing);
+			//original code does not call base class
+            //base.Dispose(disposing);
         }
 
 #else

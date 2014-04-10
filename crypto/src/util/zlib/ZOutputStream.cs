@@ -99,13 +99,13 @@ namespace Org.BouncyCastle.Utilities.Zlib
 
 	    protected override void Dispose(bool disposing)
 	    {
-	        base.Dispose(disposing);
 	        CleanUp();
+	        base.Dispose(disposing);
 	    }
 
 #else
 
-		public override void Close()
+        public override void Close()
 		{
 			CleanUp();
 		}
