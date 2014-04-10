@@ -7,7 +7,7 @@
     <ProjectGuid>{2E39FE59-814A-434E-A26C-1C93E49C8A5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cryptoportable_test45</RootNamespace>
+    <RootNamespace>crypto.test</RootNamespace>
     <AssemblyName>cryptoportable-test45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.166\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.166\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.166\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.core, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\nunit.core.dll</HintPath>
@@ -43,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -665,6 +675,234 @@
     <Compile Include="..\crypto\test\src\crypto\test\XTEATest.cs">
       <Link>src\crypto\test\XTEATest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\AllTests.cs">
+      <Link>src\math\ec\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\ECPointPerformanceTest.cs">
+      <Link>src\math\ec\test\ECPointPerformanceTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\ECPointTest.cs">
+      <Link>src\math\ec\test\ECPointTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\F2mProofer.cs">
+      <Link>src\math\ec\test\F2mProofer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\TnafTest.cs">
+      <Link>src\math\ec\test\TnafTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\test\AllTests.cs">
+      <Link>src\math\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\math\test\BigIntegerTest.cs">
+      <Link>src\math\test\BigIntegerTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openssl\test\AllTests.cs">
+      <Link>src\openssl\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openssl\test\ReaderTest.cs">
+      <Link>src\openssl\test\ReaderTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\openssl\test\WriterTest.cs">
+      <Link>src\openssl\test\WriterTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\pkcs\examples\PKCS12Example.cs">
+      <Link>src\pkcs\examples\PKCS12Example.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\pkcs\test\EncryptedPrivateKeyInfoTest.cs">
+      <Link>src\pkcs\test\EncryptedPrivateKeyInfoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\pkcs\test\PKCS10Test.cs">
+      <Link>src\pkcs\test\PKCS10Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\pkcs\test\PKCS12StoreTest.cs">
+      <Link>src\pkcs\test\PKCS12StoreTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\SecureRandomTest.cs">
+      <Link>src\security\test\SecureRandomTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\TestDigestUtil.cs">
+      <Link>src\security\test\TestDigestUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\TestDotNetUtil.cs">
+      <Link>src\security\test\TestDotNetUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\TestEncodings.cs">
+      <Link>src\security\test\TestEncodings.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\TestParameterUtil.cs">
+      <Link>src\security\test\TestParameterUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\security\test\TestSignerUtil.cs">
+      <Link>src\security\test\TestSignerUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\AESSICTest.cs">
+      <Link>src\test\AESSICTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\AESTest.cs">
+      <Link>src\test\AESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\AttrCertSelectorTest.cs">
+      <Link>src\test\AttrCertSelectorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\AttrCertTest.cs">
+      <Link>src\test\AttrCertTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\BaseBlockCipherTest.cs">
+      <Link>src\test\BaseBlockCipherTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\BlockCipherTest.cs">
+      <Link>src\test\BlockCipherTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CamelliaTest.cs">
+      <Link>src\test\CamelliaTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CertPathBuilderTest.cs">
+      <Link>src\test\CertPathBuilderTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CertPathTest.cs">
+      <Link>src\test\CertPathTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CertPathValidatorTest.cs">
+      <Link>src\test\CertPathValidatorTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CertTest.cs">
+      <Link>src\test\CertTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CipherStreamTest.cs">
+      <Link>src\test\CipherStreamTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CMacTest.cs">
+      <Link>src\test\CMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\CRL5Test.cs">
+      <Link>src\test\CRL5Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\DESedeTest.cs">
+      <Link>src\test\DESedeTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\DHTest.cs">
+      <Link>src\test\DHTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\DigestTest.cs">
+      <Link>src\test\DigestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\DSATest.cs">
+      <Link>src\test\DSATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\ECDSA5Test.cs">
+      <Link>src\test\ECDSA5Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\ECEncodingTest.cs">
+      <Link>src\test\ECEncodingTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\ECNRTest.cs">
+      <Link>src\test\ECNRTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\ElGamalTest.cs">
+      <Link>src\test\ElGamalTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\EncryptedPrivateKeyInfoTest.cs">
+      <Link>src\test\EncryptedPrivateKeyInfoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\FIPSDESTest.cs">
+      <Link>src\test\FIPSDESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\GOST28147Test.cs">
+      <Link>src\test\GOST28147Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\GOST3410Test.cs">
+      <Link>src\test\GOST3410Test.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\HMacTest.cs">
+      <Link>src\test\HMacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\IESTest.cs">
+      <Link>src\test\IESTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\MacTest.cs">
+      <Link>src\test\MacTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\MqvTest.cs">
+      <Link>src\test\MqvTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\NamedCurveTest.cs">
+      <Link>src\test\NamedCurveTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\NistCertPathTest.cs">
+      <Link>src\test\NistCertPathTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\nist\NistCertPathTest.cs">
+      <Link>src\test\nist\NistCertPathTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\NoekeonTest.cs">
+      <Link>src\test\NoekeonTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PBETest.cs">
+      <Link>src\test\PBETest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PEMData.cs">
+      <Link>src\test\PEMData.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PKCS10CertRequestTest.cs">
+      <Link>src\test\PKCS10CertRequestTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PkixNameConstraintsTest.cs">
+      <Link>src\test\PkixNameConstraintsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PkixPolicyMappingTest.cs">
+      <Link>src\test\PkixPolicyMappingTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PkixTest.cs">
+      <Link>src\test\PkixTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\PSSTest.cs">
+      <Link>src\test\PSSTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\RegressionTest.cs">
+      <Link>src\test\RegressionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\rsa3\RSA3CertTest.cs">
+      <Link>src\test\rsa3\RSA3CertTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\RSATest.cs">
+      <Link>src\test\RSATest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\SEEDTest.cs">
+      <Link>src\test\SEEDTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\SigTest.cs">
+      <Link>src\test\SigTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\TestUtilities.cs">
+      <Link>src\test\TestUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\WrapTest.cs">
+      <Link>src\test\WrapTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\X509CertificatePairTest.cs">
+      <Link>src\test\X509CertificatePairTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\test\X509StoreTest.cs">
+      <Link>src\test\X509StoreTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\AllTests.cs">
+      <Link>src\tsp\test\AllTests.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\GenTimeAccuracyTest.cs">
+      <Link>src\tsp\test\GenTimeAccuracyTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\ParseTest.cs">
+      <Link>src\tsp\test\ParseTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\TimeStampTokenInfoTest.cs">
+      <Link>src\tsp\test\TimeStampTokenInfoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\TSPTest.cs">
+      <Link>src\tsp\test\TSPTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\tsp\test\TSPTestUtil.cs">
+      <Link>src\tsp\test\TSPTestUtil.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\test\src\util\io\pem\test\AllTests.cs">
       <Link>src\util\io\pem\test\AllTests.cs</Link>
     </Compile>
@@ -694,6 +932,9 @@
     </Compile>
     <Compile Include="..\crypto\test\src\util\test\UncloseableStream.cs">
       <Link>src\util\test\UncloseableStream.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\x509\test\TestCertificateGen.cs">
+      <Link>src\x509\test\TestCertificateGen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\util\AllFixtureSetup.cs" />
@@ -3168,27 +3409,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\crypto\test\data\scrypt\TestVectors.txt">
+    <EmbeddedResource Include="..\crypto\test\data\scrypt\TestVectors.txt">
       <Link>data\scrypt\TestVectors.txt</Link>
-    </Content>
+    </EmbeddedResource>
     <Content Include="lib\nunit.core.dll" />
     <Content Include="lib\nunit.core.interfaces.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\math\ec\test\" />
-    <Folder Include="src\math\test\" />
-    <Folder Include="src\ocsp\test\" />
-    <Folder Include="src\openpgp\examples\test\" />
-    <Folder Include="src\openpgp\test\" />
-    <Folder Include="src\openssl\test\" />
-    <Folder Include="src\pkcs\examples\" />
-    <Folder Include="src\pkcs\test\" />
-    <Folder Include="src\security\test\" />
-    <Folder Include="src\test\nist\" />
-    <Folder Include="src\test\rsa3\" />
-    <Folder Include="src\tsp\test\" />
-    <Folder Include="src\x509\test\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\cryptoportable\cryptoportable.csproj">
       <Project>{d69a4f7e-d0c2-45bf-9e89-490467f8a6b3}</Project>
