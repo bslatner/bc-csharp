@@ -1035,7 +1035,7 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="PortableFileSystem.cs" />
+    <Compile Include="src\util\SystemIOFileSystem.cs" />
     <Compile Include="src\util\SystemConsole.cs" />
     <Compile Include="src\util\SystemConsoleFactory.cs" />
     <EmbeddedResource Include="..\crypto\test\data\cms\sigs\counterSig.p7m">
@@ -3467,14 +3467,6 @@
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.166\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="MonoTouch.NUnitLite" />
-    <Reference Include="PCLStorage, Version=0.9.4.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PCLStorage.0.9.4\lib\monotouch\PCLStorage.dll</HintPath>
-    </Reference>
-    <Reference Include="PCLStorage.Abstractions, Version=0.9.4.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PCLStorage.0.9.4\lib\monotouch\PCLStorage.Abstractions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

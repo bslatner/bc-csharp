@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
 using MonoTouch.Foundation;
 using MonoTouch.NUnit.UI;
 using MonoTouch.UIKit;
@@ -37,7 +37,7 @@ namespace cryptoportable_testios
 
             // register console and file system
             Console.ConsoleFactory = new SystemConsoleFactory();
-            FileSystemHelper.FileSystem = new PortableFileSystem();
+            FileSystemHelper.FileSystem = new SystemIOFileSystem();
 
             window.RootViewController = new UINavigationController(runner.GetViewController());
 

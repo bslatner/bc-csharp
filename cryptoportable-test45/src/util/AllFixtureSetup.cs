@@ -10,7 +10,7 @@ namespace Org.BouncyCastle
         public void SetUp()
         {
             Console.ConsoleFactory = new SystemConsoleFactory();
-            FileSystemHelper.FileSystem = new PortableFileSystem();
+            FileSystemHelper.FileSystem = new SystemIOFileSystem();
         }
     }
 }
