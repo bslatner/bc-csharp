@@ -69,9 +69,6 @@
     <Compile Include="..\crypto\test\src\asn1\test\AdmissionSyntaxUnitTest.cs">
       <Link>src\asn1\test\AdmissionSyntaxUnitTest.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\asn1\test\AllTests.cs">
-      <Link>src\asn1\test\AllTests.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\asn1\test\ASN1SequenceParserTest.cs">
       <Link>src\asn1\test\ASN1SequenceParserTest.cs</Link>
     </Compile>
@@ -222,9 +219,6 @@
     <Compile Include="..\crypto\test\src\asn1\test\ReasonFlagsTest.cs">
       <Link>src\asn1\test\ReasonFlagsTest.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\asn1\test\RegressionTest.cs">
-      <Link>src\asn1\test\RegressionTest.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\asn1\test\RequestedCertificateUnitTest.cs">
       <Link>src\asn1\test\RequestedCertificateUnitTest.cs</Link>
     </Compile>
@@ -273,9 +267,6 @@
     <Compile Include="..\crypto\test\src\asn1\test\X9Test.cs">
       <Link>src\asn1\test\X9Test.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\cms\test\AllTests.cs">
-      <Link>src\cms\test\AllTests.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\cms\test\AuthenticatedDataStreamTest.cs">
       <Link>src\cms\test\AuthenticatedDataStreamTest.cs</Link>
     </Compile>
@@ -315,9 +306,6 @@
     <Compile Include="..\crypto\test\src\crypto\examples\DESExample.cs">
       <Link>src\crypto\examples\DESExample.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\crypto\io\test\AllTests.cs">
-      <Link>src\crypto\io\test\AllTests.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\crypto\io\test\CipherStreamTest.cs">
       <Link>src\crypto\io\test\CipherStreamTest.cs</Link>
     </Compile>
@@ -332,9 +320,6 @@
     </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\AESWrapTest.cs">
       <Link>src\crypto\test\AESWrapTest.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\test\src\crypto\test\AllTests.cs">
-      <Link>src\crypto\test\AllTests.cs</Link>
     </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\BlockCipherMonteCarloTest.cs">
       <Link>src\crypto\test\BlockCipherMonteCarloTest.cs</Link>
@@ -531,9 +516,6 @@
     <Compile Include="..\crypto\test\src\crypto\test\RC6Test.cs">
       <Link>src\crypto\test\RC6Test.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\crypto\test\RegressionTest.cs">
-      <Link>src\crypto\test\RegressionTest.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\RFC3211WrapTest.cs">
       <Link>src\crypto\test\RFC3211WrapTest.cs</Link>
     </Compile>
@@ -675,9 +657,6 @@
     <Compile Include="..\crypto\test\src\crypto\test\XTEATest.cs">
       <Link>src\crypto\test\XTEATest.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\math\ec\test\AllTests.cs">
-      <Link>src\math\ec\test\AllTests.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\math\ec\test\ECPointPerformanceTest.cs">
       <Link>src\math\ec\test\ECPointPerformanceTest.cs</Link>
     </Compile>
@@ -690,15 +669,8 @@
     <Compile Include="..\crypto\test\src\math\ec\test\TnafTest.cs">
       <Link>src\math\ec\test\TnafTest.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\math\test\AllTests.cs">
-      <Link>src\math\test\AllTests.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\math\test\BigIntegerTest.cs">
       <Link>src\math\test\BigIntegerTest.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\test\src\ocsp\test\AllTests.cs">
-      <Link>src\ocsp\test\AllTests.cs</Link>
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="..\crypto\test\src\ocsp\test\OCSPTest.cs">
       <Link>src\ocsp\test\OCSPTest.cs</Link>
@@ -810,10 +782,6 @@
     </Compile>
     <Compile Include="..\crypto\test\src\openpgp\test\PGPSignatureTest.cs">
       <Link>src\openpgp\test\PGPSignatureTest.cs</Link>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="..\crypto\test\src\openpgp\test\RegressionTest.cs">
-      <Link>src\openpgp\test\RegressionTest.cs</Link>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="..\crypto\test\src\openssl\test\AllTests.cs">
@@ -978,9 +946,6 @@
     <Compile Include="..\crypto\test\src\test\PSSTest.cs">
       <Link>src\test\PSSTest.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\test\src\test\RegressionTest.cs">
-      <Link>src\test\RegressionTest.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\test\src\test\rsa3\RSA3CertTest.cs">
       <Link>src\test\rsa3\RSA3CertTest.cs</Link>
     </Compile>
@@ -1004,9 +969,6 @@
     </Compile>
     <Compile Include="..\crypto\test\src\test\X509StoreTest.cs">
       <Link>src\test\X509StoreTest.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\test\src\tsp\test\AllTests.cs">
-      <Link>src\tsp\test\AllTests.cs</Link>
     </Compile>
     <Compile Include="..\crypto\test\src\tsp\test\GenTimeAccuracyTest.cs">
       <Link>src\tsp\test\GenTimeAccuracyTest.cs</Link>
