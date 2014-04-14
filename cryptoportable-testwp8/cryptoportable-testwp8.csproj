@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2558AAD7-647F-4FE4-9D30-4DA2E19B6A3C}</ProjectGuid>
+    <ProjectGuid>{033B0527-E4D3-4A3D-8569-12E7EB4F0B6A}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -19,9 +19,9 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>crypto_testwp8_$(Configuration)_$(Platform).xap</XapFilename>
+    <XapFilename>crypto.test_$(Configuration)_$(Platform).xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>crypto_testwp8.App</SilverlightAppEntry>
+    <SilverlightAppEntry>crypto.test.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
@@ -1048,6 +1048,49 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\crypto\test\data\asn1\masterlist-content.data">
+      <Link>data\asn1\masterlist-content.data</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignData.data">
+      <Link>data\cms\sigs\PSSSignData.data</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc128\ecrypt_HC-128.txt">
+      <Link>data\hc256\hc128\ecrypt_HC-128.txt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt">
+      <Link>data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt</Link>
+    </EmbeddedResource>
+    <None Include="..\crypto\test\data\keys\README.txt">
+      <Link>data\keys\README.txt</Link>
+    </None>
+    <None Include="..\crypto\test\data\openssl\README.txt">
+      <Link>data\openssl\README.txt</Link>
+    </None>
+    <None Include="..\crypto\test\data\openpgp\dsa\README.txt">
+      <Link>data\openpgp\dsa\README.txt</Link>
+    </None>
+    <EmbeddedResource Include="..\crypto\test\data\rfc4134\rfc4134.txt">
+      <Link>data\rfc4134\rfc4134.txt</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\scrypt\TestVectors.txt">
+      <Link>data\scrypt\TestVectors.txt</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="..\crypto\test\data\cms\sigs\counterSig.p7m">
       <Link>data\cms\sigs\counterSig.p7m</Link>
     </EmbeddedResource>
@@ -3451,48 +3494,8 @@
     <EmbeddedResource Include="..\crypto\test\data\tls\keystores\server_store.rsa">
       <Link>data\tls\keystores\server_store.rsa</Link>
     </EmbeddedResource>
-    <None Include="Properties\AppManifest.xml" />
-    <None Include="Properties\WMAppManifest.xml">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\crypto\test\data\asn1\masterlist-content.data">
-      <Link>data\asn1\masterlist-content.data</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\cms\sigs\PSSSignData.data">
-      <Link>data\cms\sigs\PSSSignData.data</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\hc256\hc128\ecrypt_HC-128.txt">
-      <Link>data\hc256\hc128\ecrypt_HC-128.txt</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt">
-      <Link>data\hc256\hc256\ecrypt_HC-256_128K_128IV.txt</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt">
-      <Link>data\hc256\hc256\ecrypt_HC-256_128K_256IV.txt</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt">
-      <Link>data\hc256\hc256\ecrypt_HC-256_256K_128IV.txt</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt">
-      <Link>data\hc256\hc256\ecrypt_HC-256_256K_256IV.txt</Link>
-    </EmbeddedResource>
-    <None Include="..\crypto\test\data\keys\README.txt">
-      <Link>data\keys\README.txt</Link>
-    </None>
-    <None Include="..\crypto\test\data\openssl\README.txt">
-      <Link>data\openssl\README.txt</Link>
-    </None>
-    <None Include="..\crypto\test\data\openpgp\dsa\README.txt">
-      <Link>data\openpgp\dsa\README.txt</Link>
-    </None>
-    <EmbeddedResource Include="..\crypto\test\data\rfc4134\rfc4134.txt">
-      <Link>data\rfc4134\rfc4134.txt</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\crypto\test\data\scrypt\TestVectors.txt">
-      <Link>data\scrypt\TestVectors.txt</Link>
-    </EmbeddedResource>
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -3520,17 +3523,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Phone">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="nunitlite">
+      <HintPath>lib\nunitlite.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\cryptoportable\cryptoportable.csproj">
       <Project>{D69A4F7E-D0C2-45BF-9E89-490467F8A6B3}</Project>
       <Name>cryptoportable</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="nunitlite">
-      <HintPath>lib\nunitlite.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
@@ -3541,4 +3552,9 @@
   </Target>
   -->
   <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
 </Project>

@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{2558aad7-647f-4fe4-9d30-4da2e19b6a3c}" Title="crypto.test" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="crypto.test author" Description="Sample description" Publisher="crypto.test" PublisherID="{6507df8c-f6d0-4e61-a007-3d3384915897}">
+  <App xmlns="" ProductID="{033b0527-e4d3-4a3d-8569-12e7eb4f0b6a}" Title="crypto.test" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="crypto.test author" Description="Sample description" Publisher="crypto.test" PublisherID="{4d912884-e05c-4e09-ade6-14dc26a44f76}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
