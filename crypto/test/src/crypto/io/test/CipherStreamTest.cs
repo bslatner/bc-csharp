@@ -19,44 +19,44 @@ namespace Org.BouncyCastle.Crypto.IO.Tests
 		[Test]
 		public void TestEncryptDecryptA()
 		{
-			byte[] dataBytes = Encoding.ASCII.GetBytes(DATA);
+			byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(DATA);
 			byte[] encryptedDataBytes = encryptOnWrite(dataBytes);
 
 			byte[] decryptedDataBytes = decryptOnRead(encryptedDataBytes);
-			string decryptedData = Encoding.ASCII.GetString(decryptedDataBytes, 0, decryptedDataBytes.Length);
+			string decryptedData = TestEncodingHelpers.GetAsciiString(decryptedDataBytes, 0, decryptedDataBytes.Length);
 			Assert.AreEqual(DATA, decryptedData);
 		}
 
 		[Test]
 		public void TestEncryptDecryptB()
 		{
-			byte[] dataBytes = Encoding.ASCII.GetBytes(DATA);
+			byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(DATA);
 			byte[] encryptedDataBytes = encryptOnRead(dataBytes);
 
 			byte[] decryptedDataBytes = decryptOnWrite(encryptedDataBytes);
-			string decryptedData = Encoding.ASCII.GetString(decryptedDataBytes, 0, decryptedDataBytes.Length);
+			string decryptedData = TestEncodingHelpers.GetAsciiString(decryptedDataBytes, 0, decryptedDataBytes.Length);
 			Assert.AreEqual(DATA, decryptedData);
 		}
 
 		[Test]
 		public void TestEncryptDecryptC()
 		{
-			byte[] dataBytes = Encoding.ASCII.GetBytes(DATA);
+			byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(DATA);
 			byte[] encryptedDataBytes = encryptOnWrite(dataBytes);
 
 			byte[] decryptedDataBytes = decryptOnWrite(encryptedDataBytes);
-			string decryptedData = Encoding.ASCII.GetString(decryptedDataBytes, 0, decryptedDataBytes.Length);
+			string decryptedData = TestEncodingHelpers.GetAsciiString(decryptedDataBytes, 0, decryptedDataBytes.Length);
 			Assert.AreEqual(DATA, decryptedData);
 		}
 
 		[Test]
 		public void TestEncryptDecryptD()
 		{
-			byte[] dataBytes = Encoding.ASCII.GetBytes(DATA);
+			byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(DATA);
 			byte[] encryptedDataBytes = encryptOnRead(dataBytes);
 
 			byte[] decryptedDataBytes = decryptOnRead(encryptedDataBytes);
-			string decryptedData = Encoding.ASCII.GetString(decryptedDataBytes, 0, decryptedDataBytes.Length);
+			string decryptedData = TestEncodingHelpers.GetAsciiString(decryptedDataBytes, 0, decryptedDataBytes.Length);
 			Assert.AreEqual(DATA, decryptedData);
 		}
 

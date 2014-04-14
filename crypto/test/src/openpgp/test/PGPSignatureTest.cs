@@ -26,8 +26,8 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 
 		private const int TEST_EXPIRATION_TIME = 10000;
 		private const string TEST_USER_ID = "test user id";
-		private static readonly byte[] TEST_DATA = Encoding.ASCII.GetBytes("hello world!\nhello world!\n");
-		private static readonly byte[] TEST_DATA_WITH_CRLF = Encoding.ASCII.GetBytes("hello world!\r\nhello world!\r\n");
+		private static readonly byte[] TEST_DATA = TestEncodingHelpers.GetAsciiBytes("hello world!\nhello world!\n");
+		private static readonly byte[] TEST_DATA_WITH_CRLF = TestEncodingHelpers.GetAsciiBytes("hello world!\r\nhello world!\r\n");
 
 		private static readonly byte[] dsaKeyRing = Base64.Decode(
 			"lQHhBD9HBzURBACzkxRCVGJg5+Ld9DU4Xpnd4LCKgMq7YOY7Gi0EgK92gbaa6+zQ"

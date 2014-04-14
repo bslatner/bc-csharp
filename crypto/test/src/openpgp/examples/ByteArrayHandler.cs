@@ -166,7 +166,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 
 		private static string GetAsciiString(byte[] bs)
 		{
-			return Encoding.ASCII.GetString(bs, 0, bs.Length);
+			return TestEncodingHelpers.GetAsciiString(bs, 0, bs.Length);
 		}
 
         public static void Main(
@@ -175,7 +175,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
             string passPhrase = "Dick Beck";
             char[] passArray = passPhrase.ToCharArray();
 
-            byte[] original = Encoding.ASCII.GetBytes("Hello world");
+            byte[] original = TestEncodingHelpers.GetAsciiBytes("Hello world");
             Console.WriteLine("Starting PGP test");
             byte[] encrypted = Encrypt(original, passArray, "iway", SymmetricKeyAlgorithmTag.Cast5, true);
 

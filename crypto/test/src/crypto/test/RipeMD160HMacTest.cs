@@ -63,7 +63,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 
             for (int i = 0; i < messages.Length; i++)
             {
-                byte[] m = Encoding.ASCII.GetBytes(messages[i]);
+                byte[] m = TestEncodingHelpers.GetAsciiBytes(messages[i]);
                 if (messages[i].StartsWith("0x"))
                 {
                     m = Hex.Decode(messages[i].Substring(2));

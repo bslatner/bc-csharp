@@ -89,7 +89,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 
 		private void blankLineTest()
 		{
-			byte[] blankLineBytes = Encoding.ASCII.GetBytes(blankLineData);
+			byte[] blankLineBytes = TestEncodingHelpers.GetAsciiBytes(blankLineData);
 			MemoryStream bIn = new MemoryStream(blankLineBytes, false);
 			ArmoredInputStream aIn = new ArmoredInputStream(bIn, true);
 
@@ -100,7 +100,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 				bOut.WriteByte((byte)c);
 			}
 
-			byte[] expected = Encoding.ASCII.GetBytes("Hello World!");
+			byte[] expected = TestEncodingHelpers.GetAsciiBytes("Hello World!");
 
 			if (!Arrays.AreEqual(expected, bOut.ToArray()))
 			{

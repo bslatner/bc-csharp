@@ -1023,6 +1023,7 @@
     <Compile Include="src\util\SystemIOFileSystem.cs" />
     <Compile Include="src\util\SystemConsole.cs" />
     <Compile Include="src\util\SystemConsoleFactory.cs" />
+    <Compile Include="src\util\TestEncodingHelpers.cs" />
     <Compile Include="src\util\TestSuiteExtensions.cs" />
   </ItemGroup>
   <ItemGroup>

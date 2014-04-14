@@ -70,7 +70,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestEach()
 		{
-			byte[] testData = Encoding.ASCII.GetBytes("Hello world!");
+			byte[] testData = TestEncodingHelpers.GetAsciiBytes("Hello world!");
 
 			CmsCompressedDataStreamGenerator gen = new CmsCompressedDataStreamGenerator();
 			MemoryStream bOut = new MemoryStream();

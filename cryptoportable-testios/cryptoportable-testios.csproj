@@ -1020,6 +1020,7 @@
     <Compile Include="src\util\SystemIOFileSystem.cs" />
     <Compile Include="src\util\SystemConsole.cs" />
     <Compile Include="src\util\SystemConsoleFactory.cs" />
+    <Compile Include="src\util\TestEncodingHelpers.cs" />
     <EmbeddedResource Include="..\crypto\test\data\cms\sigs\counterSig.p7m">
       <Link>data\cms\sigs\counterSig.p7m</Link>
     </EmbeddedResource>

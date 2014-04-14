@@ -237,7 +237,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //		public void TestSha1WithRsaNoAttributes()
 //		{
 //			IList certList = new ArrayList();
-//			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes(TestMessage));
+//			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes(TestMessage));
 //
 //			certList.Add(OrigCert);
 //			certList.Add(SignCert);
@@ -255,7 +255,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //			CmsSignedData s = gen.Generate(CmsSignedDataGenerator.Data, msg, false, false);
 //
 //			CmsSignedDataParser sp = new CmsSignedDataParser(
-//				new CmsTypedStream(new MemoryStream(Encoding.ASCII.GetBytes(TestMessage), false)), s.GetEncoded());
+//				new CmsTypedStream(new MemoryStream(TestEncodingHelpers.GetAsciiBytes(TestMessage), false)), s.GetEncoded());
 //
 //			sp.GetSignedContent().Drain();
 //
@@ -264,7 +264,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //			//
 //			IDigest md = DigestUtilities.GetDigest("SHA1");
 //
-//			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+//			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 //			md.BlockUpdate(testBytes, 0, testBytes.Length);
 //			byte[] hash = DigestUtilities.DoFinal(md);
 //
@@ -275,7 +275,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //		public void TestDsaNoAttributes()
 //		{
 //			IList certList = new ArrayList();
-//			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes(TestMessage));
+//			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes(TestMessage));
 //
 //			certList.Add(OrigDsaCert);
 //			certList.Add(SignCert);
@@ -294,7 +294,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //
 //			CmsSignedDataParser sp = new CmsSignedDataParser(
 //				new CmsTypedStream(
-//				new MemoryStream(Encoding.ASCII.GetBytes(TestMessage), false)),
+//				new MemoryStream(TestEncodingHelpers.GetAsciiBytes(TestMessage), false)),
 //				s.GetEncoded());
 //
 //			sp.GetSignedContent().Drain();
@@ -304,7 +304,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //			//
 //			IDigest md = DigestUtilities.GetDigest("SHA1");
 //
-//			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+//			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 //			md.BlockUpdate(testBytes, 0, testBytes.Length);
 //			byte[] hash = DigestUtilities.DoFinal(md);
 //
@@ -340,7 +340,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -420,7 +420,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, "1.2.3.4", true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -463,7 +463,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			gen.AddCertificates(x509Certs);
@@ -636,7 +636,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -738,7 +738,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -808,7 +808,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -871,7 +871,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -896,7 +896,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			IList certList = new ArrayList();
 			MemoryStream bOut = new MemoryStream();
-			byte[] data = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] data = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 
 			certList.Add(OrigCert);
 			certList.Add(SignCert);
@@ -986,7 +986,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -1039,7 +1039,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			IList certList = new ArrayList();
 			MemoryStream bOut = new MemoryStream();
-			byte[] data = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] data = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 
 			certList.Add(OrigDsaCert);
 
@@ -1107,7 +1107,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -1159,7 +1159,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();
@@ -1196,7 +1196,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream sigOut = gen.Open(bOut, true);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			sigOut.Write(testBytes, 0, testBytes.Length);
 
 			sigOut.Close();

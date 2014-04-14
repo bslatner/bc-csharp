@@ -145,7 +145,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             ecgost3410.Init(true, param);
 
             //get hash message using the digest GOST3411.
-            byte[] message = Encoding.ASCII.GetBytes("Message for sign");
+            byte[] message = TestEncodingHelpers.GetAsciiBytes("Message for sign");
             Gost3411Digest gost3411 = new Gost3411Digest();
             gost3411.BlockUpdate(message, 0, message.Length);
             byte[] hashmessage = new byte[gost3411.GetDigestSize()];

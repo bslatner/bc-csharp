@@ -280,7 +280,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             string data = "hello world!";
             MemoryStream bOut = new MemoryStream();
 
-            byte[] dataBytes = Encoding.ASCII.GetBytes(data);
+            byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
             MemoryStream testIn = new MemoryStream(dataBytes, false);
 
             PgpSignatureGenerator sGen = new PgpSignatureGenerator(PublicKeyAlgorithmTag.Dsa, HashAlgorithmTag.Sha1);
@@ -414,7 +414,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             // signature generation - canonical text
             //
             const string data = "hello world!";
-            byte[] dataBytes = Encoding.ASCII.GetBytes(data);
+            byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
             MemoryStream bOut = new MemoryStream();
             MemoryStream testIn = new MemoryStream(dataBytes, false);
             PgpSignatureGenerator sGen = new PgpSignatureGenerator(

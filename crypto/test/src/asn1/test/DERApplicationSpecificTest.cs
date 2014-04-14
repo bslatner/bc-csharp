@@ -65,8 +65,8 @@ namespace Org.BouncyCastle.Asn1.Tests
 
 			if (!Arrays.AreEqual(certData, encoded))
 			{
-				Console.WriteLine(Encoding.ASCII.GetString(certData, 0, certData.Length).Substring(0, 20));
-				Console.WriteLine(Encoding.ASCII.GetString(encoded, 0, encoded.Length).Substring(0, 20));
+				Console.WriteLine(TestEncodingHelpers.GetAsciiString(certData, 0, certData.Length).Substring(0, 20));
+				Console.WriteLine(TestEncodingHelpers.GetAsciiString(encoded, 0, encoded.Length).Substring(0, 20));
 				Fail("re-encoding of certificate data failed");
 			}
 		}

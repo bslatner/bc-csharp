@@ -19,7 +19,7 @@ namespace Org.BouncyCastle.Tests
         : SimpleTest
     {
         private static byte[] keyBytes = Hex.Decode("0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b");
-        private static byte[] message = Encoding.ASCII.GetBytes("Hi There");
+        private static byte[] message = TestEncodingHelpers.GetAsciiBytes("Hi There");
         private static byte[] output1 = Hex.Decode("b617318655057264e28bc0b6fb378c8ef146be00");
         private static byte[] outputMD5 = Hex.Decode("5ccec34ea9656392457fa1ac27f08fbc");
         private static byte[] outputMD2 = Hex.Decode("dc1923ef5f161d35bef839ca8c807808");

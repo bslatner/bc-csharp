@@ -282,7 +282,7 @@ namespace Org.BouncyCastle.Tests
 
             sgr.Init(true, new ParametersWithRandom(sKey, k));
 
-            byte[] message = Encoding.ASCII.GetBytes("abc");
+            byte[] message = TestEncodingHelpers.GetAsciiBytes("abc");
 
             sgr.BlockUpdate(message, 0, message.Length);
 
@@ -353,7 +353,7 @@ namespace Org.BouncyCastle.Tests
                 parameters);
 
             ISigner sgr = SignerUtilities.GetSigner("ECDSA");
-            byte[] message = Encoding.ASCII.GetBytes("abc");
+            byte[] message = TestEncodingHelpers.GetAsciiBytes("abc");
 
             sgr.Init(true, new ParametersWithRandom(sKey, k));
 
@@ -456,7 +456,7 @@ namespace Org.BouncyCastle.Tests
                 parameters);
 
             ISigner sgr = SignerUtilities.GetSigner(algorithm);
-            byte[] message = Encoding.ASCII.GetBytes("abc");
+            byte[] message = TestEncodingHelpers.GetAsciiBytes("abc");
 
             sgr.Init(true, new ParametersWithRandom(sKey, k));
 

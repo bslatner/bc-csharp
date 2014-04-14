@@ -410,7 +410,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestDetachedVerification()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("Hello World!");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("Hello World!");
 			CmsProcessable msg = new CmsProcessableByteArray(data);
 
 			IList certList = new ArrayList();
@@ -453,7 +453,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestSha1AndMD5WithRsaEncapsulatedRepeated()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(OrigCert);
 			certList.Add(SignCert);
@@ -554,7 +554,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //		public void TestSha1WithRsaNoAttributes()
 //		{
 //			IList certList = new ArrayList();
-//			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello world!"));
+//			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello world!"));
 //
 //			certList.Add(OrigCert);
 //			certList.Add(SignCert);
@@ -576,7 +576,7 @@ namespace Org.BouncyCastle.Cms.Tests
 //			//
 //			IDigest md = DigestUtilities.GetDigest("SHA1");
 //
-//			byte[] testBytes = Encoding.ASCII.GetBytes("Hello world!");
+//			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes("Hello world!");
 //			md.BlockUpdate(testBytes, 0, testBytes.Length);
 //			byte[] hash = DigestUtilities.DoFinal(md);
 //
@@ -586,7 +586,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestSha1WithRsaAndAttributeTable()
 		{
-			byte[] testBytes = Encoding.ASCII.GetBytes("Hello world!");
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes("Hello world!");
 
 			IList certList = new ArrayList();
 			CmsProcessable msg = new CmsProcessableByteArray(testBytes);
@@ -774,7 +774,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			IList certList = new ArrayList();
 			IList crlList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(SignCert);
 			certList.Add(OrigCert);
@@ -826,7 +826,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			string	digestOID)
 		{
 			IList certList = new ArrayList();
-			byte[] msgBytes = Encoding.ASCII.GetBytes("Hello World!");
+			byte[] msgBytes = TestEncodingHelpers.GetAsciiBytes("Hello World!");
 			CmsProcessable msg = new CmsProcessableByteArray(msgBytes);
 
 			certList.Add(OrigCert);
@@ -861,7 +861,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			IList certList = new ArrayList();
 			IList crlList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(signatureCert);
 			certList.Add(OrigCert);
@@ -964,7 +964,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		{
 			IList certList = new ArrayList();
 			IList crlList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(signatureCert);
 			certList.Add(OrigCert);
@@ -1131,7 +1131,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestWithAttributeCertificate()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(SignDsaCert);
 
@@ -1191,7 +1191,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestCertStoreReplacement()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(SignDsaCert);
 
@@ -1230,7 +1230,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestEncapsulatedCertStoreReplacement()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(SignDsaCert);
 
@@ -1269,7 +1269,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestCertOrdering1()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(OrigCert);
 			certList.Add(SignCert);
@@ -1300,7 +1300,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestCertOrdering2()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(SignCert);
 			certList.Add(SignDsaCert);
@@ -1331,7 +1331,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		public void TestSignerStoreReplacement()
 		{
 			IList certList = new ArrayList();
-			CmsProcessable msg = new CmsProcessableByteArray(Encoding.ASCII.GetBytes("Hello World!"));
+			CmsProcessable msg = new CmsProcessableByteArray(TestEncodingHelpers.GetAsciiBytes("Hello World!"));
 
 			certList.Add(OrigCert);
 			certList.Add(SignCert);

@@ -205,11 +205,11 @@ namespace Org.BouncyCastle.Cms.Tests
 			{
 				if (i + 64 < data.Length)
 				{
-					buf.Append(Encoding.Default.GetString(data, i, 64));
+					buf.Append(TestEncodingHelpers.GetDefaultEncodingString(data, i, 64));
 				}
 				else
 				{
-					buf.Append(Encoding.Default.GetString(data, i, data.Length - i));
+					buf.Append(TestEncodingHelpers.GetDefaultEncodingString(data, i, data.Length - i));
 				}
 				buf.Append('\n');
 			}

@@ -31,11 +31,11 @@ namespace Org.BouncyCastle.Tests
 
 		private static readonly byte[] keyBytesISO9797 = Hex.Decode("7CA110454A1A6E570131D9619DC1376E");
 
-		private static readonly byte[] inputISO9797 = Encoding.ASCII.GetBytes("Hello World !!!!");
+		private static readonly byte[] inputISO9797 = TestEncodingHelpers.GetAsciiBytes("Hello World !!!!");
 
 		private static readonly byte[] outputISO9797 = Hex.Decode("F09B856213BAB83B");
 
-		private static readonly byte[] inputDesEDE64 = Encoding.ASCII.GetBytes("Hello World !!!!");
+		private static readonly byte[] inputDesEDE64 = TestEncodingHelpers.GetAsciiBytes("Hello World !!!!");
 
 		private static readonly byte[] outputDesEDE64 = Hex.Decode("862304d33af01096");
 

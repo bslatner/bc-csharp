@@ -14,7 +14,7 @@ namespace Org.BouncyCastle.Cms.Tests
 	[TestFixture]
 	public class CompressedDataTest
 	{
-		private static readonly byte[] TEST_DATA = Encoding.ASCII.GetBytes("Hello world!");
+		private static readonly byte[] TEST_DATA = TestEncodingHelpers.GetAsciiBytes("Hello world!");
 
 		private static readonly byte[] compData = Base64.Decode(
 			  "MIAGCyqGSIb3DQEJEAEJoIAwgAIBADANBgsqhkiG9w0BCRADCDCABgkqhkiG9w0BBwGggCSABIIC"

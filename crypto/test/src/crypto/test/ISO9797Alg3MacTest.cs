@@ -19,7 +19,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 		static byte[] keyBytes = Hex.Decode("7CA110454A1A6E570131D9619DC1376E");
 		static byte[] ivBytes = Hex.Decode("0000000000000000");
 
-		static byte[] input1 = Encoding.ASCII.GetBytes("Hello World !!!!");
+		static byte[] input1 = TestEncodingHelpers.GetAsciiBytes("Hello World !!!!");
 
 		static byte[] output1 = Hex.Decode("F09B856213BAB83B");
 

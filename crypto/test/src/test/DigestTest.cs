@@ -43,7 +43,7 @@ namespace Org.BouncyCastle.Tests
         void doTest(
             string algorithm)
         {
-            byte[] message = Encoding.ASCII.GetBytes("hello world");
+            byte[] message = TestEncodingHelpers.GetAsciiBytes("hello world");
 
             IDigest digest = DigestUtilities.GetDigest(algorithm);
 

@@ -69,7 +69,7 @@ namespace Org.BouncyCastle.Tests
 			IBufferedCipher inCipher = CipherUtilities.GetCipher(name);
 			IBufferedCipher outCipher = CipherUtilities.GetCipher(name);
 			KeyParameter key = ParameterUtilities.CreateKeyParameter(baseName, kGen.GenerateKey());
-			MemoryStream bIn = new MemoryStream(Encoding.ASCII.GetBytes(lCode), false);
+			MemoryStream bIn = new MemoryStream(TestEncodingHelpers.GetAsciiBytes(lCode), false);
 			MemoryStream bOut = new MemoryStream();
 
 			// In the Java build, this IV would be implicitly created and then retrieved with getIV()
@@ -108,7 +108,7 @@ namespace Org.BouncyCastle.Tests
 			cOut.Close();
 
 			byte[] bs = bOut.ToArray();
-			string res = Encoding.ASCII.GetString(bs, 0, bs.Length);
+			string res = TestEncodingHelpers.GetAsciiString(bs, 0, bs.Length);
 
 			if (!res.Equals(lCode))
 			{

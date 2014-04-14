@@ -137,7 +137,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 			//
             // create a PBE encrypted message and read it back.
             //
-			byte[] text = Encoding.ASCII.GetBytes("hello world!\n");
+			byte[] text = TestEncodingHelpers.GetAsciiBytes("hello world!\n");
 
 			//
             // encryption step - convert to literal data, compress, encode.

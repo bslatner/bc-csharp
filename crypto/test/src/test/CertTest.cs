@@ -2235,19 +2235,19 @@ namespace Org.BouncyCastle.Tests
             {
                 Fail("PEM cert with extraneous header not read");
             }
-            X509Crl crl = new X509CrlParser().ReadCrl(Encoding.ASCII.GetBytes(PemData.CRL_1));
+            X509Crl crl = new X509CrlParser().ReadCrl(TestEncodingHelpers.GetAsciiBytes(PemData.CRL_1));
             if (crl == null)
             {
                 Fail("PEM crl not read");
             }
             ArrayList col = new ArrayList(
-                new X509CertificateParser().ReadCertificates(Encoding.ASCII.GetBytes(PemData.CERTIFICATE_2)));
+                new X509CertificateParser().ReadCertificates(TestEncodingHelpers.GetAsciiBytes(PemData.CERTIFICATE_2)));
             if (col.Count != 1 || !col.Contains(cert))
             {
                 Fail("PEM cert collection not right");
             }
             col = new ArrayList(
-                new X509CrlParser().ReadCrls(Encoding.ASCII.GetBytes(PemData.CRL_2)));
+                new X509CrlParser().ReadCrls(TestEncodingHelpers.GetAsciiBytes(PemData.CRL_2)));
             if (col.Count != 1 || !col.Contains(crl))
             {
                 Fail("PEM crl collection not right");
@@ -2257,7 +2257,7 @@ namespace Org.BouncyCastle.Tests
         private static X509Certificate readPemCert(
             string pemData)
         {
-            return new X509CertificateParser().ReadCertificate(Encoding.ASCII.GetBytes(pemData));
+            return new X509CertificateParser().ReadCertificate(TestEncodingHelpers.GetAsciiBytes(pemData));
         }
 
         private void pkcs7Test()

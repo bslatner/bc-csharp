@@ -4711,6 +4711,7 @@
     <Compile Include="test\src\util\net\test\IPAddressTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\util\TestEncodingHelpers.cs" />
     <Compile Include="test\src\util\test\FixedSecureRandom.cs">
       <SubType>Code</SubType>
     </Compile>

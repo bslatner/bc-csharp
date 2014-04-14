@@ -147,7 +147,7 @@ namespace Org.BouncyCastle.Utilities.Test
 			w.WriteLine();
 			w.Close();
 			byte[] bs = buf.ToArray();
-			return Encoding.ASCII.GetString(bs, 0, bs.Length);
+			return TestEncodingHelpers.GetAsciiString(bs, 0, bs.Length);
 		}
 
 		internal static string GetEnvironmentVariable(

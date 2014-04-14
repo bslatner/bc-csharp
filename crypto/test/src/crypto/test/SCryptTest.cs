@@ -78,7 +78,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 		{
 			arg = arg.Trim();
 			arg = arg.Substring(1, arg.Length - 2);
-			return Encoding.ASCII.GetBytes(arg);
+			return TestEncodingHelpers.GetAsciiBytes(arg);
 		}
 
 		private static int ExtractInteger(string arg)

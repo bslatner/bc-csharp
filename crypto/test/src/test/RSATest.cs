@@ -470,7 +470,7 @@ namespace Org.BouncyCastle.Tests
 //
 //			if (!AreEqual(outBytes, output[2]))
 //			{
-//				Fail("OAEP test failed on encrypt expected " + Encoding.ASCII.GetString(Hex.Encode(output[2])) + " got " + Encoding.ASCII.GetString(Hex.Encode(outBytes)));
+//				Fail("OAEP test failed on encrypt expected " + TestEncodingHelpers.GetAsciiString(Hex.Encode(output[2])) + " got " + TestEncodingHelpers.GetAsciiString(Hex.Encode(outBytes)));
 //			}
 //
 //			c = CipherUtilities.GetCipher("RSA/NONE/OAEPWithSHA1AndMGF1Padding");
@@ -481,7 +481,7 @@ namespace Org.BouncyCastle.Tests
 //
 //			if (!AreEqual(outBytes, input))
 //			{
-//				Fail("OAEP test failed on decrypt expected " + Encoding.ASCII.GetString(Hex.Encode(input)) + " got " + Encoding.ASCII.GetString(Hex.Encode(outBytes)));
+//				Fail("OAEP test failed on decrypt expected " + TestEncodingHelpers.GetAsciiString(Hex.Encode(input)) + " got " + TestEncodingHelpers.GetAsciiString(Hex.Encode(outBytes)));
 //			}
 //
 //			oaepP = c.getParameters();
@@ -514,7 +514,7 @@ namespace Org.BouncyCastle.Tests
 //
 //			if (!AreEqual(outBytes, output[7]))
 //			{
-//				Fail("OAEP test failed on encrypt expected " + Encoding.ASCII.GetString(Hex.Encode(output[2])) + " got " + Encoding.ASCII.GetString(Hex.Encode(outBytes)));
+//				Fail("OAEP test failed on encrypt expected " + TestEncodingHelpers.GetAsciiString(Hex.Encode(output[2])) + " got " + TestEncodingHelpers.GetAsciiString(Hex.Encode(outBytes)));
 //			}
 
 			c = CipherUtilities.GetCipher("RSA/NONE/OAEPWithSHA1AndMGF1Padding");
@@ -526,7 +526,7 @@ namespace Org.BouncyCastle.Tests
 //
 //			if (!AreEqual(outBytes, input))
 //			{
-//				Fail("OAEP test failed on decrypt expected " + Encoding.ASCII.GetString(Hex.Encode(input)) + " got " + Encoding.ASCII.GetString(Hex.Encode(outBytes)));
+//				Fail("OAEP test failed on decrypt expected " + TestEncodingHelpers.GetAsciiString(Hex.Encode(input)) + " got " + TestEncodingHelpers.GetAsciiString(Hex.Encode(outBytes)));
 //			}
 
 			//

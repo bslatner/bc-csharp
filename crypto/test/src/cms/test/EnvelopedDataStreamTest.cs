@@ -361,7 +361,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestKeyTransAes128()
 		{
-			byte[] data = Encoding.Default.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetDefaultEncodingBytes("WallaWallaWashington");
 
 			CmsEnvelopedDataStreamGenerator edGen = new CmsEnvelopedDataStreamGenerator();
 
@@ -399,7 +399,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestAesKek()
 		{
-			byte[] data = Encoding.Default.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetDefaultEncodingBytes("WallaWallaWashington");
 			KeyParameter kek = CmsTestUtil.MakeAes192Key();
 
 			CmsEnvelopedDataStreamGenerator edGen = new CmsEnvelopedDataStreamGenerator();
@@ -440,7 +440,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestTwoAesKek()
 		{
-			byte[] data = Encoding.Default.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetDefaultEncodingBytes("WallaWallaWashington");
 			KeyParameter kek1 = CmsTestUtil.MakeAes192Key();
 			KeyParameter kek2 = CmsTestUtil.MakeAes192Key();
 

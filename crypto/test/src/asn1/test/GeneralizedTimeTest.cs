@@ -192,7 +192,11 @@ namespace Org.BouncyCastle.Asn1.Tests
             char sign = '+';
 
             // Note: GetUtcOffset incorporates Daylight Savings offset
+#if WINDOWS_PHONE
+            TimeSpan offset = TimeZoneInfo.Local.GetUtcOffset(date);
+#else
             TimeSpan offset =  TimeZone.CurrentTimeZone.GetUtcOffset(date);
+#endif
             if (offset.CompareTo(TimeSpan.Zero) < 0)
             {
                 sign = '-';

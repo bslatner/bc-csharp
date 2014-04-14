@@ -1030,9 +1030,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="src\util\ArrayList.cs" />
+    <Compile Include="src\util\Hashtable.cs" />
     <Compile Include="src\util\SystemConsole.cs" />
     <Compile Include="src\util\SystemConsoleFactory.cs" />
     <Compile Include="src\util\SystemIOFileSystem.cs" />
+    <Compile Include="src\util\TestEncodingHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

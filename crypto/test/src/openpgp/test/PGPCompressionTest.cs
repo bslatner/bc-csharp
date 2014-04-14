@@ -15,7 +15,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 	public class PgpCompressionTest
 		: SimpleTest
 	{
-		private static readonly byte[] Data = Encoding.ASCII.GetBytes("hello world! !dlrow olleh");
+		private static readonly byte[] Data = TestEncodingHelpers.GetAsciiBytes("hello world! !dlrow olleh");
 
 		[Test]
 		public void TestUncompressed()

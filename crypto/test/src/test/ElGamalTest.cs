@@ -88,7 +88,7 @@ namespace Org.BouncyCastle.Tests
 
 			cipher.Init(true, new ParametersWithRandom(keyPair.Public, rand));
 
-			byte[] inBytes = Encoding.ASCII.GetBytes("This is a test");
+			byte[] inBytes = TestEncodingHelpers.GetAsciiBytes("This is a test");
 
 			if (cipher.GetOutputSize(inBytes.Length) != (size / 8) * 2)
 			{

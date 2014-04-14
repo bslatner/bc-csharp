@@ -172,7 +172,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Examples
 
 		private static byte[] LineSeparator
 		{
-			get { return Encoding.ASCII.GetBytes(SimpleTest.NewLine); }
+			get { return TestEncodingHelpers.GetAsciiBytes(SimpleTest.NewLine); }
 		}
 
         /*

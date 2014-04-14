@@ -184,7 +184,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			Stream cOut = cGen.Open(sigOut, CmsCompressedDataStreamGenerator.ZLib);
 
-			byte[] testBytes = Encoding.ASCII.GetBytes(TestMessage);
+			byte[] testBytes = TestEncodingHelpers.GetAsciiBytes(TestMessage);
 			cOut.Write(testBytes, 0, testBytes.Length);
 
 			cOut.Close();

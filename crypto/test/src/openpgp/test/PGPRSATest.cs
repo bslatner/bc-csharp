@@ -349,7 +349,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             PgpPrivateKey	pgpPrivKey,
             PgpPublicKey	pgpPubKey)
         {
-            byte[] text = Encoding.ASCII.GetBytes("hello world!\n");
+            byte[] text = TestEncodingHelpers.GetAsciiBytes("hello world!\n");
 
             //
             // literal data
@@ -635,7 +635,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 //                c.Init(Cipher.ENCRYPT_MODE, pubKey);
             c.Init(true, pubKey);
 
-            byte[] inBytes = Encoding.ASCII.GetBytes("hello world");
+            byte[] inBytes = TestEncodingHelpers.GetAsciiBytes("hello world");
             byte[] outBytes = c.DoFinal(inBytes);
 
 //                c.Init(Cipher.DECRYPT_MODE, pgpPrivKey.GetKey());
@@ -688,7 +688,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             //
             // encrypted message
             //
-            byte[] text = Encoding.ASCII.GetBytes("hello world!\n");
+            byte[] text = TestEncodingHelpers.GetAsciiBytes("hello world!\n");
 
             PgpObjectFactory pgpF = new PgpObjectFactory(enc1);
 
@@ -949,7 +949,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             // signature generation
             //
             const string data = "hello world!";
-            byte[] dataBytes = Encoding.ASCII.GetBytes(data);
+            byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
 
             bOut = new UncloseableMemoryStream();
 
@@ -1126,7 +1126,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
             PgpPrivateKey		privKey)
         {
             const string data = "hello world!";
-            byte[] dataBytes = Encoding.ASCII.GetBytes(data);
+            byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
 
             MemoryStream bOut = new UncloseableMemoryStream();
             MemoryStream testIn = new MemoryStream(dataBytes, false);

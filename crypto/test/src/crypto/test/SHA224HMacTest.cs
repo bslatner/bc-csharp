@@ -63,7 +63,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 
             for (int i = 0; i < messages.Length; i++)
             {
-                byte[] m = Encoding.ASCII.GetBytes(messages[i]);
+                byte[] m = TestEncodingHelpers.GetAsciiBytes(messages[i]);
                 if (messages[i].StartsWith("0x"))
                 {
                     m = Hex.Decode(messages[i].Substring(2));
@@ -82,7 +82,7 @@ namespace Org.BouncyCastle.Crypto.Tests
             // test reset
             //
             int vector = 0; // vector used for test
-            byte[] m2 = Encoding.ASCII.GetBytes(messages[vector]);
+            byte[] m2 = TestEncodingHelpers.GetAsciiBytes(messages[vector]);
             if (messages[vector].StartsWith("0x"))
             {
                 m2 = Hex.Decode(messages[vector].Substring(2));

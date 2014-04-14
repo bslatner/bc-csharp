@@ -176,7 +176,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestKeyTrans()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaWashington");
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
@@ -208,7 +208,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestKeyTransRC4()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaBouncyCastle");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaBouncyCastle");
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
@@ -237,7 +237,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestKeyTrans128RC4()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaBouncyCastle");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaBouncyCastle");
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
@@ -266,7 +266,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestKeyTransOdes()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaBouncyCastle");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaBouncyCastle");
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
@@ -387,7 +387,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			DerObjectIdentifier	checkOID,
 			Type				asn1Params)
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaWashington");
 
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
@@ -421,7 +421,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestErroneousKek()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaWashington");
 			KeyParameter kek = ParameterUtilities.CreateKeyParameter(
 				"AES",
 				new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 });
@@ -504,7 +504,7 @@ namespace Org.BouncyCastle.Cms.Tests
 			KeyParameter		kek,
 			DerObjectIdentifier	algOid)
 		{
-			byte[] data = Encoding.ASCII.GetBytes("WallaWallaWashington");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("WallaWallaWashington");
 			CmsEnvelopedDataGenerator edGen = new CmsEnvelopedDataGenerator();
 
 			byte[] kekId = new byte[] { 1, 2, 3, 4, 5 };

@@ -168,7 +168,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 			string type)
 		{
 			ArmoredInputStream aIn = new ArmoredInputStream(
-				new MemoryStream(Encoding.ASCII.GetBytes(message)));
+				new MemoryStream(TestEncodingHelpers.GetAsciiBytes(message)));
 
 			string[] headers = aIn.GetArmorHeaders();
 
@@ -273,7 +273,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 
 			MemoryStream bOut = new MemoryStream();
 			ArmoredOutputStream aOut = new ArmoredOutputStream(bOut);
-			MemoryStream bIn = new MemoryStream(Encoding.ASCII.GetBytes(message), false);
+			MemoryStream bIn = new MemoryStream(TestEncodingHelpers.GetAsciiBytes(message), false);
 
 			aOut.BeginClearText(HashAlgorithmTag.Sha256);
 
@@ -308,7 +308,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 			aOut.Close();
 
 			byte[] bs = bOut.ToArray();
-			messageTest(Encoding.ASCII.GetString(bs, 0, bs.Length), type);
+			messageTest(TestEncodingHelpers.GetAsciiString(bs, 0, bs.Length), type);
 		}
 
 		private static int ReadInputLine(

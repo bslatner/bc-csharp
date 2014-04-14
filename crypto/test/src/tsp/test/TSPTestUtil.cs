@@ -63,11 +63,11 @@ namespace Org.BouncyCastle.Tsp.Tests
 			{
 				if (i + 64 < data.Length)
 				{
-					buf.Append(Encoding.ASCII.GetString(data, i, 64));
+					buf.Append(TestEncodingHelpers.GetAsciiString(data, i, 64));
 				}
 				else
 				{
-					buf.Append(Encoding.ASCII.GetString(data, i, data.Length - i));
+					buf.Append(TestEncodingHelpers.GetAsciiString(data, i, data.Length - i));
 				}
 				buf.Append('\n');
 			}

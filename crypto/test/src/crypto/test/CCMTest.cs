@@ -218,7 +218,7 @@ namespace Org.BouncyCastle.Crypto.Tests
 			byte[]			k,
 			byte[]			n)
 		{
-			byte[] p = Encoding.ASCII.GetBytes("hello world!!");
+			byte[] p = TestEncodingHelpers.GetAsciiBytes("hello world!!");
 
 			ccm.Init(true, new ParametersWithIV(new KeyParameter(k), n));
 

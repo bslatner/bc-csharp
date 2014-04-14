@@ -188,7 +188,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		[Test]
 		public void TestEncoding()
 		{
-			byte[] data = Encoding.ASCII.GetBytes("Eric H. Echidna");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("Eric H. Echidna");
 
 			CmsAuthenticatedDataGenerator adGen = new CmsAuthenticatedDataGenerator();
 
@@ -221,7 +221,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 		private void tryKeyTrans(string macAlg)
 		{
-			byte[] data = Encoding.ASCII.GetBytes("Eric H. Echidna");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("Eric H. Echidna");
 
 			CmsAuthenticatedDataGenerator adGen = new CmsAuthenticatedDataGenerator();
 
@@ -252,7 +252,7 @@ namespace Org.BouncyCastle.Cms.Tests
 		
 		private void tryKekAlgorithm(KeyParameter kek, DerObjectIdentifier algOid)
 		{
-			byte[] data = Encoding.ASCII.GetBytes("Eric H. Echidna");
+			byte[] data = TestEncodingHelpers.GetAsciiBytes("Eric H. Echidna");
 
 			CmsAuthenticatedDataGenerator adGen = new CmsAuthenticatedDataGenerator();
 

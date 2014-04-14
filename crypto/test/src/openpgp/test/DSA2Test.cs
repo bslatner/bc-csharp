@@ -113,7 +113,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 			PgpSecretKeyRing		secRing = loadSecretKey(privateKeyFile);
 			PgpPublicKeyRing		pubRing = loadPublicKey(publicKeyFile);
 			string					data = "hello world!";
-			byte[]					dataBytes = Encoding.ASCII.GetBytes(data);
+			byte[]					dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
 			MemoryStream			bOut = new MemoryStream();
 			MemoryStream			testIn = new MemoryStream(dataBytes, false);
 			PgpSignatureGenerator	sGen = new PgpSignatureGenerator(PublicKeyAlgorithmTag.Dsa, digest);

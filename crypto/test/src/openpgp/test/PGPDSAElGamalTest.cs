@@ -124,7 +124,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 			// signature generation
 			//
 			const string data = "hello world!";
-			byte[] dataBytes = Encoding.ASCII.GetBytes(data);
+			byte[] dataBytes = TestEncodingHelpers.GetAsciiBytes(data);
 			MemoryStream bOut = new MemoryStream();
 			MemoryStream testIn = new MemoryStream(dataBytes, false);
 			PgpSignatureGenerator sGen = new PgpSignatureGenerator(PublicKeyAlgorithmTag.Dsa,
@@ -231,7 +231,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp.Tests
 
 			c.Init(true, pKey);
 
-			byte[] inBytes = Encoding.ASCII.GetBytes("hello world");
+			byte[] inBytes = TestEncodingHelpers.GetAsciiBytes("hello world");
 			byte[] outBytes = c.DoFinal(inBytes);
 
 			pgpPrivKey = sKey.GetSecretKey(pgpKeyID).ExtractPrivateKey(pass);
