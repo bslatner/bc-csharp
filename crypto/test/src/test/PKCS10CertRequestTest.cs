@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-
+using System.Collections.Generic;
 using NUnit.Framework;
 
 using Org.BouncyCastle.Asn1;
@@ -81,7 +81,7 @@ namespace Org.BouncyCastle.Tests
 
             AsymmetricCipherKeyPair kp = kpg.GenerateKeyPair();
 
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs.Add(X509Name.C, "AU");
             attrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
             attrs.Add(X509Name.L, "Melbourne");

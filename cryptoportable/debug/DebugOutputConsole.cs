@@ -1,28 +1,30 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace Org.BouncyCastle
 {
     public class DebugOutputConsole : IConsole
     {
+        private TextWriter output = new DebugTextWriter();
+        private TextWriter error = new DebugTextWriter();
+
         public TextWriter Out
         {
-            get { throw new NotImplementedException(); }
+            get { return output; }
         }
 
         public TextWriter Error
         {
-            get { throw new NotImplementedException(); }
+            get { return error; }
         }
 
         public void SetOut(TextWriter writer)
         {
-            throw new NotImplementedException();
+            output = writer;
         }
 
         public void SetError(TextWriter writer)
         {
-            throw new NotImplementedException();
+            error = writer;
         }
 
         public void WriteLine()

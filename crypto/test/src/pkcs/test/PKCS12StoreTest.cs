@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 using NUnit.Framework;
@@ -410,14 +411,14 @@ namespace Org.BouncyCastle.Pkcs.Tests
 			//
 			// distinguished name table.
 			//
-            IDictionary issuerAttrs = new Hashtable();
+		    IDictionary issuerAttrs = new Dictionary<DerObjectIdentifier, string>();
 			issuerAttrs.Add(X509Name.C, "AU");
 			issuerAttrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
 			issuerAttrs.Add(X509Name.L, "Melbourne");
 			issuerAttrs.Add(X509Name.ST, "Victoria");
 			issuerAttrs.Add(X509Name.EmailAddress, issuerEmail);
 
-			IDictionary subjectAttrs = new Hashtable();
+            IDictionary subjectAttrs = new Dictionary<DerObjectIdentifier, string>();
 			subjectAttrs.Add(X509Name.C, "AU");
 			subjectAttrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
 			subjectAttrs.Add(X509Name.L, "Melbourne");

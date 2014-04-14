@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -431,7 +432,7 @@ namespace Org.BouncyCastle.Cms.Tests
 
 			CmsSignedData s = gen.Generate(msg);
 
-			IDictionary hashes = new Hashtable();
+		    IDictionary hashes = new Dictionary<string, byte[]>();
 			hashes.Add(CmsSignedDataGenerator.DigestSha1, CalculateHash("SHA1", data));
 			hashes.Add(CmsSignedDataGenerator.DigestMD5, CalculateHash("MD5", data));
 

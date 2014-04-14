@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using crypto.test.Resources;
+using Org.BouncyCastle;
+using Org.BouncyCastle.Utilities.IO;
+using Console = Org.BouncyCastle.Console;
 
 namespace crypto.test
 {
@@ -25,6 +27,10 @@ namespace crypto.test
         {
             // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
+
+            // set up console and file system
+            Console.ConsoleFactory = new SystemConsoleFactory();
+            FileSystemHelper.FileSystem = new SystemIOFileSystem();
 
             // Standard XAML initialization
             InitializeComponent();

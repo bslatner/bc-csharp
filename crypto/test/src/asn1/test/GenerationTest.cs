@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -131,7 +132,7 @@ namespace Org.BouncyCastle.Asn1.Tests
 			// add extensions
 			//
 			IList order = new ArrayList();
-			IDictionary extensions = new Hashtable();
+			IDictionary extensions = new Dictionary<DerObjectIdentifier, object>();
 
 			order.Add(X509Extensions.AuthorityKeyIdentifier);
 			order.Add(X509Extensions.SubjectKeyIdentifier);
@@ -202,7 +203,7 @@ namespace Org.BouncyCastle.Asn1.Tests
 			// add extensions
 			//
 			IList order = new ArrayList();
-			IDictionary extensions = new Hashtable();
+		    IDictionary extensions = new Dictionary<DerObjectIdentifier, object>();
 
 			order.Add(X509Extensions.SubjectAlternativeName);
 
@@ -255,7 +256,7 @@ namespace Org.BouncyCastle.Asn1.Tests
             // extensions
             //
             IList order = new ArrayList();
-            IDictionary extensions = new Hashtable();
+		    IDictionary extensions = new Dictionary<DerObjectIdentifier, object>();
             SubjectPublicKeyInfo info = new SubjectPublicKeyInfo(
 				new AlgorithmIdentifier(
 					OiwObjectIdentifiers.ElGamalAlgorithm,

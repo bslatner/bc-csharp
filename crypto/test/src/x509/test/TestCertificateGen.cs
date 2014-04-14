@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 using NUnit.Framework;
-
+using Org.BouncyCastle.Asn1;
 using Org.BouncyCastle.Asn1.X509;
 using Org.BouncyCastle.Crypto.Digests;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -64,7 +65,7 @@ namespace Org.BouncyCastle.X509.Tests
             RsaKeyParameters rsaPublic = new RsaKeyParameters(false, rsaPubMod, rsaPubExp);
 			RsaPrivateCrtKeyParameters rsaPrivate = new RsaPrivateCrtKeyParameters(rsaPrivMod, rsaPubExp, rsaPrivExp, rsaPrivP, rsaPrivQ, rsaPrivDP, rsaPrivDQ, rsaPrivQinv);
 
-			IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs[X509Name.C] = "AU";
             attrs[X509Name.O] = "The Legion of the Bouncy Castle";
             attrs[X509Name.L] = "Melbourne";
@@ -141,7 +142,7 @@ namespace Org.BouncyCastle.X509.Tests
             DsaPrivateKeyParameters dsaPriv = new DsaPrivateKeyParameters(DsaPrivateX, para);
             DsaPublicKeyParameters dsaPub = new DsaPublicKeyParameters(DSAPublicY, para);
 
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs[X509Name.C] = "AU";
             attrs[X509Name.O] = "The Legion of the Bouncy Castle";
             attrs[X509Name.L] = "Melbourne";
@@ -228,7 +229,7 @@ namespace Org.BouncyCastle.X509.Tests
             ECPrivateKeyParameters ecPriv = new ECPrivateKeyParameters("ECDSA", ECPrivD, ecDomain);
 
 
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
 			attrs[X509Name.C] = "AU";
             attrs[X509Name.O] = "The Legion of the Bouncy Castle";
             attrs[X509Name.L] = "Melbourne";

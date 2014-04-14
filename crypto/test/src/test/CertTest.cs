@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -1432,7 +1433,7 @@ namespace Org.BouncyCastle.Tests
             //
             // distinguished name table.
             //
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             IList order = new ArrayList();
 
             attrs.Add(X509Name.C, "AU");
@@ -1569,7 +1570,7 @@ namespace Org.BouncyCastle.Tests
             //
             // distinguished name table.
             //
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             IList order = new ArrayList();
 
             attrs.Add(X509Name.C, "AU");
@@ -2011,7 +2012,7 @@ namespace Org.BouncyCastle.Tests
             //
             // distinguished name table.
             //
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs.Add(X509Name.C, "AU");
             attrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
             attrs.Add(X509Name.L, "Melbourne");

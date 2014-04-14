@@ -1,4 +1,6 @@
 ﻿using Microsoft.Phone.Controls;
+using NUnit.Framework.Internal.Filters;
+using NUnitLite.Api;
 
 namespace crypto.test
 {
@@ -8,6 +10,7 @@ namespace crypto.test
         public MainPage()
         {
             InitializeComponent();
+            RunnerResults.listener = new DebugOutputTestListener();
             RunnerResults.callingAssembly = GetType().Assembly;
 
             // Sample code to localize the ApplicationBar

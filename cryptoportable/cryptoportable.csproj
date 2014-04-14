@@ -3723,6 +3723,7 @@
     <Compile Include="debug\Console.cs" />
     <Compile Include="debug\DebugOutputConsole.cs" />
     <Compile Include="debug\DebugOutputConsoleFactory.cs" />
+    <Compile Include="debug\DebugTextWriter.cs" />
     <Compile Include="debug\IConsole.cs" />
     <Compile Include="debug\IConsoleFactory.cs" />
     <Compile Include="src\util\io\File.cs" />

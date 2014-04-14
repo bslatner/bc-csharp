@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 using Org.BouncyCastle.Asn1;
@@ -65,7 +66,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			cert.Verify(pubKey);
 
 //			PKCS12BagAttributeCarrier   bagAttr = (PKCS12BagAttributeCarrier)cert;
-			IDictionary bagAttr = new Hashtable();
+			IDictionary bagAttr = new Dictionary<string, DerBmpString>();
 
 			//
 			// this is actually optional - but if you want to have control
@@ -91,7 +92,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			//
 			// subject name table.
 			//
-			IDictionary attrs = new Hashtable();
+		    IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
 			IList order = new ArrayList();
 
 			attrs.Add(X509Name.C, "AU");
@@ -142,7 +143,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			cert.Verify(caCert.GetPublicKey());
 
 //			PKCS12BagAttributeCarrier   bagAttr = (PKCS12BagAttributeCarrier)cert;
-			IDictionary bagAttr = new Hashtable();
+		    IDictionary bagAttr = new Dictionary<string, DerBmpString>();
 
 			//
 			// this is actually optional - but if you want to have control
@@ -168,8 +169,8 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			//
 			// signers name table.
 			//
-			IDictionary sAttrs = new Hashtable();
-			IList sOrder = new ArrayList();
+            IDictionary sAttrs = new Dictionary<DerObjectIdentifier, string>();
+            IList sOrder = new ArrayList();
 
 			sAttrs.Add(X509Name.C, "AU");
 			sAttrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
@@ -184,8 +185,8 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			//
 			// subjects name table.
 			//
-			IDictionary attrs = new Hashtable();
-			IList order = new ArrayList();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
+            IList order = new ArrayList();
 
 			attrs.Add(X509Name.C, "AU");
 			attrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
@@ -232,7 +233,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			cert.Verify(caPubKey);
 
 //			PKCS12BagAttributeCarrier   bagAttr = (PKCS12BagAttributeCarrier)cert;
-			IDictionary bagAttr = new Hashtable();
+		    IDictionary bagAttr = new Dictionary<string, DerBmpString>();
 
 			//
 			// this is also optional - in the sense that if you leave this
@@ -341,7 +342,7 @@ namespace Org.BouncyCastle.Pkcs.Examples
 			// add the friendly name for the private key
 			//
 //			PKCS12BagAttributeCarrier   bagAttr = (PKCS12BagAttributeCarrier)privKey;
-			IDictionary bagAttr = new Hashtable();
+		    IDictionary bagAttr = new Dictionary<DerBmpString, string>();
 
 			//
 			// this is also optional - in the sense that if you leave this

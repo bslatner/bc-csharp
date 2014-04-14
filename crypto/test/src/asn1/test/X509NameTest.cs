@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 using NUnit.Framework;
@@ -41,7 +42,7 @@ namespace Org.BouncyCastle.Asn1.Tests
             DerObjectIdentifier	oid,
             string				value)
         {
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs.Add(oid, value);
 
             IList ord = new ArrayList();
@@ -60,7 +61,7 @@ namespace Org.BouncyCastle.Asn1.Tests
             DerObjectIdentifier	oid,
             string				val)
         {
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs.Add(oid, val);
 
             IList ord = new ArrayList(attrs.Keys);
@@ -127,7 +128,7 @@ namespace Org.BouncyCastle.Asn1.Tests
             //
             // composite
             //
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
             attrs.Add(X509Name.C, "AU");
             attrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
             attrs.Add(X509Name.L, "Melbourne");

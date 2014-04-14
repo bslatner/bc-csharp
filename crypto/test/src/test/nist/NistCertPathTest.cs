@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -35,8 +36,8 @@ namespace Org.BouncyCastle.Tests.Nist
 		private static readonly string NIST_TEST_POLICY_2 = "2.16.840.1.101.3.2.1.48.2";
 		private static readonly string NIST_TEST_POLICY_3 = "2.16.840.1.101.3.2.1.48.3";
 
-		private static IDictionary certs = new Hashtable();
-		private static IDictionary crls = new Hashtable();
+	    private static IDictionary certs = new Dictionary<string, X509Certificate>();
+	    private static IDictionary crls = new Dictionary<string, X509Crl>();
 
 		private static ISet noPolicies = new HashSet();
 		private static ISet anyPolicy = new HashSet();

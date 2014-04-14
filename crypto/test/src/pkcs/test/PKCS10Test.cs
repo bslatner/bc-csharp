@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 using NUnit.Framework;
@@ -39,7 +40,7 @@ namespace Org.BouncyCastle.Pkcs.Tests
 
             AsymmetricCipherKeyPair pair = pGen.GenerateKeyPair();
 
-            IDictionary attrs = new Hashtable();
+            IDictionary attrs = new Dictionary<DerObjectIdentifier, string>();
 
             attrs.Add(X509Name.C, "AU");
             attrs.Add(X509Name.O, "The Legion of the Bouncy Castle");
