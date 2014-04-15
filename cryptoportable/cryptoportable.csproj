@@ -1668,9 +1668,6 @@
     <Compile Include="..\crypto\src\cms\MacOutputStream.cs">
       <Link>src\cms\MacOutputStream.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\cms\NullOutputStream.cs">
-      <Link>src\cms\NullOutputStream.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\src\cms\OriginatorId.cs">
       <Link>src\cms\OriginatorId.cs</Link>
     </Compile>
@@ -2529,8 +2526,14 @@
     <Compile Include="..\crypto\src\crypto\tls\AlwaysValidVerifyer.cs">
       <Link>src\crypto\tls\AlwaysValidVerifyer.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\BulkCipherAlgorithm.cs">
+      <Link>src\crypto\tls\BulkCipherAlgorithm.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ByteQueue.cs">
       <Link>src\crypto\tls\ByteQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\CertChainType.cs">
+      <Link>src\crypto\tls\CertChainType.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\Certificate.cs">
       <Link>src\crypto\tls\Certificate.cs</Link>
@@ -2538,8 +2541,20 @@
     <Compile Include="..\crypto\src\crypto\tls\CertificateRequest.cs">
       <Link>src\crypto\tls\CertificateRequest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\CertificateStatusType.cs">
+      <Link>src\crypto\tls\CertificateStatusType.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ChangeCipherSpec.cs">
+      <Link>src\crypto\tls\ChangeCipherSpec.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\CipherSuite.cs">
       <Link>src\crypto\tls\CipherSuite.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\CipherType.cs">
+      <Link>src\crypto\tls\CipherType.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ClientAuthenticationType.cs">
+      <Link>src\crypto\tls\ClientAuthenticationType.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ClientCertificateType.cs">
       <Link>src\crypto\tls\ClientCertificateType.cs</Link>
@@ -2549,6 +2564,9 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\CompressionMethod.cs">
       <Link>src\crypto\tls\CompressionMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ConnectionEnd.cs">
+      <Link>src\crypto\tls\ConnectionEnd.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ContentType.cs">
       <Link>src\crypto\tls\ContentType.cs</Link>
@@ -2568,6 +2586,12 @@
     <Compile Include="..\crypto\src\crypto\tls\DigestAlgorithm.cs">
       <Link>src\crypto\tls\DigestAlgorithm.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DigestInputBuffer.cs">
+      <Link>src\crypto\tls\DigestInputBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ECBasisType.cs">
+      <Link>src\crypto\tls\ECBasisType.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ECCurveType.cs">
       <Link>src\crypto\tls\ECCurveType.cs</Link>
     </Compile>
@@ -2577,6 +2601,9 @@
     <Compile Include="..\crypto\src\crypto\tls\EncryptionAlgorithm.cs">
       <Link>src\crypto\tls\EncryptionAlgorithm.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ExporterLabel.cs">
+      <Link>src\crypto\tls\ExporterLabel.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ExtensionType.cs">
       <Link>src\crypto\tls\ExtensionType.cs</Link>
     </Compile>
@@ -2585,6 +2612,12 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\HashAlgorithm.cs">
       <Link>src\crypto\tls\HashAlgorithm.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\HeartbeatMessageType.cs">
+      <Link>src\crypto\tls\HeartbeatMessageType.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\HeartbeatMode.cs">
+      <Link>src\crypto\tls\HeartbeatMode.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ICertificateVerifyer.cs">
       <Link>src\crypto\tls\ICertificateVerifyer.cs</Link>
@@ -2598,8 +2631,17 @@
     <Compile Include="..\crypto\src\crypto\tls\LegacyTlsClient.cs">
       <Link>src\crypto\tls\LegacyTlsClient.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\MacAlgorithm.cs">
+      <Link>src\crypto\tls\MacAlgorithm.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\MaxFragmentLength.cs">
+      <Link>src\crypto\tls\MaxFragmentLength.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\NamedCurve.cs">
       <Link>src\crypto\tls\NamedCurve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\NameType.cs">
+      <Link>src\crypto\tls\NameType.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\PrfAlgorithm.cs">
       <Link>src\crypto\tls\PrfAlgorithm.cs</Link>
@@ -2622,11 +2664,20 @@
     <Compile Include="..\crypto\src\crypto\tls\SignatureAndHashAlgorithm.cs">
       <Link>src\crypto\tls\SignatureAndHashAlgorithm.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\SignerInputBuffer.cs">
+      <Link>src\crypto\tls\SignerInputBuffer.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\SrpTlsClient.cs">
       <Link>src\crypto\tls\SrpTlsClient.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\SrtpProtectionProfile.cs">
+      <Link>src\crypto\tls\SrtpProtectionProfile.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\Ssl3Mac.cs">
       <Link>src\crypto\tls\Ssl3Mac.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\SupplementalDataType.cs">
+      <Link>src\crypto\tls\SupplementalDataType.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsAgreementCredentials.cs">
       <Link>src\crypto\tls\TlsAgreementCredentials.cs</Link>
@@ -2700,6 +2751,9 @@
     <Compile Include="..\crypto\src\crypto\tls\TlsNullCompression.cs">
       <Link>src\crypto\tls\TlsNullCompression.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsPeer.cs">
+      <Link>src\crypto\tls\TlsPeer.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsProtocolHandler.cs">
       <Link>src\crypto\tls\TlsProtocolHandler.cs</Link>
     </Compile>
@@ -2735,6 +2789,9 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsUtilities.cs">
       <Link>src\crypto\tls\TlsUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\UserMappingType.cs">
+      <Link>src\crypto\tls\UserMappingType.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\util\Pack.cs">
       <Link>src\crypto\util\Pack.cs</Link>
@@ -3509,6 +3566,9 @@
     </Compile>
     <Compile Include="..\crypto\src\util\io\FileSystemHelper.cs">
       <Link>src\util\io\FileSystemHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\util\io\NullOutputStream.cs">
+      <Link>src\util\io\NullOutputStream.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\util\io\pem\PemGenerationException.cs">
       <Link>src\util\io\pem\PemGenerationException.cs</Link>
