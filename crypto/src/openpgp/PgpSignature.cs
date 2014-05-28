@@ -418,5 +418,15 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 				throw new PgpException("exception preparing key.", e);
 			}
 		}
+
+	    public byte[] GetTrustData()
+	    {
+            if (trustPck == null)
+            {
+                return null;
+            }
+
+            return trustPck.GetLevelAndTrustAmount();
+        }
     }
 }
