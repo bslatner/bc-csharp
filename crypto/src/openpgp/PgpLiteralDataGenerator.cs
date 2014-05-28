@@ -177,5 +177,10 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 				pkOut = null;
 			}
 		}
+
+	    public void Dispose()
+	    {
+	        Close();
+	    }
 	}
 }

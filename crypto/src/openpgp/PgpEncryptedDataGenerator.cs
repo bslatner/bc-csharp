@@ -502,5 +502,10 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 				pOut = null;
             }
 		}
+
+	    public void Dispose()
+	    {
+	        Close();
+	    }
 	}
 }

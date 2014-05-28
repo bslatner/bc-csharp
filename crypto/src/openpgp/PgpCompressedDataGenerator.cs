@@ -149,7 +149,7 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 		}
 
 		/// <summary>Close the compressed object.</summary>summary>
-		public void Close()
+        public void Close()
 		{
 			if (dOut != null)
 			{
@@ -166,6 +166,11 @@ namespace Org.BouncyCastle.Bcpg.OpenPgp
 				pkOut = null;
 			}
 		}
+
+	    public void Dispose()
+	    {
+	        Close();
+	    }
 
 		private class SafeCBZip2OutputStream : CBZip2OutputStream
 		{
