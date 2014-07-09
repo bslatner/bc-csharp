@@ -6,4 +6,6 @@
 **/obj
 
 /crypto/doc
+/nuget/lib
+/nuget/*.nupkg
 /packages/**/*
