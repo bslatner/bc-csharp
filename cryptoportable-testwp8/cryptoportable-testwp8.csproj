@@ -684,6 +684,9 @@
     <Compile Include="..\crypto\test\src\crypto\test\XTEATest.cs">
       <Link>src\crypto\test\XTEATest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\test\src\math\ec\test\ECAlgorithmsTest.cs">
+      <Link>src\math\ec\test\ECAlgorithmsTest.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\test\src\math\ec\test\ECPointPerformanceTest.cs">
       <Link>src\math\ec\test\ECPointPerformanceTest.cs</Link>
     </Compile>
