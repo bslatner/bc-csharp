@@ -4051,6 +4051,9 @@
     <Compile Include="test\src\crypto\io\test\CipherStreamTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\test\AeadTestUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\crypto\test\AESFastTest.cs">
       <SubType>Code</SubType>
     </Compile>

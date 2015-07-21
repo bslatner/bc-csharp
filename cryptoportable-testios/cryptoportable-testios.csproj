@@ -334,6 +334,9 @@
     <Compile Include="..\crypto\test\src\crypto\io\test\CipherStreamTest.cs">
       <Link>src\crypto\io\test\CipherStreamTest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\AeadTestUtilities.cs">
+      <Link>src\crypto\test\AeadTestUtilities.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\AESFastTest.cs">
       <Link>src\crypto\test\AESFastTest.cs</Link>
     </Compile>
