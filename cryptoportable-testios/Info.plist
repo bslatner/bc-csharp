@@ -27,5 +27,7 @@
 	<string></string>
 	<key>NSMainNibFile~ipad</key>
 	<string></string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 </dict>
 </plist>
