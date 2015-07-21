@@ -2502,8 +2502,8 @@
     <Compile Include="..\crypto\src\crypto\signers\GOST3410Signer.cs">
       <Link>src\crypto\signers\GOST3410Signer.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\signers\Iso9796d2PssSigner.cs">
-      <Link>src\crypto\signers\Iso9796d2PssSigner.cs</Link>
+    <Compile Include="..\crypto\src\crypto\signers\ISO9796d2PSSSigner.cs">
+      <Link>src\crypto\signers\ISO9796d2PSSSigner.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\signers\Iso9796d2Signer.cs">
       <Link>src\crypto\signers\Iso9796d2Signer.cs</Link>
@@ -2511,8 +2511,8 @@
     <Compile Include="..\crypto\src\crypto\signers\PssSigner.cs">
       <Link>src\crypto\signers\PssSigner.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\signers\RsaDigestSigner.cs">
-      <Link>src\crypto\signers\RsaDigestSigner.cs</Link>
+    <Compile Include="..\crypto\src\crypto\signers\RSADigestSigner.cs">
+      <Link>src\crypto\signers\RSADigestSigner.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\StreamBlockCipher.cs">
       <Link>src\crypto\StreamBlockCipher.cs</Link>
