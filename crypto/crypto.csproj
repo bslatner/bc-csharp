@@ -1416,6 +1416,18 @@
     <Compile Include="src\bcpg\DSASecretBCPGKey.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\bcpg\ECDHPublicBCPGKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\bcpg\ECDsaPublicBCPGKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\bcpg\ECPublicBCPGKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\bcpg\ECSecretBCPGKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\bcpg\ElGamalPublicBCPGKey.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -3193,6 +3205,9 @@
     <Compile Include="src\math\ec\custom\sec\SecP521R1Point.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\math\Primes.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\math\ec\ECAlgorithms.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -3266,6 +3281,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\ec\custom\sec\SecT163R2Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193R2Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT193R2Point.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\ec\custom\sec\SecT233Field.cs">
