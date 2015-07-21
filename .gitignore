@@ -12,6 +12,8 @@ doc/
 obj/
 
 *.ncrunchsolution
+TestResult.xml
+*.VisualState.xml
 /crypto/doc
 /nuget/lib
 /nuget/*.nupkg
