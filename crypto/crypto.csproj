@@ -159,6 +159,12 @@
     <Compile Include="src\asn1\ASN1Tags.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\asn1\anssi\ANSSINamedCurves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\asn1\anssi\ANSSIObjectIdentifiers.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\asn1\bc\BCObjectIdentifiers.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1812,6 +1818,9 @@
     <Compile Include="src\crypto\agreement\srp\SRP6Server.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\agreement\srp\SRP6StandardGroups.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\agreement\srp\SRP6Utilities.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1840,6 +1849,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\BufferedStreamCipher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\Check.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\CipherKeyGenerator.cs">
@@ -2511,7 +2523,13 @@
     <Compile Include="src\crypto\parameters\SkeinParameters.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\parameters\Srp6GroupParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\parameters\TweakableBlockCipherParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\OutputLengthException.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\PBEParametersGenerator.cs">
@@ -2583,6 +2601,9 @@
     <Compile Include="src\crypto\StreamBlockCipher.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\signers\X931Signer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\AbstractTlsAgreementCredentials.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2623,6 +2644,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\BulkCipherAlgorithm.cs" />
+    <Compile Include="src\crypto\tls\BasicTlsPskIdentity.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\ByteQueue.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2665,6 +2689,9 @@
     <Compile Include="src\crypto\tls\ContentType.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\DatagramTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\DefaultTlsAgreementCredentials.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2680,6 +2707,9 @@
     <Compile Include="src\crypto\tls\DefaultTlsServer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\DefaultTlsSrpGroupVerifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\DefaultTlsSignerCredentials.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2688,6 +2718,32 @@
     </Compile>
     <Compile Include="src\crypto\tls\DigestInputBuffer.cs" />
     <Compile Include="src\crypto\tls\DigitallySigned.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsReassembler.cs" />
+    <Compile Include="src\crypto\tls\DtlsRecordLayer.cs" />
+    <Compile Include="src\crypto\tls\DtlsTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsServerProtocol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsReplayWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsReliableHandshake.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsProtocol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsHandshakeRetransmit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsEpoch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\DtlsClientProtocol.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\ECBasisType.cs" />
@@ -2745,6 +2801,9 @@
     <Compile Include="src\crypto\tls\PskTlsClient.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\PskTlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\RecordStream.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2752,6 +2811,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\ServerDHParams.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\ServerSrpParams.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\ServerName.cs">
@@ -2773,7 +2835,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\SignerInputBuffer.cs" />
+    <Compile Include="src\crypto\tls\SimulatedTlsSrpIdentityManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\SrpTlsClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\SrpTlsServer.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\SrtpProtectionProfile.cs" />
@@ -2890,6 +2958,9 @@
     <Compile Include="src\crypto\tls\TlsPskKeyExchange.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\TlsPskIdentityManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\TlsRsaKeyExchange.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2921,6 +2992,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsSignerCredentials.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\TlsSrpGroupVerifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\TlsSrpIdentityManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\TlsSrpLoginParameters.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsSrpKeyExchange.cs">
@@ -2975,19 +3055,46 @@
     <Compile Include="src\math\ec\custom\djb\Curve25519Point.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\custom\sec\Nat192.cs">
+    <Compile Include="src\math\ec\custom\sec\SecP128R1Curve.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\custom\sec\Nat224.cs">
+    <Compile Include="src\math\ec\custom\sec\SecP128R1Field.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\custom\sec\Nat256.cs">
+    <Compile Include="src\math\ec\custom\sec\SecP128R1FieldElement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\custom\sec\Nat384.cs">
+    <Compile Include="src\math\ec\custom\sec\SecP128R1Point.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\custom\sec\Nat512.cs">
+    <Compile Include="src\math\ec\custom\sec\SecP160k1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R1Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R1FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R2Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R2Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R2FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecP160R2Point.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\ec\custom\sec\SecP192K1Curve.cs">
@@ -3101,6 +3208,150 @@
     <Compile Include="src\math\ec\ECPointMap.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113R2Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT113R2Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131R2Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT131R2Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163R2Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT163R2Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT233R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT239Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT239FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT239K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT239K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT283R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT409R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571Field.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571FieldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571K1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571K1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571R1Curve.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\ec\custom\sec\SecT571R1Point.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\math\ec\endo\ECEndomorphism.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -3114,9 +3365,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\ec\LongArray.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\math\ec\Mod.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\ec\multiplier\AbstractECMultiplier.cs">
@@ -3179,9 +3427,6 @@
     <Compile Include="src\math\ec\multiplier\ZSignedDigitR2LMultiplier.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\math\ec\Nat.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="src\math\ec\ScaleXPointMap.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -3210,6 +3455,45 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\math\field\PrimeField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Interleave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Mod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat128.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat160.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat192.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat224.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat256.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat320.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat384.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat448.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat512.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\math\raw\Nat576.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\ocsp\BasicOCSPResp.cs">
@@ -4549,6 +4833,9 @@
     <Compile Include="test\src\crypto\test\WhirlpoolDigestTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\test\X931SignerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\crypto\test\XSalsa20Test.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -4558,19 +4845,88 @@
     <Compile Include="test\src\math\ec\test\AllTests.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\tls\test\DtlsProtocolTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\DtlsTestCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\DtlsTestSuite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\LoggingDatagramTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockDatagramAssociation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockDtlsClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockDtlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockPskTlsClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockPskTlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockSrpTlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockSrpTlsClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\crypto\tls\test\MockTlsClient.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\src\crypto\tls\test\MockTlsServer.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\tls\test\NetworkStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\PipedStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\PskTlsClientTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\crypto\tls\test\TlsClientTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsProtocolTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsPskProtocolTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsSrpProtocolTest.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\src\crypto\tls\test\TlsServerTest.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestClientImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestServerImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestSuite.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\crypto\tls\test\TlsTestUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\UnreliableDatagramTransport.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test\src\math\ec\test\ECPointPerformanceTest.cs">
@@ -5735,12 +6091,20 @@
     <EmbeddedResource Include="test\data\rsa3\self-testcase-L.p12" />
     <EmbeddedResource Include="test\data\rsa3\self-testcase-L.pem" />
     <EmbeddedResource Include="test\data\scrypt\TestVectors.txt" />
+    <EmbeddedResource Include="test\data\tls\x509-client-dsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-client-key-dsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-client-ecdsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server-ecdsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server-dsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-client-key-ecdsa.pem" />
     <EmbeddedResource Include="test\data\tls\x509-ca-key.pem" />
     <EmbeddedResource Include="test\data\tls\x509-ca.pem" />
     <EmbeddedResource Include="test\data\tls\x509-client-key.pem" />
     <EmbeddedResource Include="test\data\tls\x509-client.pem" />
     <EmbeddedResource Include="test\data\tls\x509-server-key.pem" />
     <EmbeddedResource Include="test\data\tls\x509-server.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server-key-dsa.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server-key-ecdsa.pem" />
     <EmbeddedResource Include="test\data\tls\keystores\client_store.dsa" />
     <EmbeddedResource Include="test\data\tls\keystores\client_store.rsa" />
     <EmbeddedResource Include="test\data\tls\keystores\server_store.dsa" />

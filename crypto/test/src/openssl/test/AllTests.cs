@@ -34,21 +34,26 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 				return (char[]) password.Clone();
 			}
 		}
-		
+
 #if !__MOBILE__
-		[Suite]
-		public static TestSuite Suite
-		{
-			get
-			{
-				TestSuite suite = new TestSuite("OpenSSL Tests");
-				suite.Add(new AllTests());
-				return suite;
-			}
-		}
+        public static void Main(string[] args)
+        {
+            Suite.Run(new NullListener(), NUnit.Core.TestFilter.Empty);
+        }
+		
+        [Suite]
+        public static TestSuite Suite
+        {
+            get
+            {
+                TestSuite suite = new TestSuite("OpenSSL Tests");
+                suite.Add(new AllTests());
+                return suite;
+            }
+        }
 #endif
 
-		[Test]
+        [Test]
 		public void TestOpenSsl()
 		{
 			Org.BouncyCastle.Utilities.Test.ITest[] tests = new Org.BouncyCastle.Utilities.Test.ITest[]{
@@ -125,15 +130,5 @@ namespace Org.BouncyCastle.OpenSsl.Tests
 
 			Assert.AreEqual(privKey, rdKey);
 		}
-
-#if !__MOBILE__
-        public static void Main(
-			string[] args)
-        {
-            //junit.textui.TestRunner.run(suite());
-            EventListener el = new NullListener();
-            Suite.Run(el);
-        }
-#endif
 	}
 }

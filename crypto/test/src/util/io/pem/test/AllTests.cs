@@ -22,19 +22,24 @@ namespace Org.BouncyCastle.Utilities.IO.Pem.Tests
 	public class AllTests
 	{
 #if !__MOBILE__
-		[Suite]
-		public static TestSuite Suite
-		{
-			get
-			{
-				TestSuite suite = new TestSuite("PEM Utilities Tests");
-				suite.Add(new AllTests());
-				return suite;
-			}
-		}
+        public static void Main(string[] args)
+        {
+            Suite.Run(new NullListener(), NUnit.Core.TestFilter.Empty);
+        }
+		
+        [Suite]
+        public static TestSuite Suite
+        {
+            get
+            {
+                TestSuite suite = new TestSuite("PEM Utilities Tests");
+                suite.Add(new AllTests());
+                return suite;
+            }
+        }
 #endif
 
-		[Test]
+        [Test]
 		public void TestPemLength()
 		{
 			for (int i = 1; i != 60; i++)
@@ -69,15 +74,5 @@ namespace Org.BouncyCastle.Utilities.IO.Pem.Tests
 
 			Assert.AreEqual(sw.ToString().Length, pWrt.GetOutputSize(pemObj));
 		}
-
-#if !__MOBILE__
-		public static void Main(
-			string[] args)
-        {
-            //junit.textui.TestRunner.run(suite());
-            EventListener el = new NullListener();
-            Suite.Run(el);
-        }
-#endif
 	}
 }

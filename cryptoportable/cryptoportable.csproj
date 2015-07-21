@@ -105,6 +105,12 @@
     <Compile Include="..\crypto\src\asn1\Asn1Tags.cs">
       <Link>src\asn1\Asn1Tags.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\asn1\anssi\ANSSINamedCurves.cs">
+      <Link>src\asn1\anssi\ANSSINamedCurves.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\asn1\anssi\ANSSIObjectIdentifiers.cs">
+      <Link>src\asn1\anssi\ANSSIObjectIdentifiers.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\asn1\bc\BCObjectIdentifiers.cs">
       <Link>src\asn1\bc\BCObjectIdentifiers.cs</Link>
     </Compile>
@@ -1725,6 +1731,9 @@
     <Compile Include="..\crypto\src\crypto\agreement\DHBasicAgreement.cs">
       <Link>src\crypto\agreement\DHBasicAgreement.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\agreement\DHStandardGroups.cs">
+      <Link>src\crypto\agreement\DHStandardGroups.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\agreement\ECDHBasicAgreement.cs">
       <Link>src\crypto\agreement\ECDHBasicAgreement.cs</Link>
     </Compile>
@@ -1755,6 +1764,9 @@
     <Compile Include="..\crypto\src\crypto\agreement\srp\SRP6Server.cs">
       <Link>src\crypto\agreement\srp\SRP6Server.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\agreement\srp\SRP6StandardGroups.cs">
+      <Link>src\crypto\agreement\srp\SRP6StandardGroups.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\agreement\srp\SRP6Utilities.cs">
       <Link>src\crypto\agreement\srp\SRP6Utilities.cs</Link>
     </Compile>
@@ -1784,6 +1796,9 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\BufferedStreamCipher.cs">
       <Link>src\crypto\BufferedStreamCipher.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\Check.cs">
+      <Link>src\crypto\Check.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\CipherKeyGenerator.cs">
       <Link>src\crypto\CipherKeyGenerator.cs</Link>
@@ -2454,11 +2469,17 @@
     <Compile Include="..\crypto\src\crypto\parameters\SkeinParameters.cs">
       <Link>src\crypto\parameters\SkeinParameters.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\parameters\Srp6GroupParameters.cs">
+      <Link>src\crypto\parameters\Srp6GroupParameters.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\parameters\TweakableBlockCipherParameters.cs">
       <Link>src\crypto\parameters\TweakableBlockCipherParameters.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\PbeParametersGenerator.cs">
-      <Link>src\crypto\PbeParametersGenerator.cs</Link>
+    <Compile Include="..\crypto\src\crypto\OutputLengthException.cs">
+      <Link>src\crypto\OutputLengthException.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\PBEParametersGenerator.cs">
+      <Link>src\crypto\PBEParametersGenerator.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\prng\CryptoApiRandomGenerator.cs">
       <Link>src\crypto\prng\CryptoApiRandomGenerator.cs</Link>
@@ -2526,6 +2547,9 @@
     <Compile Include="..\crypto\src\crypto\StreamBlockCipher.cs">
       <Link>src\crypto\StreamBlockCipher.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\signers\X931Signer.cs">
+      <Link>src\crypto\signers\X931Signer.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\AbstractTlsAgreementCredentials.cs">
       <Link>src\crypto\tls\AbstractTlsAgreementCredentials.cs</Link>
     </Compile>
@@ -2565,11 +2589,11 @@
     <Compile Include="..\crypto\src\crypto\tls\AlertLevel.cs">
       <Link>src\crypto\tls\AlertLevel.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\tls\AlwaysValidVerifyer.cs">
-      <Link>src\crypto\tls\AlwaysValidVerifyer.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\BulkCipherAlgorithm.cs">
       <Link>src\crypto\tls\BulkCipherAlgorithm.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\BasicTlsPskIdentity.cs">
+      <Link>src\crypto\tls\BasicTlsPskIdentity.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ByteQueue.cs">
       <Link>src\crypto\tls\ByteQueue.cs</Link>
@@ -2625,6 +2649,9 @@
     <Compile Include="..\crypto\src\crypto\tls\ContentType.cs">
       <Link>src\crypto\tls\ContentType.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DatagramTransport.cs">
+      <Link>src\crypto\tls\DatagramTransport.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\DefaultTlsAgreementCredentials.cs">
       <Link>src\crypto\tls\DefaultTlsAgreementCredentials.cs</Link>
     </Compile>
@@ -2637,20 +2664,53 @@
     <Compile Include="..\crypto\src\crypto\tls\DefaultTlsEncryptionCredentials.cs">
       <Link>src\crypto\tls\DefaultTlsEncryptionCredentials.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DefaultTlsServer.cs">
+      <Link>src\crypto\tls\DefaultTlsServer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DefaultTlsSrpGroupVerifier.cs">
+      <Link>src\crypto\tls\DefaultTlsSrpGroupVerifier.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\DefaultTlsSignerCredentials.cs">
       <Link>src\crypto\tls\DefaultTlsSignerCredentials.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\DeferredHash.cs">
       <Link>src\crypto\tls\DeferredHash.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\tls\DigestAlgorithm.cs">
-      <Link>src\crypto\tls\DigestAlgorithm.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\DigestInputBuffer.cs">
       <Link>src\crypto\tls\DigestInputBuffer.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\DigitallySigned.cs">
       <Link>src\crypto\tls\DigitallySigned.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsReassembler.cs">
+      <Link>src\crypto\tls\DtlsReassembler.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsRecordLayer.cs">
+      <Link>src\crypto\tls\DtlsRecordLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsTransport.cs">
+      <Link>src\crypto\tls\DtlsTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsServerProtocol.cs">
+      <Link>src\crypto\tls\DtlsServerProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsReplayWindow.cs">
+      <Link>src\crypto\tls\DtlsReplayWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsReliableHandshake.cs">
+      <Link>src\crypto\tls\DtlsReliableHandshake.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsProtocol.cs">
+      <Link>src\crypto\tls\DtlsProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsHandshakeRetransmit.cs">
+      <Link>src\crypto\tls\DtlsHandshakeRetransmit.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsEpoch.cs">
+      <Link>src\crypto\tls\DtlsEpoch.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\DtlsClientProtocol.cs">
+      <Link>src\crypto\tls\DtlsClientProtocol.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ECBasisType.cs">
       <Link>src\crypto\tls\ECBasisType.cs</Link>
@@ -2670,6 +2730,9 @@
     <Compile Include="..\crypto\src\crypto\tls\ExtensionType.cs">
       <Link>src\crypto\tls\ExtensionType.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\FiniteFieldDheGroup.cs">
+      <Link>src\crypto\tls\FiniteFieldDheGroup.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\HandshakeType.cs">
       <Link>src\crypto\tls\HandshakeType.cs</Link>
     </Compile>
@@ -2688,17 +2751,8 @@
     <Compile Include="..\crypto\src\crypto\tls\HeartbeatMode.cs">
       <Link>src\crypto\tls\HeartbeatMode.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\crypto\tls\ICertificateVerifyer.cs">
-      <Link>src\crypto\tls\ICertificateVerifyer.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\KeyExchangeAlgorithm.cs">
       <Link>src\crypto\tls\KeyExchangeAlgorithm.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\src\crypto\tls\LegacyTlsAuthentication.cs">
-      <Link>src\crypto\tls\LegacyTlsAuthentication.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\src\crypto\tls\LegacyTlsClient.cs">
-      <Link>src\crypto\tls\LegacyTlsClient.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\MacAlgorithm.cs">
       <Link>src\crypto\tls\MacAlgorithm.cs</Link>
@@ -2727,6 +2781,9 @@
     <Compile Include="..\crypto\src\crypto\tls\PskTlsClient.cs">
       <Link>src\crypto\tls\PskTlsClient.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\PskTlsServer.cs">
+      <Link>src\crypto\tls\PskTlsServer.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\RecordStream.cs">
       <Link>src\crypto\tls\RecordStream.cs</Link>
     </Compile>
@@ -2735,6 +2792,9 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ServerDHParams.cs">
       <Link>src\crypto\tls\ServerDHParams.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\ServerSrpParams.cs">
+      <Link>src\crypto\tls\ServerSrpParams.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\ServerName.cs">
       <Link>src\crypto\tls\ServerName.cs</Link>
@@ -2757,8 +2817,14 @@
     <Compile Include="..\crypto\src\crypto\tls\SignerInputBuffer.cs">
       <Link>src\crypto\tls\SignerInputBuffer.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\SimulatedTlsSrpIdentityManager.cs">
+      <Link>src\crypto\tls\SimulatedTlsSrpIdentityManager.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\SrpTlsClient.cs">
       <Link>src\crypto\tls\SrpTlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\SrpTlsServer.cs">
+      <Link>src\crypto\tls\SrpTlsServer.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\SrtpProtectionProfile.cs">
       <Link>src\crypto\tls\SrtpProtectionProfile.cs</Link>
@@ -2798,6 +2864,9 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsClientContextImpl.cs">
       <Link>src\crypto\tls\TlsClientContextImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsClientProtocol.cs">
+      <Link>src\crypto\tls\TlsClientProtocol.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsCompression.cs">
       <Link>src\crypto\tls\TlsCompression.cs</Link>
@@ -2877,6 +2946,9 @@
     <Compile Include="..\crypto\src\crypto\tls\TlsPskKeyExchange.cs">
       <Link>src\crypto\tls\TlsPskKeyExchange.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsPskIdentityManager.cs">
+      <Link>src\crypto\tls\TlsPskIdentityManager.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsRsaKeyExchange.cs">
       <Link>src\crypto\tls\TlsRsaKeyExchange.cs</Link>
     </Compile>
@@ -2895,6 +2967,9 @@
     <Compile Include="..\crypto\src\crypto\tls\TlsServerContextImpl.cs">
       <Link>src\crypto\tls\TlsServerContextImpl.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsServerProtocol.cs">
+      <Link>src\crypto\tls\TlsServerProtocol.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsSession.cs">
       <Link>src\crypto\tls\TlsSession.cs</Link>
     </Compile>
@@ -2906,6 +2981,15 @@
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsSignerCredentials.cs">
       <Link>src\crypto\tls\TlsSignerCredentials.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsSrpGroupVerifier.cs">
+      <Link>src\crypto\tls\TlsSrpGroupVerifier.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsSrpIdentityManager.cs">
+      <Link>src\crypto\tls\TlsSrpIdentityManager.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\crypto\tls\TlsSrpLoginParameters.cs">
+      <Link>src\crypto\tls\TlsSrpLoginParameters.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\crypto\tls\TlsSrpKeyExchange.cs">
       <Link>src\crypto\tls\TlsSrpKeyExchange.cs</Link>
@@ -2961,20 +3045,47 @@
     <Compile Include="..\crypto\src\math\ec\custom\djb\Curve25519Point.cs">
       <Link>src\math\ec\custom\djb\Curve25519Point.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\custom\sec\Nat192.cs">
-      <Link>src\math\ec\custom\sec\Nat192.cs</Link>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP128R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecP128R1Curve.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\custom\sec\Nat224.cs">
-      <Link>src\math\ec\custom\sec\Nat224.cs</Link>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP128R1Field.cs">
+      <Link>src\math\ec\custom\sec\SecP128R1Field.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\custom\sec\Nat256.cs">
-      <Link>src\math\ec\custom\sec\Nat256.cs</Link>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP128R1FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecP128R1FieldElement.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\custom\sec\Nat384.cs">
-      <Link>src\math\ec\custom\sec\Nat384.cs</Link>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP128R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecP128R1Point.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\custom\sec\Nat512.cs">
-      <Link>src\math\ec\custom\sec\Nat512.cs</Link>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160k1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecP160k1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecP160K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecP160R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R1Field.cs">
+      <Link>src\math\ec\custom\sec\SecP160R1Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R1FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecP160R1FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecP160R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R2Curve.cs">
+      <Link>src\math\ec\custom\sec\SecP160R2Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R2Field.cs">
+      <Link>src\math\ec\custom\sec\SecP160R2Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R2FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecP160R2FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecP160R2Point.cs">
+      <Link>src\math\ec\custom\sec\SecP160R2Point.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\math\ec\custom\sec\SecP192K1Curve.cs">
       <Link>src\math\ec\custom\sec\SecP192K1Curve.cs</Link>
@@ -3087,6 +3198,150 @@
     <Compile Include="..\crypto\src\math\ec\ECPointMap.cs">
       <Link>src\math\etc\ECPointMap.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113Field.cs">
+      <Link>src\math\ec\custom\sec\SecT113Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT113FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT113R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT113R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113R2Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT113R2Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT113R2Point.cs">
+      <Link>src\math\ec\custom\sec\SecT113R2Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131Field.cs">
+      <Link>src\math\ec\custom\sec\SecT131Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT131FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT131R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT131R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131R2Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT131R2Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT131R2Point.cs">
+      <Link>src\math\ec\custom\sec\SecT131R2Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163Field.cs">
+      <Link>src\math\ec\custom\sec\SecT163Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT163FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT163K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT163K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT163R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT163R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163R2Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT163R2Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163R2Point.cs">
+      <Link>src\math\ec\custom\sec\SecT163R2Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233Field.cs">
+      <Link>src\math\ec\custom\sec\SecT233Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT233FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT233K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT233K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT233R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT233R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT239Field.cs">
+      <Link>src\math\ec\custom\sec\SecT239Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT239FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT239FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT239K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT239K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT239K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT239K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283Field.cs">
+      <Link>src\math\ec\custom\sec\SecT283Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT283FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT283K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT283K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT283R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT283R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT283R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409Field.cs">
+      <Link>src\math\ec\custom\sec\SecT409Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT409FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT409K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT409K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT409R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT409R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT409R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571Field.cs">
+      <Link>src\math\ec\custom\sec\SecT571Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT571FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571K1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT571K1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571K1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT571K1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT571R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT571R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT571R1Point.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\math\ec\endo\ECEndomorphism.cs">
       <Link>src\math\ec\endo\ECEndomorphism.cs</Link>
     </Compile>
@@ -3101,9 +3356,6 @@
     </Compile>
     <Compile Include="..\crypto\src\math\ec\LongArray.cs">
       <Link>src\math\etc\LongArray.cs</Link>
-    </Compile>
-    <Compile Include="..\crypto\src\math\ec\Mod.cs">
-      <Link>src\math\etc\Mod.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\math\ec\multiplier\AbstractECMultiplier.cs">
       <Link>src\math\ec\multiplier\AbstractECMultiplier.cs</Link>
@@ -3165,9 +3417,6 @@
     <Compile Include="..\crypto\src\math\ec\multiplier\ZSignedDigitR2LMultiplier.cs">
       <Link>src\math\ec\multiplier\ZSignedDigitR2LMultiplier.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\math\ec\Nat.cs">
-      <Link>src\math\etc\Nat.cs</Link>
-    </Compile>
     <Compile Include="..\crypto\src\math\ec\ScaleXPointMap.cs">
       <Link>src\math\etc\ScaleXPointMap.cs</Link>
     </Compile>
@@ -3197,6 +3446,45 @@
     </Compile>
     <Compile Include="..\crypto\src\math\field\PrimeField.cs">
       <Link>src\math\field\PrimeField.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Interleave.cs">
+      <Link>src\math\raw\Interleave.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Mod.cs">
+      <Link>src\math\raw\Mod.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat.cs">
+      <Link>src\math\raw\Nat.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat128.cs">
+      <Link>src\math\raw\Nat128.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat160.cs">
+      <Link>src\math\raw\Nat160.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat192.cs">
+      <Link>src\math\raw\Nat192.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat224.cs">
+      <Link>src\math\raw\Nat224.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat256.cs">
+      <Link>src\math\raw\Nat256.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat320.cs">
+      <Link>src\math\raw\Nat320.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat384.cs">
+      <Link>src\math\raw\Nat384.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat448.cs">
+      <Link>src\math\raw\Nat448.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat512.cs">
+      <Link>src\math\raw\Nat512.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\raw\Nat576.cs">
+      <Link>src\math\raw\Nat576.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\ocsp\BasicOCSPResp.cs">
       <Link>src\ocsp\BasicOCSPResp.cs</Link>

@@ -14,6 +14,11 @@ namespace Org.BouncyCastle
             return Encoding.ASCII.GetString(bytes, index, count);
         }
 
+        public static string GetAsciiString(byte[] bytes)
+        {
+            return Encoding.ASCII.GetString(bytes, 0, bytes.Length);
+        }
+
         public static byte[] GetDefaultEncodingBytes(string input)
         {
             return Encoding.Default.GetBytes(input);

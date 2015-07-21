@@ -30,6 +30,32 @@ namespace Org.BouncyCastle.Crypto.Tls
             this.mCipherFactory = cipherFactory;
         }
 
+        protected virtual bool AllowUnexpectedServerExtension(int extensionType, byte[] extensionData)
+        {
+            switch (extensionType)
+            {
+            case ExtensionType.elliptic_curves:
+                /*
+                 * Exception added based on field reports that some servers do send this, although the
+                 * Supported Elliptic Curves Extension is clearly intended to be client-only. If
+                 * present, we still require that it is a valid EllipticCurveList.
+                 */
+                TlsEccUtilities.ReadSupportedEllipticCurvesExtension(extensionData);
+                return true;
+            default:
+                return false;
+            }
+        }
+
+        protected virtual void CheckForUnexpectedServerExtension(IDictionary serverExtensions, int extensionType)
+        {
+            byte[] extensionData = TlsUtilities.GetExtensionData(serverExtensions, extensionType);
+            if (extensionData != null && !AllowUnexpectedServerExtension(extensionType, extensionData))
+            {
+                throw new TlsFatalAlert(AlertDescription.illegal_parameter);
+            }
+        }
+
         public virtual void Init(TlsClientContext context)
         {
             this.mContext = context;
@@ -70,7 +96,7 @@ namespace Org.BouncyCastle.Crypto.Tls
         public virtual bool IsFallback
         {
             /*
-             * draft-bmoeller-tls-downgrade-scsv-02 4. [..] is meant for use by clients that repeat a
+             * draft-ietf-tls-downgrade-scsv-00 4. [..] is meant for use by clients that repeat a
              * connection attempt with a downgraded protocol in order to avoid interoperability problems
              * with legacy servers.
              */
@@ -91,27 +117,7 @@ namespace Org.BouncyCastle.Crypto.Tls
             {
                 // TODO Provide a way for the user to specify the acceptable hash/signature algorithms.
 
-                byte[] hashAlgorithms = new byte[]{ HashAlgorithm.sha512, HashAlgorithm.sha384, HashAlgorithm.sha256,
-                    HashAlgorithm.sha224, HashAlgorithm.sha1 };
-
-                // TODO Sort out ECDSA signatures and add them as the preferred option here
-                byte[] signatureAlgorithms = new byte[]{ SignatureAlgorithm.rsa };
-
-                this.mSupportedSignatureAlgorithms = Platform.CreateArrayList();
-                for (int i = 0; i < hashAlgorithms.Length; ++i)
-                {
-                    for (int j = 0; j < signatureAlgorithms.Length; ++j)
-                    {
-                        this.mSupportedSignatureAlgorithms.Add(new SignatureAndHashAlgorithm(hashAlgorithms[i],
-                            signatureAlgorithms[j]));
-                    }
-                }
-
-                /*
-                 * RFC 5264 7.4.3. Currently, DSA [DSS] may only be used with SHA-1.
-                 */
-                this.mSupportedSignatureAlgorithms.Add(new SignatureAndHashAlgorithm(HashAlgorithm.sha1,
-                    SignatureAlgorithm.dsa));
+                this.mSupportedSignatureAlgorithms = TlsUtilities.GetDefaultSupportedSignatureAlgorithms();
 
                 clientExtensions = TlsExtensionsUtilities.EnsureExtensionsInitialised(clientExtensions);
 
@@ -187,16 +193,18 @@ namespace Org.BouncyCastle.Crypto.Tls
                 /*
                  * RFC 5246 7.4.1.4.1. Servers MUST NOT send this extension.
                  */
-                if (serverExtensions.Contains(ExtensionType.signature_algorithms))
-                    throw new TlsFatalAlert(AlertDescription.illegal_parameter);
+                CheckForUnexpectedServerExtension(serverExtensions, ExtensionType.signature_algorithms);
 
-                int[] namedCurves = TlsEccUtilities.GetSupportedEllipticCurvesExtension(serverExtensions);
-                if (namedCurves != null)
-                    throw new TlsFatalAlert(AlertDescription.illegal_parameter);
+                CheckForUnexpectedServerExtension(serverExtensions, ExtensionType.elliptic_curves);
 
-                this.mServerECPointFormats = TlsEccUtilities.GetSupportedPointFormatsExtension(serverExtensions);
-                if (this.mServerECPointFormats != null && !TlsEccUtilities.IsEccCipherSuite(this.mSelectedCipherSuite))
-                    throw new TlsFatalAlert(AlertDescription.illegal_parameter);
+                if (TlsEccUtilities.IsEccCipherSuite(this.mSelectedCipherSuite))
+                {
+                    this.mServerECPointFormats = TlsEccUtilities.GetSupportedPointFormatsExtension(serverExtensions);
+                }
+                else
+                {
+                    CheckForUnexpectedServerExtension(serverExtensions, ExtensionType.ec_point_formats);
+                }
             }
         }
 
@@ -233,6 +241,14 @@ namespace Org.BouncyCastle.Crypto.Tls
                  */
                 throw new TlsFatalAlert(AlertDescription.internal_error);
             }
+        }
+
+        public override TlsCipher GetCipher()
+        {
+            int encryptionAlgorithm = TlsUtilities.GetEncryptionAlgorithm(mSelectedCipherSuite);
+            int macAlgorithm = TlsUtilities.GetMacAlgorithm(mSelectedCipherSuite);
+
+            return mCipherFactory.CreateCipher(mContext, encryptionAlgorithm, macAlgorithm);
         }
 
         public virtual void NotifyNewSessionTicket(NewSessionTicket newSessionTicket)

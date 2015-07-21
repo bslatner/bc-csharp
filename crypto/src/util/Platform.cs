@@ -86,6 +86,61 @@ namespace Org.BouncyCastle.Utilities
 #endif
 
 #if SILVERLIGHT || PORTABLE
+
+        private class CompositeArrayItem<TKey, TValue>
+        {
+            public TKey Key { get; set; }
+            public TValue Value { get; set; }
+
+            public CompositeArrayItem(TKey key, TValue value)
+            {
+                Key = key;
+                Value = value;
+            }
+        }
+
+        private class CompositeArrayItemComparer<TKey, TValue> : IComparer<CompositeArrayItem<TKey, TValue>>
+        {
+            private readonly IComparer<TKey> _Comparer;
+
+            public CompositeArrayItemComparer(IComparer<TKey> comparer)
+            {
+                _Comparer = comparer;
+            }
+
+            public int Compare(CompositeArrayItem<TKey, TValue> x, CompositeArrayItem<TKey, TValue> y)
+            {
+                return _Comparer.Compare(x.Key, y.Key);
+            }
+        }
+
+        // Extremely hackish, but PCLs don't support the Sort<TKey, TValue>(TKey[], TValue[], IComparer<TKey>) overload.
+
+        internal static void SortArrayWithKeys<TKey, TValue>(TKey[] keys, TValue[] values, IComparer<TKey> comparer)
+        {
+            var composite = new CompositeArrayItem<TKey, TValue>[keys.Length];
+            for (var i = 0; i < keys.Length; ++i)
+            {
+                composite[i] = new CompositeArrayItem<TKey, TValue>(keys[i], values[i]);
+            }
+            Array.Sort(composite, new CompositeArrayItemComparer<TKey, TValue>(comparer));
+            for (var i = 0; i < keys.Length; ++i)
+            {
+                keys[i] = composite[i].Key;
+                values[i] = composite[i].Value;
+            }
+        }
+
+#else
+
+        internal static void SortArrayWithKeys(Array keys, Array values, IComparer comparer)
+        {
+            Array.Sort(keys, values, comparer);
+        }
+
+#endif
+
+#if SILVERLIGHT || PORTABLE
         internal static System.Collections.IList CreateArrayList()
         {
             return new List<object>();

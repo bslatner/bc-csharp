@@ -660,6 +660,9 @@
     <Compile Include="..\crypto\test\src\crypto\test\WhirlpoolDigestTest.cs">
       <Link>src\crypto\test\WhirlpoolDigestTest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\X931SignerTest.cs">
+      <Link>src\crypto\test\X931SignerTest.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\XSalsa20Test.cs">
       <Link>src\crypto\test\XSalsa20Test.cs</Link>
     </Compile>
@@ -668,6 +671,90 @@
     </Compile>
     <Compile Include="..\crypto\test\src\math\ec\test\ECAlgorithmsTest.cs">
       <Link>src\math\ec\test\ECAlgorithmsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\DtlsProtocolTest.cs">
+      <Link>src\crypto\tls\test\DtlsProtocolTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\DtlsTestCase.cs">
+      <Link>src\crypto\tls\test\DtlsTestCase.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\DtlsTestSuite.cs">
+      <Link>src\crypto\tls\test\DtlsTestSuite.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\LoggingDatagramTransport.cs">
+      <Link>src\crypto\tls\test\LoggingDatagramTransport.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockDatagramAssociation.cs">
+      <Link>src\crypto\tls\test\MockDatagramAssociation.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockDtlsClient.cs">
+      <Link>src\crypto\tls\test\MockDtlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockDtlsServer.cs">
+      <Link>src\crypto\tls\test\MockDtlsServer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockPskTlsClient.cs">
+      <Link>src\crypto\tls\test\MockPskTlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockPskTlsServer.cs">
+      <Link>src\crypto\tls\test\MockPskTlsServer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockSrpTlsServer.cs">
+      <Link>src\crypto\tls\test\MockSrpTlsServer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockSrpTlsClient.cs">
+      <Link>src\crypto\tls\test\MockSrpTlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockTlsClient.cs">
+      <Link>src\crypto\tls\test\MockTlsClient.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\MockTlsServer.cs">
+      <Link>src\crypto\tls\test\MockTlsServer.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\NetworkStream.cs">
+      <Link>src\crypto\tls\test\NetworkStream.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\PipedStream.cs">
+      <Link>src\crypto\tls\test\PipedStream.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\PskTlsClientTest.cs">
+      <Link>src\crypto\tls\test\PskTlsClientTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsClientTest.cs">
+      <Link>src\crypto\tls\test\TlsClientTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsProtocolTest.cs">
+      <Link>src\crypto\tls\test\TlsProtocolTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsPskProtocolTest.cs">
+      <Link>src\crypto\tls\test\TlsPskProtocolTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsSrpProtocolTest.cs">
+      <Link>src\crypto\tls\test\TlsSrpProtocolTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsServerTest.cs">
+      <Link>src\crypto\tls\test\TlsServerTest.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestCase.cs">
+      <Link>src\crypto\tls\test\TlsTestCase.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestClientImpl.cs">
+      <Link>src\crypto\tls\test\TlsTestClientImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestConfig.cs">
+      <Link>src\crypto\tls\test\TlsTestConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestServerImpl.cs">
+      <Link>src\crypto\tls\test\TlsTestServerImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestSuite.cs">
+      <Link>src\crypto\tls\test\TlsTestSuite.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\TlsTestUtilities.cs">
+      <Link>src\crypto\tls\test\TlsTestUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\test\src\crypto\tls\test\UnreliableDatagramTransport.cs">
+      <Link>src\crypto\tls\test\UnreliableDatagramTransport.cs</Link>
     </Compile>
     <Compile Include="..\crypto\test\src\math\ec\test\ECPointPerformanceTest.cs">
       <Link>src\math\ec\test\ECPointPerformanceTest.cs</Link>
@@ -3430,6 +3517,48 @@
     <None Include="..\crypto\test\data\rsa3\testcases.README">
       <Link>data\rsa3\testcases.README</Link>
     </None>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client-dsa.pem">
+      <Link>data\tls\x509-client-dsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client-key-dsa.pem">
+      <Link>data\tls\x509-client-key-dsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client-ecdsa.pem">
+      <Link>data\tls\x509-client-ecdsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server-ecdsa.pem">
+      <Link>data\tls\x509-server-ecdsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server-dsa.pem">
+      <Link>data\tls\x509-server-dsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client-key-ecdsa.pem">
+      <Link>data\tls\x509-client-key-ecdsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-ca-key.pem">
+      <Link>data\tls\x509-ca-key.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-ca.pem">
+      <Link>data\tls\x509-ca.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client-key.pem">
+      <Link>data\tls\x509-client-key.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-client.pem">
+      <Link>data\tls\x509-client.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server-key.pem">
+      <Link>data\tls\x509-server-key.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server.pem">
+      <Link>data\tls\x509-server.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server-key-dsa.pem">
+      <Link>data\tls\x509-server-key-dsa.pem</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\crypto\test\data\tls\x509-server-key-ecdsa.pem">
+      <Link>data\tls\x509-server-key-ecdsa.pem</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="..\crypto\test\data\tls\keystores\client_store.dsa">
       <Link>data\tls\keystores\client_store.dsa</Link>
     </EmbeddedResource>

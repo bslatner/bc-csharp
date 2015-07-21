@@ -99,6 +99,24 @@ namespace Org.BouncyCastle.Crypto.Tls
         {
         }
 
+        protected virtual void ApplyMaxFragmentLengthExtension()
+        {
+            if (mSecurityParameters.maxFragmentLength >= 0)
+            {
+                if (!MaxFragmentLength.IsValid((byte)mSecurityParameters.maxFragmentLength))
+                    throw new TlsFatalAlert(AlertDescription.internal_error);
+
+                int plainTextLimit = 1 << (8 + mSecurityParameters.maxFragmentLength);
+                mRecordStream.SetPlaintextLimit(plainTextLimit);
+            }
+        }
+
+        protected virtual void CheckReceivedChangeCipherSpec(bool expected)
+        {
+            if (expected != mReceivedChangeCipherSpec)
+                throw new TlsFatalAlert(AlertDescription.unexpected_message);
+        }
+
         protected virtual void CleanupHandshake()
         {
             if (this.mExpectedVerifyData != null)
@@ -158,10 +176,12 @@ namespace Org.BouncyCastle.Crypto.Tls
                     if (this.mSessionParameters == null)
                     {
                         this.mSessionParameters = new SessionParameters.Builder()
-                            .SetCipherSuite(this.mSecurityParameters.cipherSuite)
-                            .SetCompressionAlgorithm(this.mSecurityParameters.compressionAlgorithm)
-                            .SetMasterSecret(this.mSecurityParameters.masterSecret)
+                            .SetCipherSuite(this.mSecurityParameters.CipherSuite)
+                            .SetCompressionAlgorithm(this.mSecurityParameters.CompressionAlgorithm)
+                            .SetMasterSecret(this.mSecurityParameters.MasterSecret)
                             .SetPeerCertificate(this.mPeerCertificate)
+                            .SetPskIdentity(this.mSecurityParameters.PskIdentity)
+                            .SetSrpIdentity(this.mSecurityParameters.SrpIdentity)
                             // TODO Consider filtering extensions that aren't relevant to resumed sessions
                             .SetServerExtensions(this.mServerExtensions)
                             .Build();
@@ -259,6 +279,8 @@ namespace Org.BouncyCastle.Crypto.Tls
                          */
                         byte[] buf = mHandshakeQueue.RemoveData(len, 4);
 
+                        CheckReceivedChangeCipherSpec(mConnectionState == CS_END || type == HandshakeType.finished);
+
                         /*
                          * RFC 2246 7.4.9. The value handshake_messages includes all handshake messages
                          * starting at client hello up to, but not including, this finished message.
@@ -270,14 +292,19 @@ namespace Org.BouncyCastle.Crypto.Tls
                             break;
                         case HandshakeType.finished:
                         default:
-                            if (type == HandshakeType.finished && this.mExpectedVerifyData == null)
+                        {
+                            TlsContext ctx = Context;
+                            if (type == HandshakeType.finished
+                                && this.mExpectedVerifyData == null
+                                && ctx.SecurityParameters.MasterSecret != null)
                             {
-                                this.mExpectedVerifyData = CreateVerifyData(!Context.IsServer);
+                                this.mExpectedVerifyData = CreateVerifyData(!ctx.IsServer);
                             }
 
                             mRecordStream.UpdateHandshakeData(beginning, 0, 4);
                             mRecordStream.UpdateHandshakeData(buf, 0, len);
                             break;
+                        }
                         }
 
                         /*
@@ -612,6 +639,9 @@ namespace Org.BouncyCastle.Crypto.Tls
 
         protected virtual void ProcessFinishedMessage(MemoryStream buf)
         {
+            if (mExpectedVerifyData == null)
+                throw new TlsFatalAlert(AlertDescription.internal_error);
+
             byte[] verify_data = TlsUtilities.ReadFully(mExpectedVerifyData.Length, buf);
 
             AssertEmpty(buf);
@@ -743,12 +773,28 @@ namespace Org.BouncyCastle.Crypto.Tls
             byte alertDescription)
         {
             short maxFragmentLength = TlsExtensionsUtilities.GetMaxFragmentLengthExtension(serverExtensions);
-            if (maxFragmentLength >= 0 && !this.mResumedSession)
+            if (maxFragmentLength >= 0)
             {
-                if (maxFragmentLength != TlsExtensionsUtilities.GetMaxFragmentLengthExtension(clientExtensions))
+                if (!MaxFragmentLength.IsValid((byte)maxFragmentLength)
+                    || (!this.mResumedSession && maxFragmentLength != TlsExtensionsUtilities
+                        .GetMaxFragmentLengthExtension(clientExtensions)))
+                {
                     throw new TlsFatalAlert(alertDescription);
+                }
             }
             return maxFragmentLength;
+        }
+
+        protected virtual void RefuseRenegotiation()
+        {
+            /*
+             * RFC 5746 4.5 SSLv3 clients that refuse renegotiation SHOULD use a fatal
+             * handshake_failure alert.
+             */
+            if (TlsUtilities.IsSsl(Context))
+                throw new TlsFatalAlert(AlertDescription.handshake_failure);
+
+            RaiseWarning(AlertDescription.no_renegotiation, "Renegotiation not supported");
         }
 
         /**
@@ -956,7 +1002,11 @@ namespace Org.BouncyCastle.Crypto.Tls
             case CipherSuite.TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256:
             case CipherSuite.TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256:
             case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:
+            case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_CCM:
+            case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8:
             case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:
+            case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_CCM:
+            case CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8:
             case CipherSuite.TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256:
             case CipherSuite.TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256:
             case CipherSuite.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:
