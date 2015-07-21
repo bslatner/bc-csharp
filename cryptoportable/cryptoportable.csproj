@@ -1362,6 +1362,18 @@
     <Compile Include="..\crypto\src\bcpg\DsaSecretBcpgKey.cs">
       <Link>src\bcpg\DsaSecretBcpgKey.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\bcpg\ECDHPublicBCPGKey.cs">
+      <Link>src\bcpg\ECDHPublicBCPGKey.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\bcpg\ECDsaPublicBCPGKey.cs">
+      <Link>src\bcpg\ECDsaPublicBCPGKey.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\bcpg\ECPublicBCPGKey.cs">
+      <Link>src\bcpg\ECPublicBCPGKey.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\bcpg\ECSecretBCPGKey.cs">
+      <Link>src\bcpg\ECSecretBCPGKey.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\bcpg\ElGamalPublicBCPGKey.cs">
       <Link> src\bcpg\ElGamalPublicBCPGKey.cs</Link>
     </Compile>
@@ -3183,6 +3195,9 @@
     <Compile Include="..\crypto\src\math\ec\custom\sec\SecP521R1Point.cs">
       <Link>src\math\ec\custom\sec\SecP521R1Point.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\src\math\Primes.cs">
+      <Link>src\math\Primes.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\src\math\ec\ECAlgorithms.cs">
       <Link>src\math\etc\ECAlgorithms.cs</Link>
     </Compile>
@@ -3257,6 +3272,24 @@
     </Compile>
     <Compile Include="..\crypto\src\math\ec\custom\sec\SecT163R2Point.cs">
       <Link>src\math\ec\custom\sec\SecT163R2Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193Field.cs">
+      <Link>src\math\ec\custom\sec\SecT193Field.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193FieldElement.cs">
+      <Link>src\math\ec\custom\sec\SecT193FieldElement.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193R1Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT193R1Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193R1Point.cs">
+      <Link>src\math\ec\custom\sec\SecT193R1Point.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193R2Curve.cs">
+      <Link>src\math\ec\custom\sec\SecT193R2Curve.cs</Link>
+    </Compile>
+    <Compile Include="..\crypto\src\math\ec\custom\sec\SecT193R2Point.cs">
+      <Link>src\math\ec\custom\sec\SecT193R2Point.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\math\ec\custom\sec\SecT233Field.cs">
       <Link>src\math\ec\custom\sec\SecT233Field.cs</Link>
