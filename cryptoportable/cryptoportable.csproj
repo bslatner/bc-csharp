@@ -1362,8 +1362,8 @@
     <Compile Include="..\crypto\src\bcpg\DsaSecretBcpgKey.cs">
       <Link>src\bcpg\DsaSecretBcpgKey.cs</Link>
     </Compile>
-    <Compile Include="..\crypto\src\bcpg\ElGamalPublicBcpgKey.cs">
-      <Link>src\bcpg\ElGamalPublicBcpgKey.cs</Link>
+    <Compile Include="..\crypto\src\bcpg\ElGamalPublicBCPGKey.cs">
+      <Link> src\bcpg\ElGamalPublicBCPGKey.cs</Link>
     </Compile>
     <Compile Include="..\crypto\src\bcpg\ElGamalSecretBcpgKey.cs">
       <Link>src\bcpg\ElGamalSecretBcpgKey.cs</Link>
