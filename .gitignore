@@ -1,11 +1,17 @@
-*.ncrunchsolution
+*.psess
+*.snk
 *.suo
+*.swp
 *.user
+*.vsp
 
-**/bin
-**/dist
-**/obj
+Backup/
+bin/
+dist/
+doc/
+obj/
 
+*.ncrunchsolution
 /crypto/doc
 /nuget/lib
 /nuget/*.nupkg

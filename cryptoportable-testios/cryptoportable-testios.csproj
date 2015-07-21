@@ -391,6 +391,9 @@
     <Compile Include="..\crypto\test\src\crypto\test\DESTest.cs">
       <Link>src\crypto\test\DESTest.cs</Link>
     </Compile>
+    <Compile Include="..\crypto\test\src\crypto\test\DeterministicDSATest.cs">
+      <Link>src\crypto\test\DeterministicDSATest.cs</Link>
+    </Compile>
     <Compile Include="..\crypto\test\src\crypto\test\DHKEKGeneratorTest.cs">
       <Link>src\crypto\test\DHKEKGeneratorTest.cs</Link>
     </Compile>
