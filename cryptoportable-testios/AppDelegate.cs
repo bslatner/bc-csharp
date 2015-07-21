@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MonoTouch.Foundation;
+﻿using System.Reflection;
+using Foundation;
 using MonoTouch.NUnit.UI;
-using MonoTouch.UIKit;
 using Org.BouncyCastle;
 using Org.BouncyCastle.Utilities.IO;
+using UIKit;
 
 namespace cryptoportable_testios
 {
@@ -33,7 +31,7 @@ namespace cryptoportable_testios
             runner = new TouchRunner(window);
 
             // register every tests included in the main application/assembly
-            runner.Add(System.Reflection.Assembly.GetExecutingAssembly());
+            runner.Add(Assembly.GetExecutingAssembly());
 
             // register console and file system
             Console.ConsoleFactory = new SystemConsoleFactory();
