@@ -1779,6 +1779,9 @@
     <Compile Include="src\crypto\agreement\DHBasicAgreement.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\agreement\DHStandardGroups.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\agreement\ECDHBasicAgreement.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2619,9 +2622,6 @@
     <Compile Include="src\crypto\tls\AlertLevel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\crypto\tls\AlwaysValidVerifyer.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="src\crypto\tls\BulkCipherAlgorithm.cs" />
     <Compile Include="src\crypto\tls\ByteQueue.cs">
       <SubType>Code</SubType>
@@ -2677,13 +2677,13 @@
     <Compile Include="src\crypto\tls\DefaultTlsEncryptionCredentials.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\DefaultTlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\DefaultTlsSignerCredentials.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\DeferredHash.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\crypto\tls\DigestAlgorithm.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\DigestInputBuffer.cs" />
@@ -2704,6 +2704,9 @@
     <Compile Include="src\crypto\tls\ExtensionType.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\crypto\tls\FiniteFieldDheGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\crypto\tls\HandshakeType.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2718,16 +2721,7 @@
     </Compile>
     <Compile Include="src\crypto\tls\HeartbeatMessageType.cs" />
     <Compile Include="src\crypto\tls\HeartbeatMode.cs" />
-    <Compile Include="src\crypto\tls\ICertificateVerifyer.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="src\crypto\tls\KeyExchangeAlgorithm.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\crypto\tls\LegacyTlsAuthentication.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\crypto\tls\LegacyTlsClient.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\MacAlgorithm.cs" />
@@ -2815,6 +2809,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsClientContextImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\TlsClientProtocol.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsCompression.cs">
@@ -2909,6 +2906,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsServerContextImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\crypto\tls\TlsServerProtocol.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\crypto\tls\TlsSession.cs">
@@ -4558,6 +4558,21 @@
     <Compile Include="test\src\math\ec\test\AllTests.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockTlsClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\MockTlsServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsClientTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsServerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\src\crypto\tls\test\TlsTestUtilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test\src\math\ec\test\ECPointPerformanceTest.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -5720,6 +5735,12 @@
     <EmbeddedResource Include="test\data\rsa3\self-testcase-L.p12" />
     <EmbeddedResource Include="test\data\rsa3\self-testcase-L.pem" />
     <EmbeddedResource Include="test\data\scrypt\TestVectors.txt" />
+    <EmbeddedResource Include="test\data\tls\x509-ca-key.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-ca.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-client-key.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-client.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server-key.pem" />
+    <EmbeddedResource Include="test\data\tls\x509-server.pem" />
     <EmbeddedResource Include="test\data\tls\keystores\client_store.dsa" />
     <EmbeddedResource Include="test\data\tls\keystores\client_store.rsa" />
     <EmbeddedResource Include="test\data\tls\keystores\server_store.dsa" />

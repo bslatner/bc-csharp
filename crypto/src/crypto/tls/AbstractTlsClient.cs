@@ -67,6 +67,16 @@ namespace Org.BouncyCastle.Crypto.Tls
             get { return ProtocolVersion.TLSv12; }
         }
 
+        public virtual bool IsFallback
+        {
+            /*
+             * draft-bmoeller-tls-downgrade-scsv-02 4. [..] is meant for use by clients that repeat a
+             * connection attempt with a downgraded protocol in order to avoid interoperability problems
+             * with legacy servers.
+             */
+            get { return false; }
+        }
+
         public virtual IDictionary GetClientExtensions()
         {
             IDictionary clientExtensions = null;
@@ -148,7 +158,7 @@ namespace Org.BouncyCastle.Crypto.Tls
 
         public virtual byte[] GetCompressionMethods()
         {
-            return new byte[]{ CompressionMethod.NULL };
+            return new byte[]{ CompressionMethod.cls_null };
         }
 
         public virtual void NotifySessionID(byte[] sessionID)
@@ -209,7 +219,7 @@ namespace Org.BouncyCastle.Crypto.Tls
         {
             switch (mSelectedCompressionMethod)
             {
-            case CompressionMethod.NULL:
+            case CompressionMethod.cls_null:
                 return new TlsNullCompression();
 
             case CompressionMethod.DEFLATE:

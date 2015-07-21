@@ -28,11 +28,14 @@ namespace Org.BouncyCastle.Crypto.Tls
 
        internal AbstractTlsContext(SecureRandom secureRandom, SecurityParameters securityParameters)
         {
-            secureRandom.SetSeed(NextCounterValue());
-            secureRandom.SetSeed(Times.NanoTime());
+            IDigest d = TlsUtilities.CreateHash(HashAlgorithm.sha256);
+            byte[] seed = new byte[d.GetDigestSize()];
+            secureRandom.NextBytes(seed);
 
-            this.mNonceRandom = new DigestRandomGenerator(TlsUtilities.CreateHash(HashAlgorithm.sha256));
-            this.mNonceRandom.AddSeedMaterial(secureRandom.GenerateSeed(32));
+            this.mNonceRandom = new DigestRandomGenerator(d);
+            mNonceRandom.AddSeedMaterial(NextCounterValue());
+            mNonceRandom.AddSeedMaterial(Times.NanoTime());
+            mNonceRandom.AddSeedMaterial(seed);
 
             this.mSecureRandom = secureRandom;
             this.mSecurityParameters = securityParameters;
@@ -58,19 +61,31 @@ namespace Org.BouncyCastle.Crypto.Tls
         public virtual ProtocolVersion ClientVersion
         {
             get { return mClientVersion; }
-            set { this.mClientVersion = value; }
+        }
+
+        internal virtual void SetClientVersion(ProtocolVersion clientVersion)
+        {
+            this.mClientVersion = clientVersion;
         }
 
         public virtual ProtocolVersion ServerVersion
         {
             get { return mServerVersion; }
-            set { this.mServerVersion = value; }
+        }
+
+        internal virtual void SetServerVersion(ProtocolVersion serverVersion)
+        {
+            this.mServerVersion = serverVersion;
         }
 
         public virtual TlsSession ResumableSession
         {
             get { return mSession; }
-            set { this.mSession = value; }
+        }
+
+        internal virtual void SetResumableSession(TlsSession session)
+        {
+            this.mSession = session;
         }
 
         public virtual object UserObject

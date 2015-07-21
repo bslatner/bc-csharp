@@ -60,7 +60,7 @@ namespace Org.BouncyCastle.Crypto.Tls
 
         protected byte[] GetCompressionMethods()
         {
-            return new byte[]{ CompressionMethod.NULL };
+            return new byte[] { CompressionMethod.cls_null };
         }
 
         protected virtual ProtocolVersion MaximumVersion
@@ -108,6 +108,18 @@ namespace Org.BouncyCastle.Crypto.Tls
         public virtual void NotifyClientVersion(ProtocolVersion clientVersion)
         {
             this.mClientVersion = clientVersion;
+        }
+
+        public virtual void NotifyFallback(bool isFallback)
+        {
+            /*
+             * draft-bmoeller-tls-downgrade-scsv-02 3. If TLS_FALLBACK_SCSV appears in
+             * ClientHello.cipher_suites and the highest protocol version supported by the server is
+             * higher than the version indicated in ClientHello.client_version, the server MUST respond
+             * with an inappropriate_fallback alert.
+             */
+            if (isFallback && MaximumVersion.IsLaterVersionOf(mClientVersion))
+                throw new TlsFatalAlert(AlertDescription.inappropriate_fallback);
         }
 
         public virtual void NotifyOfferedCipherSuites(int[] offeredCipherSuites)
@@ -223,9 +235,10 @@ namespace Org.BouncyCastle.Crypto.Tls
             if (this.mEncryptThenMacOffered && AllowEncryptThenMac)
             {
                 /*
-                 * draft-ietf-tls-encrypt-then-mac-03 3. If a server receives an encrypt-then-MAC
-                 * request extension from a client and then selects a stream or AEAD cipher suite, it
-                 * MUST NOT send an encrypt-then-MAC response extension back to the client.
+                 * RFC 7366 3. If a server receives an encrypt-then-MAC request extension from a client
+                 * and then selects a stream or Authenticated Encryption with Associated Data (AEAD)
+                 * ciphersuite, it MUST NOT send an encrypt-then-MAC response extension back to the
+                 * client.
                  */
                 if (TlsUtilities.IsBlockCipherSuite(this.mSelectedCipherSuite))
                 {
@@ -233,9 +246,11 @@ namespace Org.BouncyCastle.Crypto.Tls
                 }
             }
 
-            if (this.mMaxFragmentLengthOffered >= 0)
+            if (this.mMaxFragmentLengthOffered >= 0
+                && TlsUtilities.IsValidUint8(mMaxFragmentLengthOffered)
+                && MaxFragmentLength.IsValid((byte)mMaxFragmentLengthOffered))
             {
-                TlsExtensionsUtilities.AddMaxFragmentLengthExtension(CheckServerExtensions(), (byte)this.mMaxFragmentLengthOffered);
+                TlsExtensionsUtilities.AddMaxFragmentLengthExtension(CheckServerExtensions(), (byte)mMaxFragmentLengthOffered);
             }
 
             if (this.mTruncatedHMacOffered && AllowTruncatedHMac)
@@ -293,7 +308,7 @@ namespace Org.BouncyCastle.Crypto.Tls
         {
             switch (mSelectedCompressionMethod)
             {
-            case CompressionMethod.NULL:
+            case CompressionMethod.cls_null:
                 return new TlsNullCompression();
 
             default:

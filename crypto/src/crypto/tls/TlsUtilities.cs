@@ -492,26 +492,6 @@ namespace Org.BouncyCastle.Crypto.Tls
             return uints;
         }
 
-        [Obsolete]
-        public static void CheckVersion(byte[] ReadVersion)
-        {
-            if ((ReadVersion[0] != 3) || (ReadVersion[1] != 1))
-            {
-                throw new TlsFatalAlert(AlertDescription.protocol_version);
-            }
-        }
-
-        [Obsolete]
-        public static void CheckVersion(Stream input)
-        {
-            int i1 = input.ReadByte();
-            int i2 = input.ReadByte();
-            if ((i1 != 3) || (i2 != 1))
-            {
-                throw new TlsFatalAlert(AlertDescription.protocol_version);
-            }
-        }
-
         public static ProtocolVersion ReadVersion(byte[] buf, int offset)
         {
             return ProtocolVersion.Get(buf[offset], buf[offset + 1]);
@@ -575,20 +555,6 @@ namespace Org.BouncyCastle.Crypto.Tls
             buf[offset + 1] = (byte)(t >> 16);
             buf[offset + 2] = (byte)(t >> 8);
             buf[offset + 3] = (byte)t;
-        }
-
-        [Obsolete]
-        public static void WriteVersion(Stream output)
-        {
-            output.WriteByte(3);
-            output.WriteByte(1);
-        }
-
-        [Obsolete]
-        public static void WriteVersion(byte[] buf, int offset)
-        {
-            buf[offset] = 3;
-            buf[offset + 1] = 1;
         }
 
         public static void WriteVersion(ProtocolVersion version, Stream output)
@@ -774,9 +740,7 @@ namespace Org.BouncyCastle.Crypto.Tls
             int prfAlgorithm = context.SecurityParameters.PrfAlgorithm;
 
             if (prfAlgorithm == PrfAlgorithm.tls_prf_legacy)
-            {
                 return PRF_legacy(secret, label, labelSeed, size);
-            }
 
             IDigest prfDigest = CreatePrfHash(prfAlgorithm);
             byte[] buf = new byte[size];
@@ -851,9 +815,7 @@ namespace Org.BouncyCastle.Crypto.Tls
                     DerBitString ku = KeyUsage.GetInstance(ext);
                     int bits = ku.GetBytes()[0];
                     if ((bits & keyUsageBits) != keyUsageBits)
-                    {
                         throw new TlsFatalAlert(AlertDescription.certificate_unknown);
-                    }
                 }
             }
         }
@@ -865,9 +827,7 @@ namespace Org.BouncyCastle.Crypto.Tls
             byte[] seed = Concat(securityParameters.ServerRandom, securityParameters.ClientRandom);
 
             if (IsSsl(context))
-            {
                 return CalculateKeyBlock_Ssl(master_secret, seed, size);
-            }
 
             return PRF(context, master_secret, ExporterLabel.key_expansion, seed, size);
         }
@@ -904,14 +864,19 @@ namespace Org.BouncyCastle.Crypto.Tls
         internal static byte[] CalculateMasterSecret(TlsContext context, byte[] pre_master_secret)
         {
             SecurityParameters securityParameters = context.SecurityParameters;
-            byte[] seed = Concat(securityParameters.ClientRandom, securityParameters.ServerRandom);
+
+            byte[] seed = securityParameters.extendedMasterSecret
+                ?   securityParameters.SessionHash
+                :   Concat(securityParameters.ClientRandom, securityParameters.ServerRandom);
 
             if (IsSsl(context))
-            {
                 return CalculateMasterSecret_Ssl(pre_master_secret, seed);
-            }
 
-            return PRF(context, pre_master_secret, ExporterLabel.master_secret, seed, 48);
+            string asciiLabel = securityParameters.extendedMasterSecret
+                ?   ExporterLabel.extended_master_secret
+                :   ExporterLabel.master_secret;
+
+            return PRF(context, pre_master_secret, asciiLabel, seed, 48);
         }
 
         internal static byte[] CalculateMasterSecret_Ssl(byte[] pre_master_secret, byte[] random)
@@ -946,9 +911,7 @@ namespace Org.BouncyCastle.Crypto.Tls
         internal static byte[] CalculateVerifyData(TlsContext context, string asciiLabel, byte[] handshakeHash)
         {
             if (IsSsl(context))
-            {
                 return handshakeHash;
-            }
 
             SecurityParameters securityParameters = context.SecurityParameters;
             byte[] master_secret = securityParameters.MasterSecret;
