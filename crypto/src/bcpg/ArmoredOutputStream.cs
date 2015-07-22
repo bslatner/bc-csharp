@@ -103,7 +103,12 @@ namespace Org.BouncyCastle.Bcpg
 
         private static string GetVersion()
         {
+#if PORTABLE
+            AssemblyName asmName = new AssemblyName(typeof (ArmoredOutputStream).GetTypeInfo().Assembly.FullName);
+#else
             AssemblyName asmName = new AssemblyName(typeof (ArmoredOutputStream).Assembly.FullName);
+#endif
+
             return "BCPG C# v" + asmName.Version;
         }
 

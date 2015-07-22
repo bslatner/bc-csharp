@@ -65,7 +65,12 @@ namespace Org.BouncyCastle.Crypto.Prng
 				int last = 0;
 				int end = fast ? numBytes : numBytes * 8;
 
+#if PORTABLE
+                var runTask = new Task(() => Run(null));
+                runTask.Start();
+#else
 				ThreadPool.QueueUserWorkItem(new WaitCallback(Run));
+#endif
 
 				for (int i = 0; i < end; i++)
 				{
@@ -74,8 +79,7 @@ namespace Org.BouncyCastle.Crypto.Prng
 						try
 						{
 #if PORTABLE
-						    var waiter = new Task(DoNothing);
-						    waiter.Wait(1);
+						    runTask.Wait(TimeSpan.FromMilliseconds(1));
 #else
 							Thread.Sleep(1);
 #endif
@@ -104,13 +108,6 @@ namespace Org.BouncyCastle.Crypto.Prng
 				return result;
 			}
 
-#if PORTABLE
-
-		    private void DoNothing()
-		    {
-		    }
-
-#endif
 		}
 
 		/**
